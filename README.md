@@ -18,6 +18,10 @@
 
 > This is a fork of [device_preview](https://pub.dev/packages/device_preview) to keep it up to date with newer Flutter versions.
 
+<p align="center">
+  <img src="https://github.com/aloisdeniel/flutter_device_preview/raw/master/device_preview.gif" alt="Device Preview for Flutter" />
+</p>
+
 Approximate how your app looks and performs on another device. Main features:
 
 * Preview any device from any device
