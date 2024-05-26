@@ -1,3 +1,31 @@
+## [1.2.0](https://github.com/zeshuaro/device_preview_plus/compare/v1.1.0...v1.2.0) (2024-05-26)
+
+
+### Features
+
+* update to support flutter 3.22 ([#4](https://github.com/zeshuaro/device_preview_plus/issues/4)) ([fded29c](https://github.com/zeshuaro/device_preview_plus/commit/fded29cf8ad4a7f8234c0910f6b9286e1c1747ab))
+
+
+### Documentation
+
+* **readme:** remove codecov badge ([#8](https://github.com/zeshuaro/device_preview_plus/issues/8)) ([6aa2476](https://github.com/zeshuaro/device_preview_plus/commit/6aa247617cceb2b1d8aa1af16f30e319f91cbddb))
+* **readme:** update github actions badge to filter push events ([#7](https://github.com/zeshuaro/device_preview_plus/issues/7)) ([ac62e12](https://github.com/zeshuaro/device_preview_plus/commit/ac62e12c168cc4ef1cacf14fff81005f2dee148c))
+* **readme:** update readme ([#9](https://github.com/zeshuaro/device_preview_plus/issues/9)) ([5a863de](https://github.com/zeshuaro/device_preview_plus/commit/5a863de0fe2363ac913446382a4dcfe40851903c))
+* **readme:** update readme badges ([#10](https://github.com/zeshuaro/device_preview_plus/issues/10)) ([d21a6f5](https://github.com/zeshuaro/device_preview_plus/commit/d21a6f5031d72764de2af5967d1e9d90d049ca27))
+
+
+### Miscellaneous Chores
+
+* rename `lib/device_preview` to `device_preview_plus` ([#12](https://github.com/zeshuaro/device_preview_plus/issues/12)) ([59e937e](https://github.com/zeshuaro/device_preview_plus/commit/59e937e6a138ce9eeda6c5382cd144cdda265aef))
+
+
+### Continuous Integration
+
+* **github-actions:** add pull request and scheduled workflows ([#2](https://github.com/zeshuaro/device_preview_plus/issues/2)) ([621f90a](https://github.com/zeshuaro/device_preview_plus/commit/621f90a33c81ef52b4d09e8461a3dc32f9459d64))
+* **github-actions:** fix release condition ([#11](https://github.com/zeshuaro/device_preview_plus/issues/11)) ([4623fd9](https://github.com/zeshuaro/device_preview_plus/commit/4623fd976e72005ac559eeef2fbed8c287d3618b))
+* **github-actions:** fix triggering on `main` branch ([#6](https://github.com/zeshuaro/device_preview_plus/issues/6)) ([1037b28](https://github.com/zeshuaro/device_preview_plus/commit/1037b28bdd1e203419b6386a2d1e5de0626a15bd))
+* setup semantic release ([#5](https://github.com/zeshuaro/device_preview_plus/issues/5)) ([f9dcf11](https://github.com/zeshuaro/device_preview_plus/commit/f9dcf1173f87e2abbca1d51a7f5dace692322573))
+
 ## 1.1.0
 
 * Updated dependencies and adding support for Flutter 3.0.

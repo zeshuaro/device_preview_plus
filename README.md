@@ -34,7 +34,7 @@ Add this to your project's `pubspec.yaml` file:
 
 ```yml
 dependencies:
-  device_preview_plus: ^1.1.0
+  device_preview_plus: ^1.2.0
 ```
 
 ## Usage
