@@ -2,20 +2,22 @@
   <img src="https://github.com/aloisdeniel/flutter_device_preview/raw/master/logo.png" alt="Device Preview for Flutter" />
 </p>
 
-<h4 align="center">Approximate how your app looks and performs on another device.</h4>
+[![pub package](https://img.shields.io/pub/v/device_preview_plus.svg)](https://pub.dartlang.org/packages/device_preview_plus)
+[![docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://aloisdeniel.github.io/flutter_device_preview)
+[![MIT License](https://img.shields.io/github/license/zeshuaro/device_preview_plus.svg)](https://github.com/zeshuaro/device_preview_plus/blob/main/LICENSE)
+[![GitHub Actions](https://github.com/zeshuaro/device_preview_plus/actions/workflows/github-actions.yml/badge.svg)](https://github.com/zeshuaro/device_preview_plus/actions/workflows/github-actions.yml)
+[![codecov](https://codecov.io/gh/zeshuaro/device_preview_plus/branch/main/graph/badge.svg?token=4IVF5MBLTS)](https://codecov.io/gh/zeshuaro/device_preview_plus)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/eb770d6b694640f597e8c0de21117d19)](https://app.codacy.com/gh/zeshuaro/device_preview_plus/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![style: flutter_lints](https://img.shields.io/badge/style-flutter__lints-4BC0F5.svg)](https://pub.dev/packages/flutter_lints)
 
-<p align="center">
-  <a href="https://pub.dartlang.org/packages/device_preview"><img src="https://img.shields.io/pub/v/device_preview.svg"></a>
-  <a href="https://www.buymeacoffee.com/aloisdeniel">
-    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
-  </a>
-</p>
+[![Github-sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/zeshuaro)
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/zeshuaro)
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/zeshuaro)
+[![LiberaPay](https://img.shields.io/badge/Liberapay-F6C915?style=for-the-badge&logo=liberapay&logoColor=black)](https://liberapay.com/zeshuaro/)
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/zeshuaro)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/JoshuaTang)
 
-<p align="center">
-  <img src="https://github.com/aloisdeniel/flutter_device_preview/raw/master/device_preview.gif" alt="Device Preview for Flutter" />
-</p>
-
-## Main features
+Approximate how your app looks and performs on another device. Main features:
 
 * Preview any device from any device
 * Change the device orientation
@@ -25,18 +27,16 @@
 * Plugin system (*Screenshot, File explorer, ...*)
 * Customizable plugins
 
-## Quickstart
+## Getting Started
 
-### Add dependency to your pubspec file
+Add this to your project's `pubspec.yaml` file:
 
-Since Device Preview is a simple Dart package, you have to declare it as any other dependency in your `pubspec.yaml` file.
-
-```yaml
+```yml
 dependencies:
-  device_preview: <latest version>
+  device_preview_plus: ^1.1.0
 ```
 
-### Add DevicePreview
+## Usage
 
 Wrap your app's root widget in a `DevicePreview` and make sure to :
 
@@ -47,7 +47,7 @@ Wrap your app's root widget in a `DevicePreview` and make sure to :
 > Make sure to override the previous properties as described. If not defined, `MediaQuery` won't be simulated for the selected device.
 
 ```dart
-import 'package:device_preview/device_preview.dart';
+import 'package:device_preview_plus/device_preview.dart';
 
 void main() => runApp(
   DevicePreview(
@@ -70,10 +70,6 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-
-## Documentation
-
-<a href='https://aloisdeniel.github.io/flutter_device_preview/' target='_blank'>Open the website</a>
 
 ## Demo
 
