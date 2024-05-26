@@ -6,7 +6,6 @@
 [![docs](https://img.shields.io/badge/docs-latest-blue.svg)](https://aloisdeniel.github.io/flutter_device_preview)
 [![MIT License](https://img.shields.io/github/license/zeshuaro/device_preview_plus.svg)](https://github.com/zeshuaro/device_preview_plus/blob/main/LICENSE)
 [![GitHub Actions](https://github.com/zeshuaro/device_preview_plus/actions/workflows/github-actions.yml/badge.svg?event=push)](https://github.com/zeshuaro/device_preview_plus/actions/workflows/github-actions.yml?query=event%3Apush)
-<!-- [![codecov](https://codecov.io/gh/zeshuaro/device_preview_plus/branch/main/graph/badge.svg?token=4IVF5MBLTS)](https://codecov.io/gh/zeshuaro/device_preview_plus) -->
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/eb770d6b694640f597e8c0de21117d19)](https://app.codacy.com/gh/zeshuaro/device_preview_plus/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![style: flutter_lints](https://img.shields.io/badge/style-flutter__lints-4BC0F5.svg)](https://pub.dev/packages/flutter_lints)
 
