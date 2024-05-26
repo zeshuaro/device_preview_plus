@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>zeshuaro/renovate-configs",
+    "github>zeshuaro/renovate-configs:package",
+    "github>zeshuaro/renovate-configs:dart",
+    "github>zeshuaro/renovate-configs:flutterIgnorePaths",
+    "github>zeshuaro/renovate-configs:flutterVersion",
+    "github>zeshuaro/renovate-configs:javascript",
+    "github>zeshuaro/renovate-configs:nodeVersion",
+    "github>zeshuaro/renovate-configs:nodeChore"
+  ]
+}
