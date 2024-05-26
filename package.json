@@ -1,0 +1,17 @@
+{
+  "name": "device_preview_plus",
+  "version": "1.1.0",
+  "description": "Approximate how your Flutter app looks and performs on another device",
+  "main": "index.js",
+  "repository": "https://github.com/zeshuaro/device_preview_plus.git",
+  "author": "Joshua Tang <zeshuaro@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "conventional-changelog-conventionalcommits": "7.0.2",
+    "semantic-release": "23.1.1",
+    "semantic-release-pub": "0.8.14",
+    "semantic-release-replace-plugin": "1.2.7"
+  }
+}
