@@ -17,7 +17,7 @@ jobs:
   flutter-package:
     uses: zeshuaro/github-actions-workflows/.github/workflows/flutter-package.yml@c2ec56268eea96aec6ac99996867dbad1cf9b8f5
     with:
-      release: ${{ (github.ref == 'refs/heads/master') && (contains(fromJSON('["workflow_dispatch", "schedule"]'), github.event_name)) }}
+      release: ${{ (github.ref == 'refs/heads/main') && (contains(fromJSON('["workflow_dispatch", "schedule"]'), github.event_name)) }}
     secrets:
       GH_APP_ID: ${{ secrets.GH_APP_ID }}
       GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}
