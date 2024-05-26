@@ -1,0 +1,10 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - lib/**/*.freezed.dart
+    - lib/**/*.g.dart
+
+linter:
+  rules:
+    - require_trailing_commas
