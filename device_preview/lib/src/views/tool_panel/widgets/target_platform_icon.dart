@@ -52,7 +52,7 @@ class _PathPainter extends CustomPainter {
       target != oldDelegate.target || color != oldDelegate.color;
 }
 
-/// All paths are genereted from https://simpleicons.org/ with https://fluttershapemaker.com/
+/// All paths are generated from https://simpleicons.org/ with https://fluttershapemaker.com/
 final _paths = <TargetPlatform, Path>{
   TargetPlatform.iOS: Path()
     ..moveTo(

@@ -35,7 +35,7 @@ class DevicePreviewStore extends ChangeNotifier {
   /// The storage used to persist the states's data.
   final DevicePreviewStorage storage;
 
-  /// The curren state of the device preview.
+  /// The current state of the device preview.
   DevicePreviewState get state => _state;
 
   /// Update the state with [value] and notifies all listeners
@@ -66,7 +66,7 @@ class DevicePreviewStore extends ChangeNotifier {
       notInitialized: () async {
         state = const DevicePreviewState.initializing();
 
-        final availaiableLocales = locales != null
+        final availableLocales = locales != null
             ? locales
                 .map(
                   (available) =>
@@ -82,7 +82,7 @@ class DevicePreviewStore extends ChangeNotifier {
         final defaultLocale = device_preview
             .basicLocaleListResolution(
               WidgetsBinding.instance.window.locales,
-              availaiableLocales.map((x) => x!.locale).toList(),
+              availableLocales.map((x) => x!.locale).toList(),
             )
             .toString();
 
@@ -106,7 +106,7 @@ class DevicePreviewStore extends ChangeNotifier {
           );
         }
         state = DevicePreviewState.initialized(
-          locales: availaiableLocales.cast<NamedLocale>(),
+          locales: availableLocales.cast<NamedLocale>(),
           devices: devices!,
           data: data,
         );

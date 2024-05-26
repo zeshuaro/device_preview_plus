@@ -3,7 +3,7 @@ import 'package:device_preview/src/state/state.dart';
 import '../storage.dart';
 
 /// Since share_preferences makes pub considering the package as not supported we should
-/// remove this functionnality from the web version to get the maximum score.
+/// remove this functionality from the web version to get the maximum score.
 class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
   PreferencesDevicePreviewStorage({
     this.preferenceKey = defaultPreferencesKey,
