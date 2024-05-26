@@ -37,7 +37,7 @@ class DevicePreviewScreenshot extends StatefulWidget {
 
   final ScreenshotProcessor onScreenshot;
 
-  /// If enabled, a new item is added to the menu which allwo screenshots to be
+  /// If enabled, a new item is added to the menu which allow screenshots to be
   /// taken for all available device.
   ///
   /// Make sure to have an adapted [onScreenshot] processor for this ([screenshotAsBase64] won't
@@ -83,7 +83,7 @@ class _DevicePreviewScreenshotState extends State<DevicePreviewScreenshot> {
         ),
         if (widget.multipleScreenshots)
           ListTile(
-            key: const Key('muliple-screenshot'),
+            key: const Key('multiple-screenshot'),
             title: const Text('Take multiple screenshots'),
             subtitle: const Text('All available devices'),
             trailing: _isLoading ? const CircularProgressIndicator() : null,

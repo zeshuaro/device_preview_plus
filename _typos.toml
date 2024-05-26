@@ -1,0 +1,7 @@
+[files]
+extend-exclude = [
+    "**/CHANGELOG.md",
+    "device_preview/lib/src/locales/default_locales.dart",
+    "**/ios/**",
+    "**/macos/**",
+]

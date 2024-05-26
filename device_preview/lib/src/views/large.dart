@@ -27,7 +27,7 @@ class DervicePreviewLargeLayout extends StatefulWidget {
 class _DervicePreviewLargeLayoutState extends State<DervicePreviewLargeLayout> {
   @override
   void initState() {
-    // Forcing rebuild to update absolute postion in `_overlayKey`
+    // Forcing rebuild to update absolute position in `_overlayKey`
     WidgetsBinding.instance.addPostFrameCallback(
       (timeStamp) => setState(() {}),
     );

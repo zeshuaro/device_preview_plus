@@ -128,7 +128,7 @@ Locale basicLocaleListResolution(
       }
     }
     // countryCode-only match. When all else except default supported locale fails,
-    // attempt to match by country only, as a user is likely to be familar with a
+    // attempt to match by country only, as a user is likely to be familiar with a
     // language from their listed country.
     if (matchesCountryCode == null && userLocale.countryCode != null) {
       match = countryLocales[userLocale.countryCode];
@@ -139,7 +139,7 @@ Locale basicLocaleListResolution(
   }
   // When there is no languageCode-only match. Fallback to matching countryCode only. Country
   // fallback only applies on iOS. When there is no countryCode-only match, we return first
-  // suported locale.
+  // supported locale.
   final resolvedLocale =
       matchesLanguageCode ?? matchesCountryCode ?? supportedLocales.first;
   return resolvedLocale;
