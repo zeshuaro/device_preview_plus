@@ -18,6 +18,10 @@
 
 > This is a fork of [device_preview](https://pub.dev/packages/device_preview) to keep it up to date with newer Flutter versions.
 
+For users migrating from the `device_preview` package the only changes required are changing your `pubspec.yaml`
+file to point to `device_preview_plus` and changing any import statements to point to
+the updated `package:device_preview_plus\device_preview_plus.dart`.
+
 <p align="center">
   <img src="https://github.com/aloisdeniel/flutter_device_preview/raw/master/device_preview.gif" alt="Device Preview for Flutter" />
 </p>
@@ -52,7 +56,7 @@ Wrap your app's root widget in a `DevicePreview` and make sure to :
 > Make sure to override the previous properties as described. If not defined, `MediaQuery` won't be simulated for the selected device.
 
 ```dart
-import 'package:device_preview_plus/device_preview.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 
 void main() => runApp(
   DevicePreview(
