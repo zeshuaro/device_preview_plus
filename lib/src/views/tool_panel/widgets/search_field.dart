@@ -8,11 +8,11 @@ class ToolbarSearchField extends StatefulWidget {
   ///
   /// The [onTextChanged] is invoked each time the [text] is changed by the user.
   const ToolbarSearchField({
-    Key? key,
+    super.key,
     required this.hintText,
     required this.onTextChanged,
     this.text = '',
-  }) : super(key: key);
+  });
 
   /// The current field content.
   final String text;

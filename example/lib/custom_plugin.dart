@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class CustomPlugin extends StatelessWidget {
   const CustomPlugin({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

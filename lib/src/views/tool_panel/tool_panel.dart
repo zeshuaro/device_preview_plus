@@ -10,10 +10,10 @@ class ToolPanel extends StatelessWidget {
   /// The [isModal] indicates whether the panel is shown modally as a new page, or if it
   /// stays visible on one side of the parent layout.
   const ToolPanel({
-    Key? key,
+    super.key,
     required this.slivers,
     this.isModal = false,
-  }) : super(key: key);
+  });
 
   /// Indicates whether the panel is shown modally as a new page, or if it
   /// stays visible on one side of the parent layout.
@@ -58,11 +58,10 @@ class ToolPanel extends StatelessWidget {
 
 class _ToolPanel extends StatelessWidget {
   const _ToolPanel({
-    Key? key,
     required this.isModal,
     required this.onClose,
     required this.sections,
-  }) : super(key: key);
+  });
 
   final bool isModal;
   final VoidCallback onClose;
