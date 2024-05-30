@@ -9,9 +9,9 @@ import 'package:provider/provider.dart';
 class DervicePreviewLargeLayout extends StatefulWidget {
   /// Create a new panel from the given tools grouped as [slivers].
   const DervicePreviewLargeLayout({
-    Key? key,
+    super.key,
     required this.slivers,
-  }) : super(key: key);
+  });
 
   /// The sections containing the tools.
   ///

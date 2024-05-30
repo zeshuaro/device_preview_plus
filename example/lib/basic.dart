@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class BasicApp extends StatelessWidget {
   const BasicApp({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,8 @@ class BasicApp extends StatelessWidget {
 
 class Home extends StatelessWidget {
   const Home({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

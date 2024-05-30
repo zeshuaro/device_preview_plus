@@ -6,10 +6,10 @@ class TargetPlatformIcon extends StatelessWidget {
   ///
   /// A [color] can be given to customize the icon color.
   const TargetPlatformIcon({
-    Key? key,
+    super.key,
     required this.platform,
     this.color,
-  }) : super(key: key);
+  });
 
   final Color? color;
   final TargetPlatform platform;
