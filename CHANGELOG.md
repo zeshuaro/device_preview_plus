@@ -1,3 +1,50 @@
+## [2.0.0](https://github.com/zeshuaro/device_preview_plus/compare/v1.2.0...v2.0.0) (2024-06-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* **sdk:** update dart sdk to `>=3.0.0 <4.0.0` (#36)
+
+### Features
+
+* **sdk:** update dart sdk to `>=3.0.0 <4.0.0` ([#36](https://github.com/zeshuaro/device_preview_plus/issues/36)) ([597899e](https://github.com/zeshuaro/device_preview_plus/commit/597899ecb288d1c9cb6e6ade894c12b1038bdc1a))
+
+
+### Bug Fixes
+
+* **deps:** update dependency collection to ^1.18.0 ([#23](https://github.com/zeshuaro/device_preview_plus/issues/23)) ([9b24f26](https://github.com/zeshuaro/device_preview_plus/commit/9b24f26babb85e7180ceefeb3fcfa72a10046de1))
+* **deps:** update dependency freezed_annotation to ^2.4.1 ([#24](https://github.com/zeshuaro/device_preview_plus/issues/24)) ([a988d5f](https://github.com/zeshuaro/device_preview_plus/commit/a988d5fae3643b1d4bcdf113006fcf6e54a5a4c4))
+* **deps:** update dependency json_annotation to ^4.9.0 ([#25](https://github.com/zeshuaro/device_preview_plus/issues/25)) ([b4014c1](https://github.com/zeshuaro/device_preview_plus/commit/b4014c1052111523647202d0b05705311f430558))
+* **deps:** update dependency provider to ^6.1.2 ([#26](https://github.com/zeshuaro/device_preview_plus/issues/26)) ([3e38642](https://github.com/zeshuaro/device_preview_plus/commit/3e38642a06d53b69844accdea672061296c8eea8))
+* **deps:** update dependency shared_preferences to ^2.2.3 ([#27](https://github.com/zeshuaro/device_preview_plus/issues/27)) ([17e4660](https://github.com/zeshuaro/device_preview_plus/commit/17e4660956c9a7fe1c5693138329e4c5fa1fc0ec))
+* **example/deps:** update dependency cupertino_icons to ^1.0.8 ([#19](https://github.com/zeshuaro/device_preview_plus/issues/19)) ([d81bf54](https://github.com/zeshuaro/device_preview_plus/commit/d81bf5471d17705098c16bd75f6eaa24a5a7ef08))
+* **sdk:** update dart minor patch version ([#21](https://github.com/zeshuaro/device_preview_plus/issues/21)) ([52b370b](https://github.com/zeshuaro/device_preview_plus/commit/52b370bbb889336eb2c968c12d49658f274dbffc))
+* **sdk:** update dependency dart to >=3.0.7 <4.0.0 ([#37](https://github.com/zeshuaro/device_preview_plus/issues/37)) ([5282fb4](https://github.com/zeshuaro/device_preview_plus/commit/5282fb4aa2c948c9ed82af918aa2321a4bb49f5b))
+* **sdk:** update dependency dart to v2.19.6 ([#28](https://github.com/zeshuaro/device_preview_plus/issues/28)) ([11c74a6](https://github.com/zeshuaro/device_preview_plus/commit/11c74a65d27c8f37c93fcac06e19c255ec15b941))
+* **sdk:** update dependency flutter to >=3.22.1 ([#22](https://github.com/zeshuaro/device_preview_plus/issues/22)) ([6878c33](https://github.com/zeshuaro/device_preview_plus/commit/6878c333fa1653e11191d72d1056b588492edad6))
+
+
+### Documentation
+
+* **readme:** update with gif demo ([#17](https://github.com/zeshuaro/device_preview_plus/issues/17)) ([6246d49](https://github.com/zeshuaro/device_preview_plus/commit/6246d492c9ce4fd131aab4524cfec203d5f1e8d9))
+
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#20](https://github.com/zeshuaro/device_preview_plus/issues/20)) ([077f130](https://github.com/zeshuaro/device_preview_plus/commit/077f130e0995a6685802e7ac61c24a78a3900c0e))
+* **deps:** pin dependencies ([#14](https://github.com/zeshuaro/device_preview_plus/issues/14)) ([ab856b7](https://github.com/zeshuaro/device_preview_plus/commit/ab856b750326d93ae1c07f1d4e82911e46414d85))
+* **deps:** update dependency flutter_lints to v2.0.3 ([#31](https://github.com/zeshuaro/device_preview_plus/issues/31)) ([8a100e1](https://github.com/zeshuaro/device_preview_plus/commit/8a100e1f6e7e3c8244031fc54c98b101cb279967))
+* **deps:** update dependency flutter_lints to v3 ([#32](https://github.com/zeshuaro/device_preview_plus/issues/32)) ([8eb439a](https://github.com/zeshuaro/device_preview_plus/commit/8eb439aa8b37f02b4e1932a5eb0c6773bf8ef64f))
+* **deps:** update dependency flutter_lints to v4 ([#34](https://github.com/zeshuaro/device_preview_plus/issues/34)) ([a5c72e1](https://github.com/zeshuaro/device_preview_plus/commit/a5c72e1f003dd4e814e9bdb3cc3dded8506e3684))
+* **example/deps:** pin dependency flutter_lints to 1.0.4 ([#15](https://github.com/zeshuaro/device_preview_plus/issues/15)) ([9acd4c0](https://github.com/zeshuaro/device_preview_plus/commit/9acd4c0d4d7b59534b99173a5e1b79980eca4c16))
+* **example:** update dart to `>=3.0.0 <4.0.0` ([#39](https://github.com/zeshuaro/device_preview_plus/issues/39)) ([31974d0](https://github.com/zeshuaro/device_preview_plus/commit/31974d0be3e1e86568e34c49bb5a198bea3f0896))
+* **node:** update dependency node to v20.14.0 ([#29](https://github.com/zeshuaro/device_preview_plus/issues/29)) ([7683c1b](https://github.com/zeshuaro/device_preview_plus/commit/7683c1ba1ffe0a002c9507a9e1c5ffb9d5aed7ef))
+
+
+### Continuous Integration
+
+* setup renovate ([#13](https://github.com/zeshuaro/device_preview_plus/issues/13)) ([7a8a5fa](https://github.com/zeshuaro/device_preview_plus/commit/7a8a5fab3d7e2cc7304d068e7d8c2e32551fc58b))
+
 ## [1.2.0](https://github.com/zeshuaro/device_preview_plus/compare/v1.1.0...v1.2.0) (2024-05-26)
 
 
