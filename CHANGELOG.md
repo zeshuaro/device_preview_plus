@@ -1,3 +1,19 @@
+## [2.0.4](https://github.com/zeshuaro/device_preview_plus/compare/v2.0.3...v2.0.4) (2024-07-28)
+
+### Bug Fixes
+
+* **deps:** update dependency freezed_annotation to ^2.4.4 ([#79](https://github.com/zeshuaro/device_preview_plus/issues/79)) ([50d63f1](https://github.com/zeshuaro/device_preview_plus/commit/50d63f15a6e01d2529281da4f0c1a7e50a76cf33))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#78](https://github.com/zeshuaro/device_preview_plus/issues/78)) ([1231cda](https://github.com/zeshuaro/device_preview_plus/commit/1231cda34f6f0b241e81b0dd6d854e69fc991494))
+* **node:** update dependency node to v20.16.0 ([#81](https://github.com/zeshuaro/device_preview_plus/issues/81)) ([cf4bd16](https://github.com/zeshuaro/device_preview_plus/commit/cf4bd1659f7e68650ddc16b25e6494a1676c7470))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 4717eaa ([#80](https://github.com/zeshuaro/device_preview_plus/issues/80)) ([befaaf3](https://github.com/zeshuaro/device_preview_plus/commit/befaaf367db3b33816680d9146990f711d7558df))
+* **deps:** update zeshuaro/github-actions-workflows digest to 7de4f87 ([#82](https://github.com/zeshuaro/device_preview_plus/issues/82)) ([7e30382](https://github.com/zeshuaro/device_preview_plus/commit/7e30382541e391ca15f7044852782f954d9ab49e))
+
 ## [2.0.3](https://github.com/zeshuaro/device_preview_plus/compare/v2.0.2...v2.0.3) (2024-07-21)
 
 ### Bug Fixes
