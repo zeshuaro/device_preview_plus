@@ -75,20 +75,21 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
           ListTile(
             title: const Text('Width'),
             trailing: GestureDetector(
-              onTap: () {
-                _openDeviceSizeAdjustDialog(
+              onTap: () async {
+                final value = await _openDeviceSizeAdjustDialog(
                   context: context,
                   initialValue: customDevice.screenSize.width,
                   title: 'Change Width',
-                ).then((value) {
-                  if (value == null) return;
+                );
+                if (value == null) return;
+                if (context.mounted) {
                   final store = context.read<DevicePreviewStore>();
                   store.updateCustomDevice(
                     customDevice.copyWith(
                       screenSize: Size(value, customDevice.screenSize.height),
                     ),
                   );
-                });
+                }
               },
               child: Text(customDevice.screenSize.width.toString()),
             ),
@@ -111,20 +112,21 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
             title: const Text('Height'),
             trailing: GestureDetector(
               child: Text(customDevice.screenSize.height.toString()),
-              onTap: () {
-                _openDeviceSizeAdjustDialog(
+              onTap: () async {
+                final value = await _openDeviceSizeAdjustDialog(
                   context: context,
                   initialValue: customDevice.screenSize.height,
                   title: 'Change Height',
-                ).then((value) {
-                  if (value == null) return;
+                );
+                if (value == null) return;
+                if (context.mounted) {
                   final store = context.read<DevicePreviewStore>();
                   store.updateCustomDevice(
                     customDevice.copyWith(
                       screenSize: Size(customDevice.screenSize.width, value),
                     ),
                   );
-                });
+                }
               },
             ),
             subtitle: Slider(
