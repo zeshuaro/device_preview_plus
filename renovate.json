@@ -9,5 +9,14 @@
     "github>zeshuaro/renovate-configs:javascript",
     "github>zeshuaro/renovate-configs:nodeVersion",
     "github>zeshuaro/renovate-configs:nodeChore"
+  ],
+  "packageRules": [
+    {
+      "groupName": "Collection",
+      "description": "Used in Flutter SDK so its version has to be aligned with the SDK",
+      "matchPaths": ["pubspec.yaml"],
+      "matchPackageNames": ["collection"],
+      "enabled": false
+    }
   ]
 }
