@@ -1,3 +1,28 @@
+## [2.1.5](https://github.com/zeshuaro/device_preview_plus/compare/v2.1.4...v2.1.5) (2024-11-17)
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to ^2.3.3 ([#163](https://github.com/zeshuaro/device_preview_plus/issues/163)) ([9ba8708](https://github.com/zeshuaro/device_preview_plus/commit/9ba8708730d095da26f5724ec2832d437ad0236b))
+* **sdk:** update dependency flutter to v3.24.5 ([#162](https://github.com/zeshuaro/device_preview_plus/issues/162)) ([13e3330](https://github.com/zeshuaro/device_preview_plus/commit/13e3330449190ed2d73876240328005516243132))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#152](https://github.com/zeshuaro/device_preview_plus/issues/152)) ([9a34e47](https://github.com/zeshuaro/device_preview_plus/commit/9a34e4713fc58a951a983ae54d1d23bf796292f1))
+* **deps:** lock file maintenance ([#157](https://github.com/zeshuaro/device_preview_plus/issues/157)) ([4e4cc8a](https://github.com/zeshuaro/device_preview_plus/commit/4e4cc8ac810f8cdc29a3f1ab2af123698a6fdd0d))
+* **deps:** lock file maintenance ([#161](https://github.com/zeshuaro/device_preview_plus/issues/161)) ([90f6411](https://github.com/zeshuaro/device_preview_plus/commit/90f64117abf45c32be0e8796dd2e80aec205a6bb))
+* **deps:** update dependency flutter_lints to v5 ([#134](https://github.com/zeshuaro/device_preview_plus/issues/134)) ([14982c6](https://github.com/zeshuaro/device_preview_plus/commit/14982c61e2213a0d220a1535c0108efc3b88a922))
+* **deps:** update dependency semantic-release to v24.2.0 ([#154](https://github.com/zeshuaro/device_preview_plus/issues/154)) ([61cc057](https://github.com/zeshuaro/device_preview_plus/commit/61cc0578e4d4a260b0dea552a98d44ce0dae19d2))
+* **deps:** update dependency semantic-release-pub to v0.9.0 ([#158](https://github.com/zeshuaro/device_preview_plus/issues/158)) ([0910f6f](https://github.com/zeshuaro/device_preview_plus/commit/0910f6facad1854f0909171123d53c47eaedab6c))
+* **node:** update dependency node to v22 ([#155](https://github.com/zeshuaro/device_preview_plus/issues/155)) ([71719a7](https://github.com/zeshuaro/device_preview_plus/commit/71719a7b7067968ff8de0ba21afb253454d28491))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 242231c ([#156](https://github.com/zeshuaro/device_preview_plus/issues/156)) ([7edeb25](https://github.com/zeshuaro/device_preview_plus/commit/7edeb25d7434face15b849054e23ff77f624ca37))
+* **deps:** update zeshuaro/github-actions-workflows digest to 568e620 ([#164](https://github.com/zeshuaro/device_preview_plus/issues/164)) ([68cdcf7](https://github.com/zeshuaro/device_preview_plus/commit/68cdcf7ccab06766ef21da88bfa1281dc0621b19))
+* **deps:** update zeshuaro/github-actions-workflows digest to 71a020b ([#153](https://github.com/zeshuaro/device_preview_plus/issues/153)) ([8889d4b](https://github.com/zeshuaro/device_preview_plus/commit/8889d4bc00c27c9da82e8efe710bebd47a34ff51))
+* **deps:** update zeshuaro/github-actions-workflows digest to b28005a ([#159](https://github.com/zeshuaro/device_preview_plus/issues/159)) ([dd4e4c0](https://github.com/zeshuaro/device_preview_plus/commit/dd4e4c0f3a0ccf60fd0122ad01154b9638a5151b))
+* **deps:** update zeshuaro/github-actions-workflows digest to d138fda ([#160](https://github.com/zeshuaro/device_preview_plus/issues/160)) ([5ac81e0](https://github.com/zeshuaro/device_preview_plus/commit/5ac81e0e46d1d473703d447a169b52e15e09ac60))
+
 ## [2.1.4](https://github.com/zeshuaro/device_preview_plus/compare/v2.1.3...v2.1.4) (2024-10-27)
 
 ### Bug Fixes
