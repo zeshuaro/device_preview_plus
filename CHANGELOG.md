@@ -1,3 +1,19 @@
+## [2.2.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.0...v2.2.1) (2024-12-22)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.27.1 ([#188](https://github.com/zeshuaro/device_preview_plus/issues/188)) ([9071177](https://github.com/zeshuaro/device_preview_plus/commit/907117761a2f4637fcfab93d95c815de9e8c0e8c))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#187](https://github.com/zeshuaro/device_preview_plus/issues/187)) ([bf596b6](https://github.com/zeshuaro/device_preview_plus/commit/bf596b67ac64c2ac1ce90ce6606f60a8509f08ef))
+* **deps:** update dependency semantic-release-pub to v0.9.3 ([#190](https://github.com/zeshuaro/device_preview_plus/issues/190)) ([65c19b6](https://github.com/zeshuaro/device_preview_plus/commit/65c19b6ea72d72eeeb51df892c27f7c71bc3ae4a))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 803bde6 ([#191](https://github.com/zeshuaro/device_preview_plus/issues/191)) ([1b0ccd6](https://github.com/zeshuaro/device_preview_plus/commit/1b0ccd611fa85c0d18a5cc3e94cbd84dd4cc247a))
+* **deps:** update zeshuaro/github-actions-workflows digest to b1d5b9a ([#189](https://github.com/zeshuaro/device_preview_plus/issues/189)) ([a791726](https://github.com/zeshuaro/device_preview_plus/commit/a7917267b391b23edecb0798abe4b87871784c02))
+
 ## [2.2.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.1.5...v2.2.0) (2024-12-15)
 
 ### Features
