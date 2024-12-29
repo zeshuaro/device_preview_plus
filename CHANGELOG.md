@@ -1,3 +1,14 @@
+## [2.2.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.1...v2.2.2) (2024-12-29)
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to ^2.3.4 ([#195](https://github.com/zeshuaro/device_preview_plus/issues/195)) ([f31352b](https://github.com/zeshuaro/device_preview_plus/commit/f31352b4a79ab3e140d65cd1037bbe907b097fd7))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#192](https://github.com/zeshuaro/device_preview_plus/issues/192)) ([b3eda6a](https://github.com/zeshuaro/device_preview_plus/commit/b3eda6adc392555856b7d08ea054417b2a5536f7))
+* **deps:** update dependency build_runner to v2.4.14 ([#193](https://github.com/zeshuaro/device_preview_plus/issues/193)) ([e02990f](https://github.com/zeshuaro/device_preview_plus/commit/e02990f77d39ea1f0967b4ef489b18b7bcb50a5b))
+
 ## [2.2.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.0...v2.2.1) (2024-12-22)
 
 ### Bug Fixes
