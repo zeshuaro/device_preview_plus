@@ -1,3 +1,24 @@
+## [2.2.3](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.2...v2.2.3) (2025-01-12)
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to ^2.3.5 ([#205](https://github.com/zeshuaro/device_preview_plus/issues/205)) ([cfb1d32](https://github.com/zeshuaro/device_preview_plus/commit/cfb1d325382478ca57cb9b6479d0d3804ec40c69))
+
+### Documentation
+
+* **license:** update copyright year to 2025 ([#200](https://github.com/zeshuaro/device_preview_plus/issues/200)) ([ff90484](https://github.com/zeshuaro/device_preview_plus/commit/ff90484de12267a3fc69a83e36650742041536ae))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#196](https://github.com/zeshuaro/device_preview_plus/issues/196)) ([95c33a8](https://github.com/zeshuaro/device_preview_plus/commit/95c33a8cf59a42de951022923be34273c916ee15))
+* **deps:** update dependency semantic-release to v24.2.1 ([#199](https://github.com/zeshuaro/device_preview_plus/issues/199)) ([26a5321](https://github.com/zeshuaro/device_preview_plus/commit/26a53211a0ce09e96b354886ecb393ff192c16a6))
+* **deps:** update dependency semantic-release-pub to v0.9.4 ([#201](https://github.com/zeshuaro/device_preview_plus/issues/201)) ([f5ea15c](https://github.com/zeshuaro/device_preview_plus/commit/f5ea15c029a74ee2cda422f691d95eb7eb98c3c3))
+* **node:** update node.js to v22.13.0 ([#204](https://github.com/zeshuaro/device_preview_plus/issues/204)) ([2a089da](https://github.com/zeshuaro/device_preview_plus/commit/2a089da088dcd993acd494ca8534dccfca4ef93b))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 0e99264 ([#198](https://github.com/zeshuaro/device_preview_plus/issues/198)) ([be7b791](https://github.com/zeshuaro/device_preview_plus/commit/be7b7914c4d19446b746b45f8ba4c978e0565d9e))
+
 ## [2.2.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.1...v2.2.2) (2024-12-29)
 
 ### Bug Fixes
