@@ -1,3 +1,22 @@
+## [2.2.6](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.5...v2.2.6) (2025-02-02)
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to ^2.4.0 ([#222](https://github.com/zeshuaro/device_preview_plus/issues/222)) ([1f2e6e1](https://github.com/zeshuaro/device_preview_plus/commit/1f2e6e1134c32b231e0adfd544875730a3d0d9e7))
+
+### Miscellaneous Chores
+
+* **config:** migrate config renovate.json ([#216](https://github.com/zeshuaro/device_preview_plus/issues/216)) ([46fe76b](https://github.com/zeshuaro/device_preview_plus/commit/46fe76b7ca0bc46dc9df6d9b50860b7c54765ded))
+* **deps:** lock file maintenance ([#215](https://github.com/zeshuaro/device_preview_plus/issues/215)) ([fa0174b](https://github.com/zeshuaro/device_preview_plus/commit/fa0174bec3070507c0a50a56b5bb0ec2a71aa630))
+* **deps:** update code generation dependencies ([#217](https://github.com/zeshuaro/device_preview_plus/issues/217)) ([b57a674](https://github.com/zeshuaro/device_preview_plus/commit/b57a674452249054f8fe137c72445cdfc8ca6b0b))
+* **deps:** update dependency semantic-release-pub to v0.9.6 ([#218](https://github.com/zeshuaro/device_preview_plus/issues/218)) ([fd52f96](https://github.com/zeshuaro/device_preview_plus/commit/fd52f96dea6ec5edc5e9a3da9034cae3b9dde71d))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 10565a3 ([#214](https://github.com/zeshuaro/device_preview_plus/issues/214)) ([632e73a](https://github.com/zeshuaro/device_preview_plus/commit/632e73a266c87c42f2f9f42d482509b1cd930719))
+* **deps:** update zeshuaro/github-actions-workflows digest to bf22f76 ([#223](https://github.com/zeshuaro/device_preview_plus/issues/223)) ([aa06e3e](https://github.com/zeshuaro/device_preview_plus/commit/aa06e3ed7eb65211a9fc4e5ae2b752122f926e11))
+* **deps:** update zeshuaro/github-actions-workflows digest to dbd5e86 ([#221](https://github.com/zeshuaro/device_preview_plus/issues/221)) ([dcb23ac](https://github.com/zeshuaro/device_preview_plus/commit/dcb23ac2cf1fe456c098b611a930c76076939a2c))
+
 ## [2.2.5](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.4...v2.2.5) (2025-01-26)
 
 ### Bug Fixes
