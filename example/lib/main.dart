@@ -9,10 +9,7 @@ void main() {
   runApp(
     DevicePreview(
       enabled: true,
-      tools: const [
-        ...DevicePreview.defaultTools,
-        CustomPlugin(),
-      ],
+      tools: const [...DevicePreview.defaultTools, CustomPlugin()],
       builder: (context) => const BasicApp(),
     ),
   );
