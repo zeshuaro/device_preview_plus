@@ -69,15 +69,9 @@ class DeviceSection extends StatelessWidget {
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                TargetPlatformIcon(
-                  platform: deviceIdentifier.platform,
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
-                DeviceTypeIcon(
-                  type: deviceIdentifier.type,
-                ),
+                TargetPlatformIcon(platform: deviceIdentifier.platform),
+                const SizedBox(width: 8),
+                DeviceTypeIcon(type: deviceIdentifier.type),
                 const Icon(Icons.chevron_right_rounded),
               ],
             ),
@@ -86,10 +80,9 @@ class DeviceSection extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Theme(
-                    data: theme,
-                    child: const DeviceModelPicker(),
-                  ),
+                  builder:
+                      (context) =>
+                          Theme(data: theme, child: const DeviceModelPicker()),
                 ),
               );
             },
@@ -98,16 +91,14 @@ class DeviceSection extends StatelessWidget {
           ListTile(
             key: const Key('orientation'),
             title: const Text('Orientation'),
-            subtitle: Text(
-              () {
-                switch (orientation) {
-                  case Orientation.landscape:
-                    return 'Landscape';
-                  case Orientation.portrait:
-                    return 'Portrait';
-                }
-              }(),
-            ),
+            subtitle: Text(() {
+              switch (orientation) {
+                case Orientation.landscape:
+                  return 'Landscape';
+                case Orientation.portrait:
+                  return 'Portrait';
+              }
+            }()),
             trailing: AnimatedContainer(
               duration: const Duration(milliseconds: 200),
               transformAlignment: Alignment.center,

@@ -9,11 +9,7 @@ class ToolPanel extends StatelessWidget {
   ///
   /// The [isModal] indicates whether the panel is shown modally as a new page, or if it
   /// stays visible on one side of the parent layout.
-  const ToolPanel({
-    super.key,
-    required this.slivers,
-    this.isModal = false,
-  });
+  const ToolPanel({super.key, required this.slivers, this.isModal = false});
 
   /// Indicates whether the panel is shown modally as a new page, or if it
   /// stays visible on one side of the parent layout.
@@ -81,18 +77,20 @@ class _ToolPanel extends StatelessWidget {
           style: theme.textTheme.titleLarge?.copyWith(
             fontSize: 14,
             fontWeight: FontWeight.bold,
-            color: (theme.colorScheme.brightness == Brightness.dark
-                ? theme.colorScheme.onSurface
-                : theme.colorScheme.onPrimary),
+            color:
+                (theme.colorScheme.brightness == Brightness.dark
+                    ? theme.colorScheme.onSurface
+                    : theme.colorScheme.onPrimary),
           ),
         ),
-        leading: isModal
-            ? IconButton(
-                icon: const Icon(Icons.close),
-                tooltip: MaterialLocalizations.of(context).backButtonTooltip,
-                onPressed: onClose,
-              )
-            : null,
+        leading:
+            isModal
+                ? IconButton(
+                  icon: const Icon(Icons.close),
+                  tooltip: MaterialLocalizations.of(context).backButtonTooltip,
+                  onPressed: onClose,
+                )
+                : null,
         actions: [
           if (!isModal)
             Switch(
@@ -106,17 +104,13 @@ class _ToolPanel extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          CustomScrollView(
-            slivers: sections,
-          ),
+          CustomScrollView(slivers: sections),
           IgnorePointer(
             ignoring: isEnabled,
             child: AnimatedOpacity(
               opacity: isEnabled ? 0 : 1,
               duration: const Duration(milliseconds: 200),
-              child: Container(
-                color: const Color(0xCC000000),
-              ),
+              child: Container(color: const Color(0xCC000000)),
             ),
           ),
         ],

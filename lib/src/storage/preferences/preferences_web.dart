@@ -11,9 +11,7 @@ import '../storage.dart';
 /// A storage that keeps all preferences stored as json in the
 /// preference entry with the [preferenceKey] key.
 class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
-  PreferencesDevicePreviewStorage({
-    this.preferenceKey = defaultPreferencesKey,
-  });
+  PreferencesDevicePreviewStorage({this.preferenceKey = defaultPreferencesKey});
 
   /// The preferences key used to save the user configuration.
   final String preferenceKey;
@@ -43,8 +41,9 @@ class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
   Future _save() async {
     await Future.delayed(const Duration(milliseconds: 500));
     if (_saveData != null) {
-      web.window.localStorage['flutter.$defaultPreferencesKey'] =
-          jsonEncode(_saveData!.toJson());
+      web.window.localStorage['flutter.$defaultPreferencesKey'] = jsonEncode(
+        _saveData!.toJson(),
+      );
     }
     _saveTask = null;
   }

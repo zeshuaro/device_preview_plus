@@ -4,10 +4,7 @@ import 'dart:ui';
 /// A locale that has a display name.
 class NamedLocale {
   /// Create a new named locale from a [code] and a [name].
-  const NamedLocale(
-    this.code,
-    this.name,
-  );
+  const NamedLocale(this.code, this.name);
 
   /// The locale code in the form of `<countryCode>_`
   final String code;
@@ -59,13 +56,12 @@ Locale basicLocaleListResolution(
   final Map<String, Locale> languageLocales = HashMap<String, Locale>();
   final Map<String, Locale> countryLocales = HashMap<String, Locale>();
   for (final locale in supportedLocales) {
-    allSupportedLocales[
-            '${locale.languageCode}_${locale.scriptCode}_${locale.countryCode}'] ??=
+    allSupportedLocales['${locale.languageCode}_${locale.scriptCode}_${locale.countryCode}'] ??=
         locale;
     languageAndScriptLocales['${locale.languageCode}_${locale.scriptCode}'] ??=
         locale;
-    languageAndCountryLocales[
-        '${locale.languageCode}_${locale.countryCode}'] ??= locale;
+    languageAndCountryLocales['${locale.languageCode}_${locale.countryCode}'] ??=
+        locale;
     languageLocales[locale.languageCode] ??= locale;
     if (locale.countryCode != null) {
       countryLocales[locale.countryCode!] ??= locale;
@@ -80,9 +76,11 @@ Locale basicLocaleListResolution(
   Locale? matchesLanguageCode;
   Locale? matchesCountryCode;
   // Loop over user's preferred locales
-  for (var localeIndex = 0;
-      localeIndex < preferredLocales.length;
-      localeIndex += 1) {
+  for (
+    var localeIndex = 0;
+    localeIndex < preferredLocales.length;
+    localeIndex += 1
+  ) {
     final userLocale = preferredLocales[localeIndex];
     // Look for perfect match.
     if (allSupportedLocales.containsKey(
@@ -92,16 +90,16 @@ Locale basicLocaleListResolution(
     }
     // Look for language+script match.
     if (userLocale.scriptCode != null) {
-      final match = languageAndScriptLocales[
-          '${userLocale.languageCode}_${userLocale.scriptCode}'];
+      final match =
+          languageAndScriptLocales['${userLocale.languageCode}_${userLocale.scriptCode}'];
       if (match != null) {
         return match;
       }
     }
     // Look for language+country match.
     if (userLocale.countryCode != null) {
-      final match = languageAndCountryLocales[
-          '${userLocale.languageCode}_${userLocale.countryCode}'];
+      final match =
+          languageAndCountryLocales['${userLocale.languageCode}_${userLocale.countryCode}'];
       if (match != null) {
         return match;
       }

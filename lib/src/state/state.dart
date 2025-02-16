@@ -151,19 +151,8 @@ abstract class DevicePreviewSettingsData with _$DevicePreviewSettingsData {
       _$DevicePreviewSettingsDataFromJson(json);
 }
 
-enum DevicePreviewToolBarThemeData {
-  dark,
-  light,
-}
+enum DevicePreviewToolBarThemeData { dark, light }
 
-enum DevicePreviewBackgroundThemeData {
-  dark,
-  light,
-}
+enum DevicePreviewBackgroundThemeData { dark, light }
 
-enum DevicePreviewToolBarPositionData {
-  bottom,
-  top,
-  left,
-  right,
-}
+enum DevicePreviewToolBarPositionData { bottom, top, left, right }

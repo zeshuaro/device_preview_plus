@@ -5,10 +5,7 @@ import 'package:flutter/widgets.dart';
 class MediaQueryObserver extends StatefulWidget {
   final Widget child;
 
-  const MediaQueryObserver({
-    super.key,
-    required this.child,
-  });
+  const MediaQueryObserver({super.key, required this.child});
 
   @override
   MediaQueryObserverState createState() => MediaQueryObserverState();

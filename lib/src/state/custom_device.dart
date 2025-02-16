@@ -9,10 +9,7 @@ import 'package:flutter/material.dart';
 /// * [DeviceInfo] which describes a simulated device.
 class CustomDeviceInfo implements DeviceInfo {
   /// Creates a new custom device.
-  const CustomDeviceInfo._({
-    required this.identifier,
-    required this.data,
-  });
+  const CustomDeviceInfo._({required this.identifier, required this.data});
 
   /// Create a new custom device from stored [data].
   factory CustomDeviceInfo(CustomDeviceInfoData data) {

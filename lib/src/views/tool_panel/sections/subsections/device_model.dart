@@ -13,9 +13,7 @@ part 'custom_device.dart';
 /// A page for picking a simulated device model.
 class DeviceModelPicker extends StatefulWidget {
   /// Create a new page for picking a simulated device model.
-  const DeviceModelPicker({
-    super.key,
-  });
+  const DeviceModelPicker({super.key});
 
   @override
   State<DeviceModelPicker> createState() => _DeviceModelPickerState();
@@ -39,14 +37,12 @@ class _DeviceModelPickerState extends State<DeviceModelPicker>
   @override
   void initState() {
     super.initState();
-    controller.addListener(
-      () {
-        if (controller.index == _allPlatforms.length) {
-          final state = context.read<DevicePreviewStore>();
-          state.enableCustomDevice();
-        }
-      },
-    );
+    controller.addListener(() {
+      if (controller.index == _allPlatforms.length) {
+        final state = context.read<DevicePreviewStore>();
+        state.enableCustomDevice();
+      }
+    });
   }
 
   @override
@@ -65,15 +61,9 @@ class _DeviceModelPickerState extends State<DeviceModelPicker>
           isScrollable: true,
           tabs: [
             ..._allPlatforms.map(
-              (e) => Tab(
-                icon: TargetPlatformIcon(platform: e),
-                text: e.name,
-              ),
+              (e) => Tab(icon: TargetPlatformIcon(platform: e), text: e.name),
             ),
-            const Tab(
-              icon: Icon(Icons.tune),
-              text: 'Custom',
-            ),
+            const Tab(icon: Icon(Icons.tune), text: 'Custom'),
           ],
         ),
       ),
@@ -81,16 +71,8 @@ class _DeviceModelPickerState extends State<DeviceModelPicker>
         controller: controller,
         physics: const NeverScrollableScrollPhysics(),
         children: [
-          ..._allPlatforms.map(
-            (e) => _PlatformModelPicker(
-              platform: e,
-            ),
-          ),
-          CustomScrollView(
-            slivers: [
-              ...buildCustomDeviceTiles(context),
-            ],
-          ),
+          ..._allPlatforms.map((e) => _PlatformModelPicker(platform: e)),
+          CustomScrollView(slivers: [...buildCustomDeviceTiles(context)]),
         ],
       ),
     );
@@ -98,42 +80,33 @@ class _DeviceModelPickerState extends State<DeviceModelPicker>
 }
 
 class _PlatformModelPicker extends StatelessWidget {
-  const _PlatformModelPicker({
-    required this.platform,
-  });
+  const _PlatformModelPicker({required this.platform});
 
   final TargetPlatform platform;
 
   @override
   Widget build(BuildContext context) {
     final devices = context.select(
-      (DevicePreviewStore store) => store.devices
-          .where(
-            (x) => platform == x.identifier.platform,
-          )
-          .toList()
-        ..sort((x, y) {
-          final result = x.screenSize.width.compareTo(y.screenSize.width);
-          return result == 0
-              ? x.screenSize.height.compareTo(y.screenSize.height)
-              : result;
-        }),
+      (DevicePreviewStore store) =>
+          store.devices.where((x) => platform == x.identifier.platform).toList()
+            ..sort((x, y) {
+              final result = x.screenSize.width.compareTo(y.screenSize.width);
+              return result == 0
+                  ? x.screenSize.height.compareTo(y.screenSize.height)
+                  : result;
+            }),
     );
-    final byDeviceType =
-        groupBy<DeviceInfo, DeviceType>(devices, (d) => d.identifier.type);
+    final byDeviceType = groupBy<DeviceInfo, DeviceType>(
+      devices,
+      (d) => d.identifier.type,
+    );
     return ListView(
       children: [
         ...byDeviceType.entries
             .map(
               (e) => [
-                _TypeSectionHeader(
-                  type: e.key,
-                ),
-                ...e.value.map(
-                  (d) => DeviceTile(
-                    info: d,
-                  ),
-                ),
+                _TypeSectionHeader(type: e.key),
+                ...e.value.map((d) => DeviceTile(info: d)),
               ],
             )
             .expand((x) => x),
@@ -143,9 +116,7 @@ class _PlatformModelPicker extends StatelessWidget {
 }
 
 class _TypeSectionHeader extends StatelessWidget {
-  _TypeSectionHeader({
-    required this.type,
-  }) : super(key: ValueKey(type));
+  _TypeSectionHeader({required this.type}) : super(key: ValueKey(type));
 
   final DeviceType type;
 
@@ -168,21 +139,15 @@ class _TypeSectionHeader extends StatelessWidget {
             default:
               return 'Phone';
           }
-        }()
-            .toUpperCase(),
-        style: theme.textTheme.titleSmall?.copyWith(
-          color: theme.hintColor,
-        ),
+        }().toUpperCase(),
+        style: theme.textTheme.titleSmall?.copyWith(color: theme.hintColor),
       ),
     );
   }
 }
 
 class DeviceTile extends StatelessWidget {
-  const DeviceTile({
-    super.key,
-    required this.info,
-  });
+  const DeviceTile({super.key, required this.info});
 
   final DeviceInfo info;
 
@@ -193,9 +158,7 @@ class DeviceTile extends StatelessWidget {
       leading: DeviceTypeIcon(type: info.identifier.type),
       subtitle: Text(
         '${info.screenSize.width}x${info.screenSize.height} @${info.pixelRatio}',
-        style: const TextStyle(
-          fontSize: 10,
-        ),
+        style: const TextStyle(fontSize: 10),
       ),
       onTap: () {
         final state = context.read<DevicePreviewStore>();
