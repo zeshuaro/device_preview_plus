@@ -2,8 +2,9 @@
 
 import 'dart:async';
 import 'dart:convert' show jsonDecode, jsonEncode;
-import 'dart:html' as html;
+
 import 'package:device_preview_plus/src/state/state.dart';
+import 'package:web/web.dart' as web;
 
 import '../storage.dart';
 
@@ -23,7 +24,7 @@ class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
   /// Load the last saved preferences (until [ignore] is `true`).
   @override
   Future<DevicePreviewData?> load() async {
-    final json = html.window.localStorage['flutter.$defaultPreferencesKey'];
+    final json = web.window.localStorage['flutter.$defaultPreferencesKey'];
     if (json == null || json.isEmpty) return null;
     return DevicePreviewData.fromJson(jsonDecode(json));
   }
@@ -42,7 +43,7 @@ class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
   Future _save() async {
     await Future.delayed(const Duration(milliseconds: 500));
     if (_saveData != null) {
-      html.window.localStorage['flutter.$defaultPreferencesKey'] =
+      web.window.localStorage['flutter.$defaultPreferencesKey'] =
           jsonEncode(_saveData!.toJson());
     }
     _saveTask = null;
