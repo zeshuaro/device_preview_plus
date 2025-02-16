@@ -8,10 +8,7 @@ import 'package:provider/provider.dart';
 /// The tool layout when the screen is large.
 class DervicePreviewLargeLayout extends StatefulWidget {
   /// Create a new panel from the given tools grouped as [slivers].
-  const DervicePreviewLargeLayout({
-    super.key,
-    required this.slivers,
-  });
+  const DervicePreviewLargeLayout({super.key, required this.slivers});
 
   /// The sections containing the tools.
   ///
@@ -59,16 +56,16 @@ class DervicePreviewLargeLayoutState extends State<DervicePreviewLargeLayout> {
                 width: ToolPanel.panelWidth,
                 child: MediaQuery(
                   data: mediaQuery.copyWith(
-                    padding: mediaQuery.padding.copyWith(left: 0) +
+                    padding:
+                        mediaQuery.padding.copyWith(left: 0) +
                         const EdgeInsets.only(left: 40),
                   ),
                   child: Navigator(
                     onGenerateInitialRoutes: (navigator, initialRoute) {
                       return [
                         MaterialPageRoute(
-                          builder: (context) => ToolPanel(
-                            slivers: widget.slivers,
-                          ),
+                          builder:
+                              (context) => ToolPanel(slivers: widget.slivers),
                         ),
                       ];
                     },

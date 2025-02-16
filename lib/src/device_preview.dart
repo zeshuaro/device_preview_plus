@@ -119,9 +119,7 @@ class DevicePreview extends StatefulWidget {
 
   /// The currently selected device.
   static DeviceInfo selectedDevice(BuildContext context) {
-    return context.select(
-      (DevicePreviewStore store) => store.deviceInfo,
-    );
+    return context.select((DevicePreviewStore store) => store.deviceInfo);
   }
 
   /// The simulated target platform for the currently selected device.
@@ -221,10 +219,7 @@ class DevicePreview extends StatefulWidget {
   ///
   /// If [enablePreview] is set to `true`, then the device preview is also enabled
   /// when appearing.
-  static void showToolbar(
-    BuildContext context, {
-    bool enablePreview = true,
-  }) {
+  static void showToolbar(BuildContext context, {bool enablePreview = true}) {
     final store = Provider.of<DevicePreviewStore>(context);
     store.data = store.data.copyWith(
       isToolbarVisible: true,
@@ -236,10 +231,7 @@ class DevicePreview extends StatefulWidget {
   ///
   /// If [disablePreview] is set to `false`, then the device preview stays active even
   /// if the toolbar is not visible anymore.
-  static void hideToolbar(
-    BuildContext context, {
-    bool disablePreview = true,
-  }) {
+  static void hideToolbar(BuildContext context, {bool disablePreview = true}) {
     final store = Provider.of<DevicePreviewStore>(context);
     store.data = store.data.copyWith(
       isToolbarVisible: false,
@@ -367,9 +359,7 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
     final image = await boundary.toImage(
       pixelRatio: store.deviceInfo.pixelRatio,
     );
-    final byteData = await image.toByteData(
-      format: format,
-    );
+    final byteData = await image.toByteData(format: format);
     final bytes = byteData!.buffer.asUint8List();
     final screenshot = DeviceScreenshot(
       device: store.deviceInfo,
@@ -470,21 +460,19 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
   @override
   Widget build(BuildContext context) {
     if (!widget.enabled) {
-      return Builder(
-        key: _appKey,
-        builder: widget.builder,
-      );
+      return Builder(key: _appKey, builder: widget.builder);
     }
     final preferredLocales = View.of(context).platformDispatcher.locales;
 
     return ChangeNotifierProvider(
-      create: (context) => DevicePreviewStore(
-        defaultDevice: widget.defaultDevice ?? Devices.ios.iPhone13,
-        devices: widget.devices,
-        preferredLocales: preferredLocales,
-        availableLocales: widget.availableLocales,
-        storage: storage,
-      ),
+      create:
+          (context) => DevicePreviewStore(
+            defaultDevice: widget.defaultDevice ?? Devices.ios.iPhone13,
+            devices: widget.devices,
+            preferredLocales: preferredLocales,
+            availableLocales: widget.availableLocales,
+            storage: storage,
+          ),
       builder: (context, child) {
         final isInitialized = context.select(
           (DevicePreviewStore store) => store.state.maybeMap(
@@ -494,10 +482,7 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
         );
 
         if (!isInitialized) {
-          return Builder(
-            key: _appKey,
-            builder: widget.builder,
-          );
+          return Builder(key: _appKey, builder: widget.builder);
         }
 
         final isEnabled = context.select(
@@ -512,7 +497,8 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
           (DevicePreviewStore store) => store.settings.backgroundTheme,
         );
 
-        final isToolbarVisible = widget.isToolbarVisible &&
+        final isToolbarVisible =
+            widget.isToolbarVisible &&
             context.select(
               (DevicePreviewStore store) => store.data.isToolbarVisible,
             );
@@ -534,22 +520,26 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                     final mediaQuery = MediaQuery.of(context);
                     final isSmall = constraints.maxWidth < 700;
 
-                    final borderRadius = isToolbarVisible
-                        ? BorderRadius.only(
-                            topRight: isSmall
-                                ? Radius.zero
-                                : const Radius.circular(16),
-                            bottomRight: const Radius.circular(16),
-                            bottomLeft: isSmall
-                                ? const Radius.circular(16)
-                                : Radius.zero,
-                          )
-                        : BorderRadius.zero;
-                    final double rightPanelOffset = !isSmall
-                        ? (isEnabled
-                            ? ToolPanel.panelWidth - 10
-                            : (64 + mediaQuery.padding.right))
-                        : 0;
+                    final borderRadius =
+                        isToolbarVisible
+                            ? BorderRadius.only(
+                              topRight:
+                                  isSmall
+                                      ? Radius.zero
+                                      : const Radius.circular(16),
+                              bottomRight: const Radius.circular(16),
+                              bottomLeft:
+                                  isSmall
+                                      ? const Radius.circular(16)
+                                      : Radius.zero,
+                            )
+                            : BorderRadius.zero;
+                    final double rightPanelOffset =
+                        !isSmall
+                            ? (isEnabled
+                                ? ToolPanel.panelWidth - 10
+                                : (64 + mediaQuery.padding.right))
+                            : 0;
                     final double bottomPanelOffset =
                         isSmall ? mediaQuery.padding.bottom + 52 : 0;
                     return Stack(
@@ -564,9 +554,10 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                               slivers: widget.tools,
                               maxMenuHeight: constraints.maxHeight * 0.5,
                               scaffoldKey: scaffoldKey,
-                              onMenuVisibleChanged: (isVisible) => setState(() {
-                                _isToolPanelPopOverOpen = isVisible;
-                              }),
+                              onMenuVisibleChanged:
+                                  (isVisible) => setState(() {
+                                    _isToolPanelPopOverOpen = isVisible;
+                                  }),
                             ),
                           ),
                         if (isToolbarVisible && !isSmall)
@@ -598,14 +589,13 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                               ),
                               child: ClipRRect(
                                 borderRadius: borderRadius,
-                                child: isEnabled
-                                    ? Builder(
-                                        builder: _buildPreview,
-                                      )
-                                    : Builder(
-                                        key: _appKey,
-                                        builder: widget.builder,
-                                      ),
+                                child:
+                                    isEnabled
+                                        ? Builder(builder: _buildPreview)
+                                        : Builder(
+                                          key: _appKey,
+                                          builder: widget.builder,
+                                        ),
                               ),
                             ),
                           ),
@@ -624,10 +614,11 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                                 onGenerateInitialRoutes: (navigator, name) {
                                   return [
                                     MaterialPageRoute(
-                                      builder: (context) => Scaffold(
-                                        key: scaffoldKey,
-                                        backgroundColor: Colors.transparent,
-                                      ),
+                                      builder:
+                                          (context) => Scaffold(
+                                            key: scaffoldKey,
+                                            backgroundColor: Colors.transparent,
+                                          ),
                                     ),
                                   ];
                                 },

@@ -85,11 +85,6 @@ class EdgeInsetsJsonConverter implements JsonConverter<EdgeInsets, Object?> {
 
   @override
   Object? toJson(EdgeInsets object) {
-    return [
-      object.left,
-      object.top,
-      object.right,
-      object.bottom,
-    ];
+    return [object.left, object.top, object.right, object.bottom];
   }
 }

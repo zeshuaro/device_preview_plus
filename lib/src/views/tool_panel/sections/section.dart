@@ -23,27 +23,25 @@ class ToolPanelSection extends StatelessWidget {
     return SliverPadding(
       padding: const EdgeInsets.only(bottom: 32.0),
       sliver: SliverList(
-        delegate: SliverChildListDelegate(
-          [
-            SafeArea(
-              top: false,
-              bottom: false,
-              minimum: const EdgeInsets.only(
-                top: 20,
-                left: 16,
-                right: 16,
-                bottom: 4,
-              ),
-              child: Text(
-                title.toUpperCase(),
-                style: theme.textTheme.titleSmall?.copyWith(
-                  color: theme.hintColor,
-                ),
+        delegate: SliverChildListDelegate([
+          SafeArea(
+            top: false,
+            bottom: false,
+            minimum: const EdgeInsets.only(
+              top: 20,
+              left: 16,
+              right: 16,
+              bottom: 4,
+            ),
+            child: Text(
+              title.toUpperCase(),
+              style: theme.textTheme.titleSmall?.copyWith(
+                color: theme.hintColor,
               ),
             ),
-            ...children,
-          ],
-        ),
+          ),
+          ...children,
+        ]),
       ),
     );
   }

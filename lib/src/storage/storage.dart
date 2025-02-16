@@ -15,10 +15,7 @@ abstract class DevicePreviewStorage {
   factory DevicePreviewStorage.preferences({
     String preferenceKey =
         PreferencesDevicePreviewStorage.defaultPreferencesKey,
-  }) =>
-      PreferencesDevicePreviewStorage(
-        preferenceKey: preferenceKey,
-      );
+  }) => PreferencesDevicePreviewStorage(preferenceKey: preferenceKey);
 
   /// Save the given [data] to the storage so that it can be loaded
   /// later with the [load] method.

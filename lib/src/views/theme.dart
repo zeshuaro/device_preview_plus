@@ -38,8 +38,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
             overlayColor: accentColor.withValues(alpha: 0.12),
           ),
           checkboxTheme: CheckboxThemeData(
-            fillColor: WidgetStateProperty.resolveWith<Color?>(
-                (Set<WidgetState> states) {
+            fillColor: WidgetStateProperty.resolveWith<Color?>((
+              Set<WidgetState> states,
+            ) {
               if (states.contains(WidgetState.disabled)) {
                 return null;
               }
@@ -50,8 +51,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
             }),
           ),
           radioTheme: RadioThemeData(
-            fillColor: WidgetStateProperty.resolveWith<Color?>(
-                (Set<WidgetState> states) {
+            fillColor: WidgetStateProperty.resolveWith<Color?>((
+              Set<WidgetState> states,
+            ) {
               if (states.contains(WidgetState.disabled)) {
                 return null;
               }
@@ -62,8 +64,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
             }),
           ),
           switchTheme: SwitchThemeData(
-            thumbColor: WidgetStateProperty.resolveWith<Color?>(
-                (Set<WidgetState> states) {
+            thumbColor: WidgetStateProperty.resolveWith<Color?>((
+              Set<WidgetState> states,
+            ) {
               if (states.contains(WidgetState.disabled)) {
                 return null;
               }
@@ -72,8 +75,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
               }
               return null;
             }),
-            trackColor: WidgetStateProperty.resolveWith<Color?>(
-                (Set<WidgetState> states) {
+            trackColor: WidgetStateProperty.resolveWith<Color?>((
+              Set<WidgetState> states,
+            ) {
               if (states.contains(WidgetState.disabled)) {
                 return null;
               }
@@ -97,9 +101,7 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           primaryColorDark: accentColor,
           indicatorColor: accentColor,
           highlightColor: accentColor,
-          appBarTheme: base.appBarTheme.copyWith(
-            color: barColor,
-          ),
+          appBarTheme: base.appBarTheme.copyWith(color: barColor),
           sliderTheme: base.sliderTheme.copyWith(
             thumbColor: accentColor,
             activeTrackColor: accentColor.withValues(alpha: 0.7),
@@ -109,8 +111,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
             overlayColor: accentColor.withValues(alpha: 0.12),
           ),
           checkboxTheme: CheckboxThemeData(
-            fillColor: WidgetStateProperty.resolveWith<Color?>(
-                (Set<WidgetState> states) {
+            fillColor: WidgetStateProperty.resolveWith<Color?>((
+              Set<WidgetState> states,
+            ) {
               if (states.contains(WidgetState.disabled)) {
                 return null;
               }
@@ -121,8 +124,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
             }),
           ),
           radioTheme: RadioThemeData(
-            fillColor: WidgetStateProperty.resolveWith<Color?>(
-                (Set<WidgetState> states) {
+            fillColor: WidgetStateProperty.resolveWith<Color?>((
+              Set<WidgetState> states,
+            ) {
               if (states.contains(WidgetState.disabled)) {
                 return null;
               }
@@ -133,8 +137,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
             }),
           ),
           switchTheme: SwitchThemeData(
-            thumbColor: WidgetStateProperty.resolveWith<Color?>(
-                (Set<WidgetState> states) {
+            thumbColor: WidgetStateProperty.resolveWith<Color?>((
+              Set<WidgetState> states,
+            ) {
               if (states.contains(WidgetState.disabled)) {
                 return null;
               }
@@ -143,8 +148,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
               }
               return null;
             }),
-            trackColor: WidgetStateProperty.resolveWith<Color?>(
-                (Set<WidgetState> states) {
+            trackColor: WidgetStateProperty.resolveWith<Color?>((
+              Set<WidgetState> states,
+            ) {
               if (states.contains(WidgetState.disabled)) {
                 return null;
               }
