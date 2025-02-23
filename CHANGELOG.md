@@ -1,3 +1,33 @@
+## [2.3.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.7...v2.3.0) (2025-02-23)
+
+### Features
+
+* **sdk:** update dependency flutter to v3.29.0 ([#233](https://github.com/zeshuaro/device_preview_plus/issues/233)) ([74cb5b6](https://github.com/zeshuaro/device_preview_plus/commit/74cb5b65cb70f0dd8302ccaeeb7121c2ba1f4168))
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to ^2.5.2 ([#237](https://github.com/zeshuaro/device_preview_plus/issues/237)) ([fb74c85](https://github.com/zeshuaro/device_preview_plus/commit/fb74c855c252dc7b262027c66df4fee4b2a379ad))
+* migrate to dependency `web` ([#235](https://github.com/zeshuaro/device_preview_plus/issues/235)) ([159b210](https://github.com/zeshuaro/device_preview_plus/commit/159b210ca81bd3d0eb9bd304f1724308ca611e68))
+* **sdk:** update dependency dart to >=3.7.0 <4.0.0 ([#231](https://github.com/zeshuaro/device_preview_plus/issues/231)) ([00eb52f](https://github.com/zeshuaro/device_preview_plus/commit/00eb52f0df561f4bf6e44247646b4e40d414373f))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#228](https://github.com/zeshuaro/device_preview_plus/issues/228)) ([e68768f](https://github.com/zeshuaro/device_preview_plus/commit/e68768f6e35fb740f302f6df24abd1f7e7f1cb2b))
+* **deps:** update dependency build_runner to v2.4.15 ([#238](https://github.com/zeshuaro/device_preview_plus/issues/238)) ([99eeb81](https://github.com/zeshuaro/device_preview_plus/commit/99eeb818fcd4c6ba7a2eead79f5319f8a35ccf58))
+* **deps:** update dependency json_serializable to v6.9.4 ([#240](https://github.com/zeshuaro/device_preview_plus/issues/240)) ([debcdaa](https://github.com/zeshuaro/device_preview_plus/commit/debcdaa0825d43825d8068aed5c08c0ac47d461a))
+* **deps:** update dependency semantic-release to v24.2.2 ([#232](https://github.com/zeshuaro/device_preview_plus/issues/232)) ([5f8973d](https://github.com/zeshuaro/device_preview_plus/commit/5f8973ddcae62fa8983beb21339b36038b876068))
+* **deps:** update dependency semantic-release to v24.2.3 ([#239](https://github.com/zeshuaro/device_preview_plus/issues/239)) ([f1f5dd7](https://github.com/zeshuaro/device_preview_plus/commit/f1f5dd72dc1f17f27b135f094ade290a50c8eecd))
+* **deps:** update dependency semantic-release-pub to v0.10.2 ([#241](https://github.com/zeshuaro/device_preview_plus/issues/241)) ([9a2dadb](https://github.com/zeshuaro/device_preview_plus/commit/9a2dadb41819a03b473e4df6a8f80c213032c2c0))
+* **example/deps:** update dependency dart to >=3.7.0 <4.0.0 ([#230](https://github.com/zeshuaro/device_preview_plus/issues/230)) ([a993d62](https://github.com/zeshuaro/device_preview_plus/commit/a993d62e3e42740cff2394284452074126941eb0))
+* **node:** update node.js to v22.14.0 ([#229](https://github.com/zeshuaro/device_preview_plus/issues/229)) ([b0ac94b](https://github.com/zeshuaro/device_preview_plus/commit/b0ac94be0393f6711e9d3a439ccee599da939621))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 9d9d6ec ([#236](https://github.com/zeshuaro/device_preview_plus/issues/236)) ([44d2b74](https://github.com/zeshuaro/device_preview_plus/commit/44d2b74eb5e7552a6f280d11c7dcd9d242fec62a))
+* **deps:** update zeshuaro/github-actions-workflows digest to b2dbc93 ([#234](https://github.com/zeshuaro/device_preview_plus/issues/234)) ([6a5dbb3](https://github.com/zeshuaro/device_preview_plus/commit/6a5dbb3a06e3205c2d20c164746e23d1d8201df4))
+* **deps:** update zeshuaro/github-actions-workflows digest to d5eb020 ([#243](https://github.com/zeshuaro/device_preview_plus/issues/243)) ([ccabf15](https://github.com/zeshuaro/device_preview_plus/commit/ccabf1579342d8082b10c26b2a9f1255245d546c))
+* **deps:** update zeshuaro/github-actions-workflows digest to f3ddb04 ([#242](https://github.com/zeshuaro/device_preview_plus/issues/242)) ([1f62f5a](https://github.com/zeshuaro/device_preview_plus/commit/1f62f5a66076f3fb8ce4f41e2886b40ba44f9087))
+
 ## [2.2.7](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.6...v2.2.7) (2025-02-09)
 
 ### Bug Fixes
