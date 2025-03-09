@@ -1,3 +1,21 @@
+## [2.3.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.0...v2.3.1) (2025-03-09)
+
+### Bug Fixes
+
+* **deps:** update dependency web to ^1.1.1 ([#252](https://github.com/zeshuaro/device_preview_plus/issues/252)) ([361fc70](https://github.com/zeshuaro/device_preview_plus/commit/361fc706988d932cf85c832699a0b6c1767791a9))
+* **sdk:** update dependency flutter to v3.29.1 ([#254](https://github.com/zeshuaro/device_preview_plus/issues/254)) ([765bad2](https://github.com/zeshuaro/device_preview_plus/commit/765bad218683676bd3fd001d9706ba37bfd3f1ff))
+* update web local storage usages ([#253](https://github.com/zeshuaro/device_preview_plus/issues/253)) ([b863f06](https://github.com/zeshuaro/device_preview_plus/commit/b863f06aa8377e8688a29858d552ff12e8e15a9d))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#244](https://github.com/zeshuaro/device_preview_plus/issues/244)) ([cddf73f](https://github.com/zeshuaro/device_preview_plus/commit/cddf73f5ac1af60b52bd00a6705aeb346c2d8ae7))
+* **deps:** lock file maintenance ([#249](https://github.com/zeshuaro/device_preview_plus/issues/249)) ([100cced](https://github.com/zeshuaro/device_preview_plus/commit/100cced669908773573927ea928e65456d98f8c7))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 13ef8aa ([#246](https://github.com/zeshuaro/device_preview_plus/issues/246)) ([1b5b116](https://github.com/zeshuaro/device_preview_plus/commit/1b5b1169a666e1af5e17b63ea9287d716257d31e))
+* **deps:** update zeshuaro/github-actions-workflows digest to b9a6ba1 ([#245](https://github.com/zeshuaro/device_preview_plus/issues/245)) ([9dabbb7](https://github.com/zeshuaro/device_preview_plus/commit/9dabbb7997b4bb161d128afd482a3be1ae919a47))
+
 ## [2.3.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.2.7...v2.3.0) (2025-02-23)
 
 ### Features
