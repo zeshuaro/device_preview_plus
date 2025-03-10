@@ -1,4 +1,4 @@
-export 'package:device_frame/device_frame.dart';
+export 'package:device_frame_plus/device_frame_plus.dart';
 
 export 'src/device_preview.dart';
 export 'src/locales/default_locales.dart';
