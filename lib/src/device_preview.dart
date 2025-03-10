@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:ui' as ui;
 
-import 'package:device_frame/device_frame.dart';
+import 'package:device_frame_plus/device_frame_plus.dart';
 import 'package:device_preview_plus/src/state/state.dart';
 import 'package:device_preview_plus/src/state/store.dart';
 import 'package:device_preview_plus/src/storage/storage.dart';
