@@ -1,3 +1,19 @@
+## [2.3.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.1...v2.3.2) (2025-03-16)
+
+### Bug Fixes
+
+* **sdk:** update dependency dart to >=3.7.2 <4.0.0 ([#248](https://github.com/zeshuaro/device_preview_plus/issues/248)) ([e772de1](https://github.com/zeshuaro/device_preview_plus/commit/e772de1e7f3e2da4dc62157f10c2a1d3f2318bb4))
+* **sdk:** update dependency flutter to v3.29.2 ([#259](https://github.com/zeshuaro/device_preview_plus/issues/259)) ([48cbc84](https://github.com/zeshuaro/device_preview_plus/commit/48cbc8467becd4b659b7350babc5b522d99fe2b2))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#255](https://github.com/zeshuaro/device_preview_plus/issues/255)) ([c5b4a8f](https://github.com/zeshuaro/device_preview_plus/commit/c5b4a8f06896ec685c2cc388e9d24a1785ec0ba1))
+* **example/deps:** update dependency dart to >=3.7.2 <4.0.0 ([#247](https://github.com/zeshuaro/device_preview_plus/issues/247)) ([d36e661](https://github.com/zeshuaro/device_preview_plus/commit/d36e66193616fe01277879b9e69d15c49d5aa4af))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to af0b8e7 ([#258](https://github.com/zeshuaro/device_preview_plus/issues/258)) ([9493a39](https://github.com/zeshuaro/device_preview_plus/commit/9493a39e5952480163a99999a228feb0e47771d2))
+
 ## [2.3.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.0...v2.3.1) (2025-03-09)
 
 ### Bug Fixes
