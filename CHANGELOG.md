@@ -1,3 +1,9 @@
+## [2.3.3](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.2...v2.3.3) (2025-03-16)
+
+### Bug Fixes
+
+* **deps:** migrate to device_frame_plus and update freezed to v3 ([#257](https://github.com/zeshuaro/device_preview_plus/issues/257)) ([7c64961](https://github.com/zeshuaro/device_preview_plus/commit/7c6496170a830075d6e0e43b84d6083e5f10b3d8))
+
 ## [2.3.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.1...v2.3.2) (2025-03-16)
 
 ### Bug Fixes
