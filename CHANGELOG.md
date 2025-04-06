@@ -1,3 +1,23 @@
+## [2.3.4](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.3...v2.3.4) (2025-04-06)
+
+### Bug Fixes
+
+* **deps:** update dependency provider to ^6.1.4 ([#268](https://github.com/zeshuaro/device_preview_plus/issues/268)) ([34b22f5](https://github.com/zeshuaro/device_preview_plus/commit/34b22f5d2259c5a46a3f02519419176d4334bdcc))
+* **deps:** update dependency shared_preferences to ^2.5.3 ([#269](https://github.com/zeshuaro/device_preview_plus/issues/269)) ([ca7674a](https://github.com/zeshuaro/device_preview_plus/commit/ca7674a51e96316bd751419ee948e76817409e28))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#262](https://github.com/zeshuaro/device_preview_plus/issues/262)) ([ca90774](https://github.com/zeshuaro/device_preview_plus/commit/ca90774e7623a455b078416706e13bdd76a760d5))
+* **deps:** lock file maintenance ([#266](https://github.com/zeshuaro/device_preview_plus/issues/266)) ([336a72a](https://github.com/zeshuaro/device_preview_plus/commit/336a72a56a86948b89724d8ba9263269d6bda86c))
+* **deps:** update dependency freezed to v3.0.4 ([#263](https://github.com/zeshuaro/device_preview_plus/issues/263)) ([bac7e7f](https://github.com/zeshuaro/device_preview_plus/commit/bac7e7f1e2bf6b0f6fcff4b51bcba15c9913124f))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 27ee334 ([#267](https://github.com/zeshuaro/device_preview_plus/issues/267)) ([61afbef](https://github.com/zeshuaro/device_preview_plus/commit/61afbef958fe0051853120d46bc5cc66511942cc))
+* **deps:** update zeshuaro/github-actions-workflows digest to 478aa3f ([#265](https://github.com/zeshuaro/device_preview_plus/issues/265)) ([5da624a](https://github.com/zeshuaro/device_preview_plus/commit/5da624a6270929e528d623eee369a440ba599801))
+* **deps:** update zeshuaro/github-actions-workflows digest to 8b39c98 ([#270](https://github.com/zeshuaro/device_preview_plus/issues/270)) ([397b5a8](https://github.com/zeshuaro/device_preview_plus/commit/397b5a871ee7624e345da8be9e7358c6ddbac585))
+* **deps:** update zeshuaro/github-actions-workflows digest to aa3c43b ([#264](https://github.com/zeshuaro/device_preview_plus/issues/264)) ([3d0cf90](https://github.com/zeshuaro/device_preview_plus/commit/3d0cf9099e929146ba18b4bae3f7c6699792c9d9))
+
 ## [2.3.3](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.2...v2.3.3) (2025-03-16)
 
 ### Bug Fixes
