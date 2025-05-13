@@ -1,5 +1,6 @@
 import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 /// A device info that can be customized at runtime to update
 /// its current preview.
@@ -54,6 +55,75 @@ class CustomDeviceInfo implements DeviceInfo {
 
   @override
   CustomPainter get framePainter => _painter;
+
+  @override
+  List<DiagnosticsNode> debugDescribeChildren() => <DiagnosticsNode>[];
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    properties.add(StringProperty('name', name));
+    properties.add(DoubleProperty('pixelRatio', pixelRatio));
+    properties.add(DiagnosticsProperty<EdgeInsets>('safeAreas', safeAreas));
+    properties.add(DiagnosticsProperty<Size>('screenSize', screenSize));
+    properties.add(DiagnosticsProperty<Size>('frameSize', frameSize));
+    properties.add(
+      DiagnosticsProperty<DeviceIdentifier>('identifier', identifier),
+    );
+  }
+
+  @override
+  DiagnosticsNode toDiagnosticsNode({
+    String? name,
+    DiagnosticsTreeStyle? style,
+  }) {
+    return DiagnosticsProperty<DeviceInfo>(
+      name ?? 'CustomDeviceInfo',
+      this,
+      style: style!,
+    );
+  }
+
+  @override
+  String toStringDeep({
+    String prefixLineOne = '',
+    String? prefixOtherLines,
+    DiagnosticLevel minLevel = DiagnosticLevel.debug,
+    int wrapWidth = 65,
+  }) {
+    return toDiagnosticsNode().toStringDeep(
+      prefixLineOne: prefixLineOne,
+      prefixOtherLines: prefixOtherLines,
+      minLevel: minLevel,
+      wrapWidth: wrapWidth,
+    );
+  }
+
+  @override
+  String toStringShallow({
+    String joiner = ', ',
+    DiagnosticLevel minLevel = DiagnosticLevel.debug,
+  }) {
+    final properties = <String>[
+      'name: $name',
+      'pixelRatio: $pixelRatio',
+      'safeAreas: $safeAreas',
+      'screenSize: $screenSize',
+      'frameSize: $frameSize',
+    ];
+    return properties.join(joiner);
+  }
+
+  @override
+  String toStringShort() {
+    return name;
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'DeviceInfo(identifier: $identifier, name: $name, rotatedSafeAreas: $rotatedSafeAreas, '
+        'safeAreas: $safeAreas, screenPath: $screenPath, pixelRatio: $pixelRatio, '
+        'framePainter: $framePainter, frameSize: $frameSize, screenSize: $screenSize)';
+  }
 }
 
 /// The device identifier for a [CustomDeviceInfo].
