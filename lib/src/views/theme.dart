@@ -27,7 +27,6 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           ),
           primaryColor: accentColor,
           primaryColorDark: accentColor,
-          indicatorColor: accentColor,
           highlightColor: accentColor.withValues(alpha: 0.1),
           sliderTheme: base.sliderTheme.copyWith(
             thumbColor: accentColor,
@@ -87,6 +86,7 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
               return null;
             }),
           ),
+          tabBarTheme: base.tabBarTheme.copyWith(indicatorColor: accentColor),
         );
       case DevicePreviewToolBarThemeData.light:
         final base = ThemeData.light();
@@ -99,7 +99,6 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           ),
           primaryColor: accentColor,
           primaryColorDark: accentColor,
-          indicatorColor: accentColor,
           highlightColor: accentColor,
           appBarTheme: base.appBarTheme.copyWith(color: barColor),
           sliderTheme: base.sliderTheme.copyWith(
@@ -160,6 +159,7 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
               return null;
             }),
           ),
+          tabBarTheme: base.tabBarTheme.copyWith(indicatorColor: accentColor),
         );
     }
   }
