@@ -1,3 +1,23 @@
+## [2.4.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.6...v2.4.0) (2025-05-25)
+
+### Features
+
+* **sdk:** update dependency flutter to v3.32.0 ([#295](https://github.com/zeshuaro/device_preview_plus/issues/295)) ([0bb6b1f](https://github.com/zeshuaro/device_preview_plus/commit/0bb6b1fba17928a4ec6e776fd02ebc75fd899e8d))
+
+### Bug Fixes
+
+* **sdk:** update dependency dart to >=3.7.3 <4.0.0 ([#281](https://github.com/zeshuaro/device_preview_plus/issues/281)) ([de5e84e](https://github.com/zeshuaro/device_preview_plus/commit/de5e84ea2fd31c096a83d906b5810bcb1465a21f))
+* **sdk:** update dependency dart to >=3.8.0 <4.0.0 ([#296](https://github.com/zeshuaro/device_preview_plus/issues/296)) ([f12be9d](https://github.com/zeshuaro/device_preview_plus/commit/f12be9ddcbc7802748eb8df1e9e58e82925eb068))
+
+### Documentation
+
+* **readme:** update github actions badge ([#298](https://github.com/zeshuaro/device_preview_plus/issues/298)) ([81e8b70](https://github.com/zeshuaro/device_preview_plus/commit/81e8b7002d3b6d9c0b33bd805e7f619486be9f99))
+
+### Miscellaneous Chores
+
+* **example/deps:** update dependency dart to >=3.7.3 <4.0.0 ([#280](https://github.com/zeshuaro/device_preview_plus/issues/280)) ([580ef55](https://github.com/zeshuaro/device_preview_plus/commit/580ef552afdff9f72e7ef9cafe23e58025c6441f))
+* **example/deps:** update dependency dart to >=3.8.0 <4.0.0 ([#294](https://github.com/zeshuaro/device_preview_plus/issues/294)) ([f432759](https://github.com/zeshuaro/device_preview_plus/commit/f43275916947480d3a799b74299a939690c30f43))
+
 ## [2.3.6](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.5...v2.3.6) (2025-05-25)
 
 ### Bug Fixes
