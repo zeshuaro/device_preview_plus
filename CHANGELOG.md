@@ -1,3 +1,25 @@
+## [2.3.6](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.5...v2.3.6) (2025-05-25)
+
+### Bug Fixes
+
+* `CustomDeviceInfo` missing implementations ([#293](https://github.com/zeshuaro/device_preview_plus/issues/293)) ([09a7f80](https://github.com/zeshuaro/device_preview_plus/commit/09a7f80852c6c2d083010f874dda967ab4c7a0fd))
+* **deps:** update dependency device_frame_plus to ^1.3.1 ([#286](https://github.com/zeshuaro/device_preview_plus/issues/286)) ([f3a4b71](https://github.com/zeshuaro/device_preview_plus/commit/f3a4b718289c18480c94264527f823290234376b))
+* **deps:** update dependency provider to ^6.1.5 ([#290](https://github.com/zeshuaro/device_preview_plus/issues/290)) ([3656f83](https://github.com/zeshuaro/device_preview_plus/commit/3656f831a9829537f9ece0224052e1d1cc9bcbe5))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#282](https://github.com/zeshuaro/device_preview_plus/issues/282)) ([548b525](https://github.com/zeshuaro/device_preview_plus/commit/548b5259b96cfd592caa0f646ad22681d481f553))
+* **deps:** lock file maintenance ([#287](https://github.com/zeshuaro/device_preview_plus/issues/287)) ([1566b31](https://github.com/zeshuaro/device_preview_plus/commit/1566b317d066123f5f1211a61d4e5745dadfbaf0))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9 ([#297](https://github.com/zeshuaro/device_preview_plus/issues/297)) ([5dde209](https://github.com/zeshuaro/device_preview_plus/commit/5dde209b964018241271dc2b9ee961f8e5b6773f))
+* **deps:** update dependency json_serializable to v6.9.5 ([#284](https://github.com/zeshuaro/device_preview_plus/issues/284)) ([b0068f8](https://github.com/zeshuaro/device_preview_plus/commit/b0068f8e217f4fa4a7d28330cd81a76cce21272a))
+* **deps:** update dependency semantic-release to v24.2.4 ([#292](https://github.com/zeshuaro/device_preview_plus/issues/292)) ([b88e551](https://github.com/zeshuaro/device_preview_plus/commit/b88e5514d58877b439430dbce0845fbe923b70bc))
+* **deps:** update dependency semantic-release-pub to v0.10.6 ([#289](https://github.com/zeshuaro/device_preview_plus/issues/289)) ([82ab68c](https://github.com/zeshuaro/device_preview_plus/commit/82ab68cad7c1f09c74fa177f031f0ef1fbcd7764))
+* **node:** update node.js to v22.16.0 ([#283](https://github.com/zeshuaro/device_preview_plus/issues/283)) ([792a5ca](https://github.com/zeshuaro/device_preview_plus/commit/792a5ca293f16cb9d7d63511a73985166d1e1551))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 6822a25 ([#288](https://github.com/zeshuaro/device_preview_plus/issues/288)) ([2b950d1](https://github.com/zeshuaro/device_preview_plus/commit/2b950d101d65dd107029707f5e26fe32d3893b4c))
+
 ## [2.3.5](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.4...v2.3.5) (2025-04-20)
 
 ### Bug Fixes

@@ -42,7 +42,7 @@ Add this to your project's `pubspec.yaml` file:
 
 ```yml
 dependencies:
-  device_preview_plus: ^2.3.5
+  device_preview_plus: ^2.3.6
 ```
 
 ## Usage
