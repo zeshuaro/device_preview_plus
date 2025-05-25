@@ -399,21 +399,18 @@ class __$$InitializedDevicePreviewStateImplCopyWithImpl<$Res>
   }) {
     return _then(
       _$InitializedDevicePreviewStateImpl(
-        devices:
-            null == devices
-                ? _value._devices
-                : devices // ignore: cast_nullable_to_non_nullable
-                    as List<DeviceInfo>,
-        locales:
-            null == locales
-                ? _value._locales
-                : locales // ignore: cast_nullable_to_non_nullable
-                    as List<NamedLocale>,
-        data:
-            null == data
-                ? _value.data
-                : data // ignore: cast_nullable_to_non_nullable
-                    as DevicePreviewData,
+        devices: null == devices
+            ? _value._devices
+            : devices // ignore: cast_nullable_to_non_nullable
+                  as List<DeviceInfo>,
+        locales: null == locales
+            ? _value._locales
+            : locales // ignore: cast_nullable_to_non_nullable
+                  as List<NamedLocale>,
+        data: null == data
+            ? _value.data
+            : data // ignore: cast_nullable_to_non_nullable
+                  as DevicePreviewData,
       ),
     );
   }
@@ -493,9 +490,10 @@ class _$InitializedDevicePreviewStateImpl
   _$$InitializedDevicePreviewStateImplCopyWith<
     _$InitializedDevicePreviewStateImpl
   >
-  get copyWith => __$$InitializedDevicePreviewStateImplCopyWithImpl<
-    _$InitializedDevicePreviewStateImpl
-  >(this, _$identity);
+  get copyWith =>
+      __$$InitializedDevicePreviewStateImplCopyWithImpl<
+        _$InitializedDevicePreviewStateImpl
+      >(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -731,91 +729,74 @@ class _$DevicePreviewDataCopyWithImpl<$Res, $Val extends DevicePreviewData>
   }) {
     return _then(
       _value.copyWith(
-            isToolbarVisible:
-                null == isToolbarVisible
-                    ? _value.isToolbarVisible
-                    : isToolbarVisible // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            isEnabled:
-                null == isEnabled
-                    ? _value.isEnabled
-                    : isEnabled // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            orientation:
-                null == orientation
-                    ? _value.orientation
-                    : orientation // ignore: cast_nullable_to_non_nullable
-                        as Orientation,
-            deviceIdentifier:
-                freezed == deviceIdentifier
-                    ? _value.deviceIdentifier
-                    : deviceIdentifier // ignore: cast_nullable_to_non_nullable
-                        as String?,
-            locale:
-                null == locale
-                    ? _value.locale
-                    : locale // ignore: cast_nullable_to_non_nullable
-                        as String,
-            isFrameVisible:
-                null == isFrameVisible
-                    ? _value.isFrameVisible
-                    : isFrameVisible // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            isDarkMode:
-                null == isDarkMode
-                    ? _value.isDarkMode
-                    : isDarkMode // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            boldText:
-                null == boldText
-                    ? _value.boldText
-                    : boldText // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            isVirtualKeyboardVisible:
-                null == isVirtualKeyboardVisible
-                    ? _value.isVirtualKeyboardVisible
-                    : isVirtualKeyboardVisible // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            disableAnimations:
-                null == disableAnimations
-                    ? _value.disableAnimations
-                    : disableAnimations // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            highContrast:
-                null == highContrast
-                    ? _value.highContrast
-                    : highContrast // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            accessibleNavigation:
-                null == accessibleNavigation
-                    ? _value.accessibleNavigation
-                    : accessibleNavigation // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            invertColors:
-                null == invertColors
-                    ? _value.invertColors
-                    : invertColors // ignore: cast_nullable_to_non_nullable
-                        as bool,
-            pluginData:
-                null == pluginData
-                    ? _value.pluginData
-                    : pluginData // ignore: cast_nullable_to_non_nullable
-                        as Map<String, Map<String, dynamic>>,
-            textScaleFactor:
-                null == textScaleFactor
-                    ? _value.textScaleFactor
-                    : textScaleFactor // ignore: cast_nullable_to_non_nullable
-                        as double,
-            settings:
-                freezed == settings
-                    ? _value.settings
-                    : settings // ignore: cast_nullable_to_non_nullable
-                        as DevicePreviewSettingsData?,
-            customDevice:
-                freezed == customDevice
-                    ? _value.customDevice
-                    : customDevice // ignore: cast_nullable_to_non_nullable
-                        as CustomDeviceInfoData?,
+            isToolbarVisible: null == isToolbarVisible
+                ? _value.isToolbarVisible
+                : isToolbarVisible // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isEnabled: null == isEnabled
+                ? _value.isEnabled
+                : isEnabled // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            orientation: null == orientation
+                ? _value.orientation
+                : orientation // ignore: cast_nullable_to_non_nullable
+                      as Orientation,
+            deviceIdentifier: freezed == deviceIdentifier
+                ? _value.deviceIdentifier
+                : deviceIdentifier // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            locale: null == locale
+                ? _value.locale
+                : locale // ignore: cast_nullable_to_non_nullable
+                      as String,
+            isFrameVisible: null == isFrameVisible
+                ? _value.isFrameVisible
+                : isFrameVisible // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isDarkMode: null == isDarkMode
+                ? _value.isDarkMode
+                : isDarkMode // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            boldText: null == boldText
+                ? _value.boldText
+                : boldText // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isVirtualKeyboardVisible: null == isVirtualKeyboardVisible
+                ? _value.isVirtualKeyboardVisible
+                : isVirtualKeyboardVisible // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            disableAnimations: null == disableAnimations
+                ? _value.disableAnimations
+                : disableAnimations // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            highContrast: null == highContrast
+                ? _value.highContrast
+                : highContrast // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            accessibleNavigation: null == accessibleNavigation
+                ? _value.accessibleNavigation
+                : accessibleNavigation // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            invertColors: null == invertColors
+                ? _value.invertColors
+                : invertColors // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            pluginData: null == pluginData
+                ? _value.pluginData
+                : pluginData // ignore: cast_nullable_to_non_nullable
+                      as Map<String, Map<String, dynamic>>,
+            textScaleFactor: null == textScaleFactor
+                ? _value.textScaleFactor
+                : textScaleFactor // ignore: cast_nullable_to_non_nullable
+                      as double,
+            settings: freezed == settings
+                ? _value.settings
+                : settings // ignore: cast_nullable_to_non_nullable
+                      as DevicePreviewSettingsData?,
+            customDevice: freezed == customDevice
+                ? _value.customDevice
+                : customDevice // ignore: cast_nullable_to_non_nullable
+                      as CustomDeviceInfoData?,
           )
           as $Val,
     );
@@ -913,91 +894,74 @@ class __$$DevicePreviewDataImplCopyWithImpl<$Res>
   }) {
     return _then(
       _$DevicePreviewDataImpl(
-        isToolbarVisible:
-            null == isToolbarVisible
-                ? _value.isToolbarVisible
-                : isToolbarVisible // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        isEnabled:
-            null == isEnabled
-                ? _value.isEnabled
-                : isEnabled // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        orientation:
-            null == orientation
-                ? _value.orientation
-                : orientation // ignore: cast_nullable_to_non_nullable
-                    as Orientation,
-        deviceIdentifier:
-            freezed == deviceIdentifier
-                ? _value.deviceIdentifier
-                : deviceIdentifier // ignore: cast_nullable_to_non_nullable
-                    as String?,
-        locale:
-            null == locale
-                ? _value.locale
-                : locale // ignore: cast_nullable_to_non_nullable
-                    as String,
-        isFrameVisible:
-            null == isFrameVisible
-                ? _value.isFrameVisible
-                : isFrameVisible // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        isDarkMode:
-            null == isDarkMode
-                ? _value.isDarkMode
-                : isDarkMode // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        boldText:
-            null == boldText
-                ? _value.boldText
-                : boldText // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        isVirtualKeyboardVisible:
-            null == isVirtualKeyboardVisible
-                ? _value.isVirtualKeyboardVisible
-                : isVirtualKeyboardVisible // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        disableAnimations:
-            null == disableAnimations
-                ? _value.disableAnimations
-                : disableAnimations // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        highContrast:
-            null == highContrast
-                ? _value.highContrast
-                : highContrast // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        accessibleNavigation:
-            null == accessibleNavigation
-                ? _value.accessibleNavigation
-                : accessibleNavigation // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        invertColors:
-            null == invertColors
-                ? _value.invertColors
-                : invertColors // ignore: cast_nullable_to_non_nullable
-                    as bool,
-        pluginData:
-            null == pluginData
-                ? _value._pluginData
-                : pluginData // ignore: cast_nullable_to_non_nullable
-                    as Map<String, Map<String, dynamic>>,
-        textScaleFactor:
-            null == textScaleFactor
-                ? _value.textScaleFactor
-                : textScaleFactor // ignore: cast_nullable_to_non_nullable
-                    as double,
-        settings:
-            freezed == settings
-                ? _value.settings
-                : settings // ignore: cast_nullable_to_non_nullable
-                    as DevicePreviewSettingsData?,
-        customDevice:
-            freezed == customDevice
-                ? _value.customDevice
-                : customDevice // ignore: cast_nullable_to_non_nullable
-                    as CustomDeviceInfoData?,
+        isToolbarVisible: null == isToolbarVisible
+            ? _value.isToolbarVisible
+            : isToolbarVisible // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isEnabled: null == isEnabled
+            ? _value.isEnabled
+            : isEnabled // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        orientation: null == orientation
+            ? _value.orientation
+            : orientation // ignore: cast_nullable_to_non_nullable
+                  as Orientation,
+        deviceIdentifier: freezed == deviceIdentifier
+            ? _value.deviceIdentifier
+            : deviceIdentifier // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        locale: null == locale
+            ? _value.locale
+            : locale // ignore: cast_nullable_to_non_nullable
+                  as String,
+        isFrameVisible: null == isFrameVisible
+            ? _value.isFrameVisible
+            : isFrameVisible // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isDarkMode: null == isDarkMode
+            ? _value.isDarkMode
+            : isDarkMode // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        boldText: null == boldText
+            ? _value.boldText
+            : boldText // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isVirtualKeyboardVisible: null == isVirtualKeyboardVisible
+            ? _value.isVirtualKeyboardVisible
+            : isVirtualKeyboardVisible // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        disableAnimations: null == disableAnimations
+            ? _value.disableAnimations
+            : disableAnimations // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        highContrast: null == highContrast
+            ? _value.highContrast
+            : highContrast // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        accessibleNavigation: null == accessibleNavigation
+            ? _value.accessibleNavigation
+            : accessibleNavigation // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        invertColors: null == invertColors
+            ? _value.invertColors
+            : invertColors // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        pluginData: null == pluginData
+            ? _value._pluginData
+            : pluginData // ignore: cast_nullable_to_non_nullable
+                  as Map<String, Map<String, dynamic>>,
+        textScaleFactor: null == textScaleFactor
+            ? _value.textScaleFactor
+            : textScaleFactor // ignore: cast_nullable_to_non_nullable
+                  as double,
+        settings: freezed == settings
+            ? _value.settings
+            : settings // ignore: cast_nullable_to_non_nullable
+                  as DevicePreviewSettingsData?,
+        customDevice: freezed == customDevice
+            ? _value.customDevice
+            : customDevice // ignore: cast_nullable_to_non_nullable
+                  as CustomDeviceInfoData?,
       ),
     );
   }
@@ -1371,46 +1335,38 @@ class _$CustomDeviceInfoDataCopyWithImpl<
   }) {
     return _then(
       _value.copyWith(
-            id:
-                null == id
-                    ? _value.id
-                    : id // ignore: cast_nullable_to_non_nullable
-                        as String,
-            type:
-                null == type
-                    ? _value.type
-                    : type // ignore: cast_nullable_to_non_nullable
-                        as DeviceType,
-            platform:
-                null == platform
-                    ? _value.platform
-                    : platform // ignore: cast_nullable_to_non_nullable
-                        as TargetPlatform,
-            name:
-                null == name
-                    ? _value.name
-                    : name // ignore: cast_nullable_to_non_nullable
-                        as String,
-            rotatedSafeAreas:
-                freezed == rotatedSafeAreas
-                    ? _value.rotatedSafeAreas
-                    : rotatedSafeAreas // ignore: cast_nullable_to_non_nullable
-                        as EdgeInsets?,
-            safeAreas:
-                null == safeAreas
-                    ? _value.safeAreas
-                    : safeAreas // ignore: cast_nullable_to_non_nullable
-                        as EdgeInsets,
-            pixelRatio:
-                null == pixelRatio
-                    ? _value.pixelRatio
-                    : pixelRatio // ignore: cast_nullable_to_non_nullable
-                        as double,
-            screenSize:
-                null == screenSize
-                    ? _value.screenSize
-                    : screenSize // ignore: cast_nullable_to_non_nullable
-                        as Size,
+            id: null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                      as String,
+            type: null == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                      as DeviceType,
+            platform: null == platform
+                ? _value.platform
+                : platform // ignore: cast_nullable_to_non_nullable
+                      as TargetPlatform,
+            name: null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                      as String,
+            rotatedSafeAreas: freezed == rotatedSafeAreas
+                ? _value.rotatedSafeAreas
+                : rotatedSafeAreas // ignore: cast_nullable_to_non_nullable
+                      as EdgeInsets?,
+            safeAreas: null == safeAreas
+                ? _value.safeAreas
+                : safeAreas // ignore: cast_nullable_to_non_nullable
+                      as EdgeInsets,
+            pixelRatio: null == pixelRatio
+                ? _value.pixelRatio
+                : pixelRatio // ignore: cast_nullable_to_non_nullable
+                      as double,
+            screenSize: null == screenSize
+                ? _value.screenSize
+                : screenSize // ignore: cast_nullable_to_non_nullable
+                      as Size,
           )
           as $Val,
     );
@@ -1461,46 +1417,38 @@ class __$$CustomDeviceInfoDataImplCopyWithImpl<$Res>
   }) {
     return _then(
       _$CustomDeviceInfoDataImpl(
-        id:
-            null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                    as String,
-        type:
-            null == type
-                ? _value.type
-                : type // ignore: cast_nullable_to_non_nullable
-                    as DeviceType,
-        platform:
-            null == platform
-                ? _value.platform
-                : platform // ignore: cast_nullable_to_non_nullable
-                    as TargetPlatform,
-        name:
-            null == name
-                ? _value.name
-                : name // ignore: cast_nullable_to_non_nullable
-                    as String,
-        rotatedSafeAreas:
-            freezed == rotatedSafeAreas
-                ? _value.rotatedSafeAreas
-                : rotatedSafeAreas // ignore: cast_nullable_to_non_nullable
-                    as EdgeInsets?,
-        safeAreas:
-            null == safeAreas
-                ? _value.safeAreas
-                : safeAreas // ignore: cast_nullable_to_non_nullable
-                    as EdgeInsets,
-        pixelRatio:
-            null == pixelRatio
-                ? _value.pixelRatio
-                : pixelRatio // ignore: cast_nullable_to_non_nullable
-                    as double,
-        screenSize:
-            null == screenSize
-                ? _value.screenSize
-                : screenSize // ignore: cast_nullable_to_non_nullable
-                    as Size,
+        id: null == id
+            ? _value.id
+            : id // ignore: cast_nullable_to_non_nullable
+                  as String,
+        type: null == type
+            ? _value.type
+            : type // ignore: cast_nullable_to_non_nullable
+                  as DeviceType,
+        platform: null == platform
+            ? _value.platform
+            : platform // ignore: cast_nullable_to_non_nullable
+                  as TargetPlatform,
+        name: null == name
+            ? _value.name
+            : name // ignore: cast_nullable_to_non_nullable
+                  as String,
+        rotatedSafeAreas: freezed == rotatedSafeAreas
+            ? _value.rotatedSafeAreas
+            : rotatedSafeAreas // ignore: cast_nullable_to_non_nullable
+                  as EdgeInsets?,
+        safeAreas: null == safeAreas
+            ? _value.safeAreas
+            : safeAreas // ignore: cast_nullable_to_non_nullable
+                  as EdgeInsets,
+        pixelRatio: null == pixelRatio
+            ? _value.pixelRatio
+            : pixelRatio // ignore: cast_nullable_to_non_nullable
+                  as double,
+        screenSize: null == screenSize
+            ? _value.screenSize
+            : screenSize // ignore: cast_nullable_to_non_nullable
+                  as Size,
       ),
     );
   }
@@ -1724,21 +1672,18 @@ class _$DevicePreviewSettingsDataCopyWithImpl<
   }) {
     return _then(
       _value.copyWith(
-            toolbarPosition:
-                null == toolbarPosition
-                    ? _value.toolbarPosition
-                    : toolbarPosition // ignore: cast_nullable_to_non_nullable
-                        as DevicePreviewToolBarPositionData,
-            toolbarTheme:
-                null == toolbarTheme
-                    ? _value.toolbarTheme
-                    : toolbarTheme // ignore: cast_nullable_to_non_nullable
-                        as DevicePreviewToolBarThemeData,
-            backgroundTheme:
-                null == backgroundTheme
-                    ? _value.backgroundTheme
-                    : backgroundTheme // ignore: cast_nullable_to_non_nullable
-                        as DevicePreviewBackgroundThemeData,
+            toolbarPosition: null == toolbarPosition
+                ? _value.toolbarPosition
+                : toolbarPosition // ignore: cast_nullable_to_non_nullable
+                      as DevicePreviewToolBarPositionData,
+            toolbarTheme: null == toolbarTheme
+                ? _value.toolbarTheme
+                : toolbarTheme // ignore: cast_nullable_to_non_nullable
+                      as DevicePreviewToolBarThemeData,
+            backgroundTheme: null == backgroundTheme
+                ? _value.backgroundTheme
+                : backgroundTheme // ignore: cast_nullable_to_non_nullable
+                      as DevicePreviewBackgroundThemeData,
           )
           as $Val,
     );
@@ -1783,21 +1728,18 @@ class __$$DevicePreviewSettingsDataImplCopyWithImpl<$Res>
   }) {
     return _then(
       _$DevicePreviewSettingsDataImpl(
-        toolbarPosition:
-            null == toolbarPosition
-                ? _value.toolbarPosition
-                : toolbarPosition // ignore: cast_nullable_to_non_nullable
-                    as DevicePreviewToolBarPositionData,
-        toolbarTheme:
-            null == toolbarTheme
-                ? _value.toolbarTheme
-                : toolbarTheme // ignore: cast_nullable_to_non_nullable
-                    as DevicePreviewToolBarThemeData,
-        backgroundTheme:
-            null == backgroundTheme
-                ? _value.backgroundTheme
-                : backgroundTheme // ignore: cast_nullable_to_non_nullable
-                    as DevicePreviewBackgroundThemeData,
+        toolbarPosition: null == toolbarPosition
+            ? _value.toolbarPosition
+            : toolbarPosition // ignore: cast_nullable_to_non_nullable
+                  as DevicePreviewToolBarPositionData,
+        toolbarTheme: null == toolbarTheme
+            ? _value.toolbarTheme
+            : toolbarTheme // ignore: cast_nullable_to_non_nullable
+                  as DevicePreviewToolBarThemeData,
+        backgroundTheme: null == backgroundTheme
+            ? _value.backgroundTheme
+            : backgroundTheme // ignore: cast_nullable_to_non_nullable
+                  as DevicePreviewBackgroundThemeData,
       ),
     );
   }
@@ -1857,9 +1799,10 @@ class _$DevicePreviewSettingsDataImpl implements _DevicePreviewSettingsData {
   @override
   @pragma('vm:prefer-inline')
   _$$DevicePreviewSettingsDataImplCopyWith<_$DevicePreviewSettingsDataImpl>
-  get copyWith => __$$DevicePreviewSettingsDataImplCopyWithImpl<
-    _$DevicePreviewSettingsDataImpl
-  >(this, _$identity);
+  get copyWith =>
+      __$$DevicePreviewSettingsDataImplCopyWithImpl<
+        _$DevicePreviewSettingsDataImpl
+      >(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {

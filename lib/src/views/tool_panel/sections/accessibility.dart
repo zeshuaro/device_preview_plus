@@ -106,12 +106,12 @@ class AccessibilitySection extends StatelessWidget {
             subtitle: Text(textScalingFactor.toString()),
             trailing: Transform(
               alignment: Alignment.center,
-              transform:
-                  (Matrix4.identity()..scale(
-                    textScalingFactor >= 2
-                        ? 1.0
-                        : (textScalingFactor < 1 ? 0.25 : 0.6),
-                  )),
+              transform: (Matrix4.identity()
+                ..scale(
+                  textScalingFactor >= 2
+                      ? 1.0
+                      : (textScalingFactor < 1 ? 0.25 : 0.6),
+                )),
               child: const Icon(Icons.text_format),
             ),
           ),

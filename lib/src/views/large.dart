@@ -64,8 +64,8 @@ class DervicePreviewLargeLayoutState extends State<DervicePreviewLargeLayout> {
                     onGenerateInitialRoutes: (navigator, initialRoute) {
                       return [
                         MaterialPageRoute(
-                          builder:
-                              (context) => ToolPanel(slivers: widget.slivers),
+                          builder: (context) =>
+                              ToolPanel(slivers: widget.slivers),
                         ),
                       ];
                     },

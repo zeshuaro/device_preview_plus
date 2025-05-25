@@ -80,9 +80,8 @@ class DeviceSection extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder:
-                      (context) =>
-                          Theme(data: theme, child: const DeviceModelPicker()),
+                  builder: (context) =>
+                      Theme(data: theme, child: const DeviceModelPicker()),
                 ),
               );
             },

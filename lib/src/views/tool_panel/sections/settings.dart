@@ -59,8 +59,8 @@ class SettingsSection extends StatelessWidget {
               state.settings = state.settings.copyWith(
                 backgroundTheme:
                     backgroundTheme == DevicePreviewBackgroundThemeData.dark
-                        ? DevicePreviewBackgroundThemeData.light
-                        : DevicePreviewBackgroundThemeData.dark,
+                    ? DevicePreviewBackgroundThemeData.light
+                    : DevicePreviewBackgroundThemeData.dark,
               );
             },
           ),
@@ -88,10 +88,9 @@ class SettingsSection extends StatelessWidget {
             onTap: () {
               final state = context.read<DevicePreviewStore>();
               state.settings = state.settings.copyWith(
-                toolbarTheme:
-                    toolbarTheme == DevicePreviewToolBarThemeData.dark
-                        ? DevicePreviewToolBarThemeData.light
-                        : DevicePreviewToolBarThemeData.dark,
+                toolbarTheme: toolbarTheme == DevicePreviewToolBarThemeData.dark
+                    ? DevicePreviewToolBarThemeData.light
+                    : DevicePreviewToolBarThemeData.dark,
               );
             },
           ),

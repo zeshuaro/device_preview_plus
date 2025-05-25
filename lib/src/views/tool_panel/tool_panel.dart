@@ -77,20 +77,18 @@ class _ToolPanel extends StatelessWidget {
           style: theme.textTheme.titleLarge?.copyWith(
             fontSize: 14,
             fontWeight: FontWeight.bold,
-            color:
-                (theme.colorScheme.brightness == Brightness.dark
-                    ? theme.colorScheme.onSurface
-                    : theme.colorScheme.onPrimary),
+            color: (theme.colorScheme.brightness == Brightness.dark
+                ? theme.colorScheme.onSurface
+                : theme.colorScheme.onPrimary),
           ),
         ),
-        leading:
-            isModal
-                ? IconButton(
-                  icon: const Icon(Icons.close),
-                  tooltip: MaterialLocalizations.of(context).backButtonTooltip,
-                  onPressed: onClose,
-                )
-                : null,
+        leading: isModal
+            ? IconButton(
+                icon: const Icon(Icons.close),
+                tooltip: MaterialLocalizations.of(context).backButtonTooltip,
+                onPressed: onClose,
+              )
+            : null,
         actions: [
           if (!isModal)
             Switch(

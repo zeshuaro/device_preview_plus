@@ -35,33 +35,31 @@ class LocalePickerState extends State<LocalePicker> {
             ),
             Expanded(
               child: ListView(
-                children:
-                    locales
-                        .where((locale) {
-                          final filter = this.filter.trim().toLowerCase();
-                          return filter.isEmpty ||
-                              locale.name.toLowerCase().contains(filter) ||
-                              locale.code.toLowerCase().contains(filter);
-                        })
-                        .map((locale) {
-                          final isSelected = locale.code == selectedLocale;
-                          return ListTile(
-                            onTap:
-                                !isSelected
-                                    ? () {
-                                      final store =
-                                          context.read<DevicePreviewStore>();
-                                      store.data = store.data.copyWith(
-                                        locale: locale.code,
-                                      );
-                                      Navigator.pop(context);
-                                    }
-                                    : null,
-                            title: Text(locale.name),
-                            subtitle: Text(locale.code),
-                          );
-                        })
-                        .toList(),
+                children: locales
+                    .where((locale) {
+                      final filter = this.filter.trim().toLowerCase();
+                      return filter.isEmpty ||
+                          locale.name.toLowerCase().contains(filter) ||
+                          locale.code.toLowerCase().contains(filter);
+                    })
+                    .map((locale) {
+                      final isSelected = locale.code == selectedLocale;
+                      return ListTile(
+                        onTap: !isSelected
+                            ? () {
+                                final store = context
+                                    .read<DevicePreviewStore>();
+                                store.data = store.data.copyWith(
+                                  locale: locale.code,
+                                );
+                                Navigator.pop(context);
+                              }
+                            : null,
+                        title: Text(locale.name),
+                        subtitle: Text(locale.code),
+                      );
+                    })
+                    .toList(),
               ),
             ),
           ],

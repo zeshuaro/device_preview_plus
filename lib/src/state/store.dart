@@ -64,28 +64,25 @@ class DevicePreviewStore extends ChangeNotifier {
       notInitialized: () async {
         state = const DevicePreviewState.initializing();
 
-        final resolvedAvailableLocales =
-            availableLocales != null
-                ? availableLocales
-                    .map(
-                      (available) => defaultAvailableLocales
-                          .cast<NamedLocale?>()
-                          .firstWhere(
-                            (all) => all!.code == available.toString(),
-                            orElse: () => null,
-                          ),
-                    )
-                    .where((x) => x != null)
-                    .toList()
-                : defaultAvailableLocales;
+        final resolvedAvailableLocales = availableLocales != null
+            ? availableLocales
+                  .map(
+                    (available) =>
+                        defaultAvailableLocales.cast<NamedLocale?>().firstWhere(
+                          (all) => all!.code == available.toString(),
+                          orElse: () => null,
+                        ),
+                  )
+                  .where((x) => x != null)
+                  .toList()
+            : defaultAvailableLocales;
 
-        final defaultLocale =
-            device_preview
-                .basicLocaleListResolution(
-                  preferredLocales,
-                  resolvedAvailableLocales.map((x) => x!.locale).toList(),
-                )
-                .toString();
+        final defaultLocale = device_preview
+            .basicLocaleListResolution(
+              preferredLocales,
+              resolvedAvailableLocales.map((x) => x!.locale).toList(),
+            )
+            .toString();
 
         devices = devices ?? Devices.all;
         DevicePreviewData? data;
@@ -173,13 +170,12 @@ extension DevicePreviewStateHelperExtensions on DevicePreviewStore {
       return CustomDeviceInfo(data.customDevice!);
     }
     return state.maybeMap(
-      initialized:
-          (state) => state.devices.firstWhere(
-            (x) =>
-                x.identifier.toString() ==
-                (data.deviceIdentifier ?? defaultDevice.identifier.toString()),
-            orElse: () => state.devices.first,
-          ),
+      initialized: (state) => state.devices.firstWhere(
+        (x) =>
+            x.identifier.toString() ==
+            (data.deviceIdentifier ?? defaultDevice.identifier.toString()),
+        orElse: () => state.devices.first,
+      ),
       orElse: () => throw Exception('Not initialized'),
     );
   }
@@ -188,14 +184,12 @@ extension DevicePreviewStateHelperExtensions on DevicePreviewStore {
   ///
   /// Throws an exception if not initialized.
   Locale get locale => state.maybeMap(
-    initialized:
-        (state) =>
-            state.locales
-                .firstWhere(
-                  (x) => x.locale.toString() == data.locale,
-                  orElse: () => state.locales.first,
-                )
-                .locale,
+    initialized: (state) => state.locales
+        .firstWhere(
+          (x) => x.locale.toString() == data.locale,
+          orElse: () => state.locales.first,
+        )
+        .locale,
     orElse: () => throw Exception('Not initialized'),
   );
 

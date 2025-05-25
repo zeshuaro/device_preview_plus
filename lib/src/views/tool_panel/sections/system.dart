@@ -53,9 +53,8 @@ class SystemSection extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder:
-                      (context) =>
-                          Theme(data: theme, child: const LocalePicker()),
+                  builder: (context) =>
+                      Theme(data: theme, child: const LocalePicker()),
                 ),
               );
             },
