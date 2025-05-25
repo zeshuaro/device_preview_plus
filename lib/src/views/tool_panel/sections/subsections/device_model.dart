@@ -61,7 +61,10 @@ class _DeviceModelPickerState extends State<DeviceModelPicker>
           isScrollable: true,
           tabs: [
             ..._allPlatforms.map(
-              (e) => Tab(icon: TargetPlatformIcon(platform: e), text: e.name),
+              (e) => Tab(
+                icon: TargetPlatformIcon(platform: e),
+                text: e.name,
+              ),
             ),
             const Tab(icon: Icon(Icons.tune), text: 'Custom'),
           ],

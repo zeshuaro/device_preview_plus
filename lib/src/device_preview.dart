@@ -465,14 +465,13 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
     final preferredLocales = View.of(context).platformDispatcher.locales;
 
     return ChangeNotifierProvider(
-      create:
-          (context) => DevicePreviewStore(
-            defaultDevice: widget.defaultDevice ?? Devices.ios.iPhone13,
-            devices: widget.devices,
-            preferredLocales: preferredLocales,
-            availableLocales: widget.availableLocales,
-            storage: storage,
-          ),
+      create: (context) => DevicePreviewStore(
+        defaultDevice: widget.defaultDevice ?? Devices.ios.iPhone13,
+        devices: widget.devices,
+        preferredLocales: preferredLocales,
+        availableLocales: widget.availableLocales,
+        storage: storage,
+      ),
       builder: (context, child) {
         final isInitialized = context.select(
           (DevicePreviewStore store) => store.state.maybeMap(
@@ -520,28 +519,25 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                     final mediaQuery = MediaQuery.of(context);
                     final isSmall = constraints.maxWidth < 700;
 
-                    final borderRadius =
-                        isToolbarVisible
-                            ? BorderRadius.only(
-                              topRight:
-                                  isSmall
-                                      ? Radius.zero
-                                      : const Radius.circular(16),
-                              bottomRight: const Radius.circular(16),
-                              bottomLeft:
-                                  isSmall
-                                      ? const Radius.circular(16)
-                                      : Radius.zero,
-                            )
-                            : BorderRadius.zero;
-                    final double rightPanelOffset =
-                        !isSmall
-                            ? (isEnabled
-                                ? ToolPanel.panelWidth - 10
-                                : (64 + mediaQuery.padding.right))
-                            : 0;
-                    final double bottomPanelOffset =
-                        isSmall ? mediaQuery.padding.bottom + 52 : 0;
+                    final borderRadius = isToolbarVisible
+                        ? BorderRadius.only(
+                            topRight: isSmall
+                                ? Radius.zero
+                                : const Radius.circular(16),
+                            bottomRight: const Radius.circular(16),
+                            bottomLeft: isSmall
+                                ? const Radius.circular(16)
+                                : Radius.zero,
+                          )
+                        : BorderRadius.zero;
+                    final double rightPanelOffset = !isSmall
+                        ? (isEnabled
+                              ? ToolPanel.panelWidth - 10
+                              : (64 + mediaQuery.padding.right))
+                        : 0;
+                    final double bottomPanelOffset = isSmall
+                        ? mediaQuery.padding.bottom + 52
+                        : 0;
                     return Stack(
                       children: <Widget>[
                         if (isToolbarVisible && isSmall)
@@ -554,10 +550,9 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                               slivers: widget.tools,
                               maxMenuHeight: constraints.maxHeight * 0.5,
                               scaffoldKey: scaffoldKey,
-                              onMenuVisibleChanged:
-                                  (isVisible) => setState(() {
-                                    _isToolPanelPopOverOpen = isVisible;
-                                  }),
+                              onMenuVisibleChanged: (isVisible) => setState(() {
+                                _isToolPanelPopOverOpen = isVisible;
+                              }),
                             ),
                           ),
                         if (isToolbarVisible && !isSmall)
@@ -589,13 +584,12 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                               ),
                               child: ClipRRect(
                                 borderRadius: borderRadius,
-                                child:
-                                    isEnabled
-                                        ? Builder(builder: _buildPreview)
-                                        : Builder(
-                                          key: _appKey,
-                                          builder: widget.builder,
-                                        ),
+                                child: isEnabled
+                                    ? Builder(builder: _buildPreview)
+                                    : Builder(
+                                        key: _appKey,
+                                        builder: widget.builder,
+                                      ),
                               ),
                             ),
                           ),
@@ -614,11 +608,10 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                                 onGenerateInitialRoutes: (navigator, name) {
                                   return [
                                     MaterialPageRoute(
-                                      builder:
-                                          (context) => Scaffold(
-                                            key: scaffoldKey,
-                                            backgroundColor: Colors.transparent,
-                                          ),
+                                      builder: (context) => Scaffold(
+                                        key: scaffoldKey,
+                                        backgroundColor: Colors.transparent,
+                                      ),
                                     ),
                                   ];
                                 },

@@ -30,18 +30,16 @@ _$DevicePreviewDataImpl _$$DevicePreviewDataImplFromJson(
       ) ??
       const <String, Map<String, dynamic>>{},
   textScaleFactor: (json['textScaleFactor'] as num?)?.toDouble() ?? 1.0,
-  settings:
-      json['settings'] == null
-          ? null
-          : DevicePreviewSettingsData.fromJson(
-            json['settings'] as Map<String, dynamic>,
-          ),
-  customDevice:
-      json['customDevice'] == null
-          ? null
-          : CustomDeviceInfoData.fromJson(
-            json['customDevice'] as Map<String, dynamic>,
-          ),
+  settings: json['settings'] == null
+      ? null
+      : DevicePreviewSettingsData.fromJson(
+          json['settings'] as Map<String, dynamic>,
+        ),
+  customDevice: json['customDevice'] == null
+      ? null
+      : CustomDeviceInfoData.fromJson(
+          json['customDevice'] as Map<String, dynamic>,
+        ),
 );
 
 Map<String, dynamic> _$$DevicePreviewDataImplToJson(
@@ -78,12 +76,11 @@ _$CustomDeviceInfoDataImpl _$$CustomDeviceInfoDataImplFromJson(
   type: $enumDecode(_$DeviceTypeEnumMap, json['type']),
   platform: $enumDecode(_$TargetPlatformEnumMap, json['platform']),
   name: json['name'] as String,
-  rotatedSafeAreas:
-      json['rotatedSafeAreas'] == null
-          ? null
-          : const NullableEdgeInsetsJsonConverter().fromJson(
-            json['rotatedSafeAreas'],
-          ),
+  rotatedSafeAreas: json['rotatedSafeAreas'] == null
+      ? null
+      : const NullableEdgeInsetsJsonConverter().fromJson(
+          json['rotatedSafeAreas'],
+        ),
   safeAreas: const EdgeInsetsJsonConverter().fromJson(json['safeAreas']),
   pixelRatio: (json['pixelRatio'] as num).toDouble(),
   screenSize: const SizeJsonConverter().fromJson(json['screenSize']),
