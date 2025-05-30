@@ -26,8 +26,19 @@ class CustomDeviceInfo implements DeviceInfo {
   final CustomDeviceInfoData data;
 
   @override
-  $DeviceInfoCopyWith<DeviceInfo> get copyWith =>
-      throw UnsupportedError('Read only');
+  CustomDeviceInfo copyWith({
+    DeviceIdentifier? identifier,
+    String? name,
+    EdgeInsets? rotatedSafeAreas,
+    EdgeInsets? safeAreas,
+    Path? screenPath,
+    double? pixelRatio,
+    CustomPainter? framePainter,
+    Size? frameSize,
+    Size? screenSize,
+  }) {
+    throw UnsupportedError('Read only');
+  }
 
   @override
   final DeviceIdentifier identifier;
