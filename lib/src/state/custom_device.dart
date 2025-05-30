@@ -67,10 +67,8 @@ class CustomDeviceInfo implements DeviceInfo {
   @override
   CustomPainter get framePainter => _painter;
 
-  @override
   List<DiagnosticsNode> debugDescribeChildren() => [];
 
-  @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     properties
       ..add(StringProperty('name', name))
@@ -81,7 +79,6 @@ class CustomDeviceInfo implements DeviceInfo {
       ..add(DiagnosticsProperty('identifier', identifier));
   }
 
-  @override
   DiagnosticsNode toDiagnosticsNode({
     String? name,
     DiagnosticsTreeStyle? style,
@@ -93,7 +90,6 @@ class CustomDeviceInfo implements DeviceInfo {
     );
   }
 
-  @override
   String toStringDeep({
     String prefixLineOne = '',
     String? prefixOtherLines,
@@ -108,7 +104,6 @@ class CustomDeviceInfo implements DeviceInfo {
     );
   }
 
-  @override
   String toStringShallow({
     String joiner = ', ',
     DiagnosticLevel minLevel = DiagnosticLevel.debug,
@@ -123,7 +118,6 @@ class CustomDeviceInfo implements DeviceInfo {
     return properties.join(joiner);
   }
 
-  @override
   String toStringShort() {
     return name;
   }
