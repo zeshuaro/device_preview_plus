@@ -1,3 +1,21 @@
+## [2.4.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.0...v2.4.1) (2025-05-31)
+
+### Bug Fixes
+
+* **sdk:** update dependency dart to >=3.8.1 <4.0.0 ([#304](https://github.com/zeshuaro/device_preview_plus/issues/304)) ([0c20b2c](https://github.com/zeshuaro/device_preview_plus/commit/0c20b2c1cf7d9bfe38d32859cd687341b10fb77f))
+* **sdk:** update dependency flutter to v3.32.1 ([#305](https://github.com/zeshuaro/device_preview_plus/issues/305)) ([91087eb](https://github.com/zeshuaro/device_preview_plus/commit/91087eb8d81f58cfdc0e16b3be05bb8a7dad85ec))
+* update dependency `device_frame_plus` to `^1.4.0` and fix `CustomDeviceInfo` functions ([#307](https://github.com/zeshuaro/device_preview_plus/issues/307)) ([ae19545](https://github.com/zeshuaro/device_preview_plus/commit/ae195453b40455571e96a8d34dcb36e0acaf344e))
+
+### Documentation
+
+* add issue templates ([#300](https://github.com/zeshuaro/device_preview_plus/issues/300)) ([816a775](https://github.com/zeshuaro/device_preview_plus/commit/816a775d41d1e2f58c66af5a90d17d3948d7e834))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency semantic-release to v24.2.5 ([#301](https://github.com/zeshuaro/device_preview_plus/issues/301)) ([5521121](https://github.com/zeshuaro/device_preview_plus/commit/552112197d9efbd4eb2a77a5a248db90ab8e6a02))
+* **deps:** update dependency semantic-release-pub to v0.10.7 ([#302](https://github.com/zeshuaro/device_preview_plus/issues/302)) ([8541846](https://github.com/zeshuaro/device_preview_plus/commit/85418464442743e17c49f0a52a070de388a3c4a9))
+* **example/deps:** update dependency dart to >=3.8.1 <4.0.0 ([#303](https://github.com/zeshuaro/device_preview_plus/issues/303)) ([2cf152e](https://github.com/zeshuaro/device_preview_plus/commit/2cf152e800a09ab1219ea03225bae565e2183fc3))
+
 ## [2.4.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.3.6...v2.4.0) (2025-05-25)
 
 ### Features
