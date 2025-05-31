@@ -1,5 +1,4 @@
 import 'package:device_preview_plus/device_preview_plus.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 /// A device info that can be customized at runtime to update
@@ -26,8 +25,19 @@ class CustomDeviceInfo implements DeviceInfo {
   final CustomDeviceInfoData data;
 
   @override
-  $DeviceInfoCopyWith<DeviceInfo> get copyWith =>
-      throw UnsupportedError('Read only');
+  CustomDeviceInfo copyWith({
+    DeviceIdentifier? identifier,
+    String? name,
+    EdgeInsets? rotatedSafeAreas,
+    EdgeInsets? safeAreas,
+    Path? screenPath,
+    double? pixelRatio,
+    CustomPainter? framePainter,
+    Size? frameSize,
+    Size? screenSize,
+  }) {
+    throw UnsupportedError('Read only');
+  }
 
   @override
   final DeviceIdentifier identifier;
@@ -55,67 +65,6 @@ class CustomDeviceInfo implements DeviceInfo {
 
   @override
   CustomPainter get framePainter => _painter;
-
-  @override
-  List<DiagnosticsNode> debugDescribeChildren() => [];
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    properties
-      ..add(StringProperty('name', name))
-      ..add(DoubleProperty('pixelRatio', pixelRatio))
-      ..add(DiagnosticsProperty('safeAreas', safeAreas))
-      ..add(DiagnosticsProperty('screenSize', screenSize))
-      ..add(DiagnosticsProperty('frameSize', frameSize))
-      ..add(DiagnosticsProperty('identifier', identifier));
-  }
-
-  @override
-  DiagnosticsNode toDiagnosticsNode({
-    String? name,
-    DiagnosticsTreeStyle? style,
-  }) {
-    return DiagnosticsProperty<DeviceInfo>(
-      name ?? 'CustomDeviceInfo',
-      this,
-      style: style ?? DiagnosticsTreeStyle.dense,
-    );
-  }
-
-  @override
-  String toStringDeep({
-    String prefixLineOne = '',
-    String? prefixOtherLines,
-    DiagnosticLevel minLevel = DiagnosticLevel.debug,
-    int wrapWidth = 65,
-  }) {
-    return toDiagnosticsNode().toStringDeep(
-      prefixLineOne: prefixLineOne,
-      prefixOtherLines: prefixOtherLines,
-      minLevel: minLevel,
-      wrapWidth: wrapWidth,
-    );
-  }
-
-  @override
-  String toStringShallow({
-    String joiner = ', ',
-    DiagnosticLevel minLevel = DiagnosticLevel.debug,
-  }) {
-    final properties = <String>[
-      'name: $name',
-      'pixelRatio: $pixelRatio',
-      'safeAreas: $safeAreas',
-      'screenSize: $screenSize',
-      'frameSize: $frameSize',
-    ];
-    return properties.join(joiner);
-  }
-
-  @override
-  String toStringShort() {
-    return name;
-  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
