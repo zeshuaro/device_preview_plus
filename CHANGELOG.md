@@ -1,3 +1,18 @@
+## [2.4.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.1...v2.4.2) (2025-06-08)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.32.2 ([#310](https://github.com/zeshuaro/device_preview_plus/issues/310)) ([6d231b8](https://github.com/zeshuaro/device_preview_plus/commit/6d231b8d7a301a09d837b7e2e4484be26d7d3470))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency flutter_lints to v6 ([#309](https://github.com/zeshuaro/device_preview_plus/issues/309)) ([c7c61ab](https://github.com/zeshuaro/device_preview_plus/commit/c7c61ab16ef97d4d9284c8c52f5cb46ac27a8c28))
+* **deps:** update dependency semantic-release-pub to v0.10.8 ([#308](https://github.com/zeshuaro/device_preview_plus/issues/308)) ([b184ebd](https://github.com/zeshuaro/device_preview_plus/commit/b184ebdc96e08322aef6c0a7285152ec2d984d95))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 8d1554a ([#311](https://github.com/zeshuaro/device_preview_plus/issues/311)) ([bf12b1c](https://github.com/zeshuaro/device_preview_plus/commit/bf12b1c1c6b0bb73b45de1d1c3eacfa10f8eaa6d))
+
 ## [2.4.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.0...v2.4.1) (2025-05-31)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "device_preview_plus",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Approximate how your Flutter app looks and performs on another device",
   "main": "index.js",
   "repository": "https://github.com/zeshuaro/device_preview_plus.git",
