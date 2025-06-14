@@ -49,7 +49,6 @@ dependencies:
 
 Wrap your app's root widget in a `DevicePreview` and make sure to :
 
-* Set your app's `useInheritedMediaQuery` to `true`.
 * Set your app's `builder` to `DevicePreview.appBuilder`.
 * Set your app's `locale` to `DevicePreview.locale(context)`.
 
@@ -69,7 +68,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),

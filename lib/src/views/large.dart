@@ -1,4 +1,4 @@
-import 'package:device_preview_plus/src/state/store.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:device_preview_plus/src/views/theme.dart';
 import 'package:device_preview_plus/src/views/tool_panel/tool_panel.dart';
 import 'package:flutter/material.dart';
@@ -6,24 +6,42 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
 /// The tool layout when the screen is large.
-class DervicePreviewLargeLayout extends StatefulWidget {
+class DevicePreviewLargeLayout extends StatefulWidget {
   /// Create a new panel from the given tools grouped as [slivers].
-  const DervicePreviewLargeLayout({super.key, required this.slivers});
+  const DevicePreviewLargeLayout({
+    super.key,
+    this.quickDevices = const [],
+    required this.slivers,
+    this.enableQuickDevicesTools = false,
+    this.showDeviceToast = false,
+    this.showThemeToggle = true,
+  });
 
   /// The sections containing the tools.
   ///
   /// They must be [Sliver]s.
   final List<Widget> slivers;
 
+  final List<DeviceInfo> quickDevices;
+
+  /// Enables quick device selection tools.
+  final bool enableQuickDevicesTools;
+
+  /// Shows a toast message when a device is selected instead of tooltip.
+  final bool showDeviceToast;
+
+  /// Shows a theme toggle button in the toolbar.
+  final bool showThemeToggle;
+
   @override
-  DervicePreviewLargeLayoutState createState() =>
-      DervicePreviewLargeLayoutState();
+  DevicePreviewLargeLayoutState createState() =>
+      DevicePreviewLargeLayoutState();
 }
 
-class DervicePreviewLargeLayoutState extends State<DervicePreviewLargeLayout> {
+class DevicePreviewLargeLayoutState extends State<DevicePreviewLargeLayout> {
   @override
   void initState() {
-    // Forcing rebuild to update absolute position in `_overlayKey`
+    // Forcing rebuild to update absolute postion in `_overlayKey`
     WidgetsBinding.instance.addPostFrameCallback(
       (timeStamp) => setState(() {}),
     );
@@ -56,16 +74,21 @@ class DervicePreviewLargeLayoutState extends State<DervicePreviewLargeLayout> {
                 width: ToolPanel.panelWidth,
                 child: MediaQuery(
                   data: mediaQuery.copyWith(
-                    padding:
-                        mediaQuery.padding.copyWith(left: 0) +
+                    padding: mediaQuery.padding.copyWith(left: 0) +
                         const EdgeInsets.only(left: 40),
                   ),
                   child: Navigator(
                     onGenerateInitialRoutes: (navigator, initialRoute) {
                       return [
                         MaterialPageRoute(
-                          builder: (context) =>
-                              ToolPanel(slivers: widget.slivers),
+                          builder: (context) => ToolPanel(
+                            slivers: widget.slivers,
+                            quickDevices: widget.quickDevices,
+                            enableQuickDevicesTools:
+                                widget.enableQuickDevicesTools,
+                            showDeviceToast: widget.showDeviceToast,
+                            showThemeToggle: widget.showThemeToggle,
+                          ),
                         ),
                       ];
                     },

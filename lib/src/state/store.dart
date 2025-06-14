@@ -10,29 +10,35 @@ import 'custom_device.dart';
 ///
 /// Whenever the state changes, it notifies its listener so that they can update themselves.
 class DevicePreviewStore extends ChangeNotifier {
-  /// Create a new store with the given [availableLocales], [device] and [storage].
+  /// Create a new store with the given [locales], [device] and [storage].
   DevicePreviewStore({
     required this.defaultDevice,
-    required List<Locale> preferredLocales,
-    List<Locale>? availableLocales,
+    List<Locale>? locales,
     List<DeviceInfo>? devices,
     required this.storage,
+    this.onThemeChanged,
+    this.initialDarkMode,
   }) {
     initialize(
-      preferredLocales: preferredLocales,
-      availableLocales: availableLocales,
+      locales: locales,
       devices: devices,
     );
   }
 
   final DeviceInfo defaultDevice;
 
+  /// Callback that is triggered when theme changes
+  final void Function(bool isDark)? onThemeChanged;
+
+  /// Initial dark mode setting when store initializes (true for dark, false for light)
+  final bool? initialDarkMode;
+
   DevicePreviewState _state = const DevicePreviewState.notInitialized();
 
   /// The storage used to persist the states's data.
   final DevicePreviewStorage storage;
 
-  /// The current state of the device preview.
+  /// The curren state of the device preview.
   DevicePreviewState get state => _state;
 
   /// Update the state with [value] and notifies all listeners
@@ -56,31 +62,30 @@ class DevicePreviewStore extends ChangeNotifier {
 
   /// Initializes the state by loading data from storage (if [useStorage])
   Future<void> initialize({
-    required List<Locale> preferredLocales,
-    List<Locale>? availableLocales,
+    List<Locale>? locales,
     List<DeviceInfo>? devices,
   }) async {
     await state.maybeWhen(
       notInitialized: () async {
         state = const DevicePreviewState.initializing();
 
-        final resolvedAvailableLocales = availableLocales != null
-            ? availableLocales
-                  .map(
-                    (available) =>
-                        defaultAvailableLocales.cast<NamedLocale?>().firstWhere(
-                          (all) => all!.code == available.toString(),
-                          orElse: () => null,
-                        ),
-                  )
-                  .where((x) => x != null)
-                  .toList()
+        final availaiableLocales = locales != null
+            ? locales
+                .map(
+                  (available) =>
+                      defaultAvailableLocales.cast<NamedLocale?>().firstWhere(
+                            (all) => all!.code == available.toString(),
+                            orElse: () => null,
+                          ),
+                )
+                .where((x) => x != null)
+                .toList()
             : defaultAvailableLocales;
 
         final defaultLocale = device_preview
             .basicLocaleListResolution(
-              preferredLocales,
-              resolvedAvailableLocales.map((x) => x!.locale).toList(),
+              WidgetsBinding.instance.window.locales,
+              availaiableLocales.map((x) => x!.locale).toList(),
             )
             .toString();
 
@@ -99,10 +104,19 @@ class DevicePreviewStore extends ChangeNotifier {
         );
 
         if (data.customDevice == null) {
-          data = data.copyWith(customDevice: _defaultCustomDevice);
+          data = data.copyWith(
+            customDevice: _defaultCustomDevice,
+          );
         }
+
+        if (initialDarkMode != null) {
+          data = data.copyWith(
+            isDarkMode: initialDarkMode!,
+          );
+        }
+
         state = DevicePreviewState.initialized(
-          locales: resolvedAvailableLocales.cast<NamedLocale>(),
+          locales: availaiableLocales.cast<NamedLocale>(),
           devices: devices!,
           data: data,
         );
@@ -118,9 +132,9 @@ extension DevicePreviewStateHelperExtensions on DevicePreviewStore {
   ///
   /// Throws an exception if not initialized.
   DevicePreviewData get data => state.maybeMap(
-    initialized: (state) => state.data,
-    orElse: () => throw Exception('Not initialized'),
-  );
+        initialized: (state) => state.data,
+        orElse: () => throw Exception('Not initialized'),
+      );
 
   /// Defines the current state's data.
   ///
@@ -140,17 +154,17 @@ extension DevicePreviewStateHelperExtensions on DevicePreviewStore {
   ///
   /// Throws an exception if not initialized.
   List<NamedLocale> get locales => state.maybeMap(
-    initialized: (state) => state.locales,
-    orElse: () => throw Exception('Not initialized'),
-  );
+        initialized: (state) => state.locales,
+        orElse: () => throw Exception('Not initialized'),
+      );
 
   /// Access to all available devices.
   ///
   /// Throws an exception if not initialized.
   List<DeviceInfo> get devices => state.maybeMap(
-    initialized: (state) => state.devices,
-    orElse: () => throw Exception('Not initialized'),
-  );
+        initialized: (state) => state.devices,
+        orElse: () => throw Exception('Not initialized'),
+      );
 
   /// Access to device preview settings from state's data.
   ///
@@ -184,23 +198,27 @@ extension DevicePreviewStateHelperExtensions on DevicePreviewStore {
   ///
   /// Throws an exception if not initialized.
   Locale get locale => state.maybeMap(
-    initialized: (state) => state.locales
-        .firstWhere(
-          (x) => x.locale.toString() == data.locale,
-          orElse: () => state.locales.first,
-        )
-        .locale,
-    orElse: () => throw Exception('Not initialized'),
-  );
+        initialized: (state) => state.locales
+            .firstWhere(
+              (x) => x.locale.toString() == data.locale,
+              orElse: () => state.locales.first,
+            )
+            .locale,
+        orElse: () => throw Exception('Not initialized'),
+      );
 
   /// Activate the custom device mode.
   void enableCustomDevice() {
-    data = data.copyWith(deviceIdentifier: CustomDeviceIdentifier.identifier);
+    data = data.copyWith(
+      deviceIdentifier: CustomDeviceIdentifier.identifier,
+    );
   }
 
   /// Hide or show the current device frame.
   void toggleFrame() {
-    data = data.copyWith(isFrameVisible: !data.isFrameVisible);
+    data = data.copyWith(
+      isFrameVisible: !data.isFrameVisible,
+    );
   }
 
   /// Hide or show the virtual keyboard.
@@ -212,18 +230,25 @@ extension DevicePreviewStateHelperExtensions on DevicePreviewStore {
 
   /// Switch from light to dark mode.
   void toggleDarkMode() {
-    data = data.copyWith(isDarkMode: !data.isDarkMode);
+    data = data.copyWith(
+      isDarkMode: !data.isDarkMode,
+    );
+    onThemeChanged?.call(data.isDarkMode);
   }
 
   /// Change the simulated device orientation between portrait and landscape.
   void rotate() {
     final index = (data.orientation.index + 1) % Orientation.values.length;
-    data = data.copyWith(orientation: Orientation.values[index]);
+    data = data.copyWith(
+      orientation: Orientation.values[index],
+    );
   }
 
   /// Select the current device.
   void selectDevice(DeviceIdentifier id) {
-    data = data.copyWith(deviceIdentifier: id.toString());
+    data = data.copyWith(
+      deviceIdentifier: id.toString(),
+    );
   }
 
   /// Indicate whether the current device is a custom one.

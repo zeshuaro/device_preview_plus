@@ -1,25 +1,15 @@
 import 'dart:async';
 import 'dart:ui' as ui;
 
-import 'package:device_frame_plus/device_frame_plus.dart';
-import 'package:device_preview_plus/src/state/state.dart';
-import 'package:device_preview_plus/src/state/store.dart';
-import 'package:device_preview_plus/src/storage/storage.dart';
-import 'package:device_preview_plus/src/utilities/assert_inherited_media_query.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:device_preview_plus/src/utilities/media_query_observer.dart';
 import 'package:device_preview_plus/src/views/theme.dart';
-import 'package:device_preview_plus/src/views/tool_panel/sections/accessibility.dart';
-import 'package:device_preview_plus/src/views/tool_panel/sections/device.dart';
-import 'package:device_preview_plus/src/views/tool_panel/sections/settings.dart';
-import 'package:device_preview_plus/src/views/tool_panel/sections/system.dart';
 import 'package:device_preview_plus/src/views/tool_panel/tool_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
-import 'locales/default_locales.dart';
-import 'utilities/screenshot.dart';
 import 'views/large.dart';
 import 'views/small.dart';
 
@@ -33,7 +23,6 @@ import 'views/small.dart';
 /// ```dart
 /// DevicePreview(
 ///   builder: (context) => MaterialApp(
-///      useInheritedMediaQuery: true,
 ///      locale: DevicePreview.locale(context),
 ///      builder: DevicePreview.appBuilder,
 ///      theme: ThemeData.light(),
@@ -48,7 +37,7 @@ import 'views/small.dart';
 /// * [Devices] has a set of predefined common devices.
 class DevicePreview extends StatefulWidget {
   /// Create a new [DevicePreview].
-  const DevicePreview({
+  DevicePreview({
     super.key,
     required this.builder,
     this.devices,
@@ -60,7 +49,13 @@ class DevicePreview extends StatefulWidget {
     this.storage,
     this.enabled = true,
     this.backgroundColor,
-  });
+    this.enableQuickDevicesTools = false,
+    this.showDeviceToast = false,
+    this.showThemeToggle = true,
+    this.onThemeChanged,
+    this.initialDarkMode,
+    List<DeviceInfo>? quickDevices,
+  }) : quickDevices = quickDevices ?? Devices.all;
 
   /// If not [enabled], the [child] is used directly.
   final bool enabled;
@@ -102,8 +97,78 @@ class DevicePreview extends StatefulWidget {
   /// To disable settings persistence use `DevicePreviewStorage.none()`.
   final DevicePreviewStorage? storage;
 
+  /// Enables quick device selection tools.
+  ///
+  /// When enabled, quick device selection UI and functionality will be available.
+  final bool enableQuickDevicesTools;
+
+  /// Shows a toast message when a device is selected instead of tooltip.
+  ///
+  /// When enabled, device selection will show a toast message with device information
+  /// instead of displaying tooltip on hover.
+  final bool showDeviceToast;
+
+  /// Shows a theme toggle icon in the toolbar.
+  ///
+  /// When enabled, displays a theme toggle icon that allows quick switching
+  /// between dark and light themes. The icon changes based on current theme:
+  /// - Light theme: Shows moon icon (tap to switch to dark)
+  /// - Dark theme: Shows sun icon (tap to switch to light)
+  ///
+  /// This option is enabled by default and appears above the "No Device" option.
+  ///
+  /// Example:
+  /// ```dart
+  /// DevicePreview(
+  ///   showThemeToggle: true, // Show theme toggle icon
+  ///   onThemeChanged: (theme) => print('Theme: $theme'),
+  ///   builder: (context) => MyApp(),
+  /// )
+  /// ```
+  final bool showThemeToggle;
+
+  /// Callback that is triggered when the theme (dark/light) is changed.
+  ///
+  /// The callback receives a boolean parameter indicating the new theme:
+  /// - `true` when switching to dark theme
+  /// - `false` when switching to light theme
+  ///
+  /// Example:
+  /// ```dart
+  /// DevicePreview(
+  ///   onThemeChanged: (isDark) {
+  ///     print('Theme changed to: ${isDark ? 'Dark' : 'Light'}');
+  ///     if (isDark) {
+  ///       // Handle dark theme
+  ///     } else {
+  ///       // Handle light theme
+  ///     }
+  ///   },
+  ///   builder: (context) => MyApp(),
+  /// )
+  /// ```
+  final void Function(bool isDark)? onThemeChanged;
+
+  /// Initial theme setting for the device preview.
+  ///
+  /// Initial dark mode setting when DevicePreview starts.
+  ///
+  /// If not specified, defaults to light mode.
+  /// This determines whether the device preview background starts in dark or light mode.
+  ///
+  /// Example:
+  /// ```dart
+  /// DevicePreview(
+  ///   initialDarkMode: true, // Start with dark theme
+  ///   builder: (context) => MyApp(),
+  /// )
+  /// ```
+  final bool? initialDarkMode;
+
   /// All the default available devices.
   static final List<DeviceInfo> defaultDevices = Devices.all;
+
+  final List<DeviceInfo> quickDevices;
 
   /// All the default tools included in the menu : [DeviceSection], [SystemSection],
   /// [AccessibilitySection] and [SettingsSection].
@@ -113,6 +178,10 @@ class DevicePreview extends StatefulWidget {
     AccessibilitySection(),
     SettingsSection(),
   ];
+
+  /// Global key for accessing ScaffoldMessenger from anywhere in the app
+  static GlobalKey<ScaffoldMessengerState> get scaffoldMessengerKey =>
+      DevicePreviewWidgetState.scaffoldMessengerKey;
 
   @override
   DevicePreviewWidgetState createState() => DevicePreviewWidgetState();
@@ -219,7 +288,10 @@ class DevicePreview extends StatefulWidget {
   ///
   /// If [enablePreview] is set to `true`, then the device preview is also enabled
   /// when appearing.
-  static void showToolbar(BuildContext context, {bool enablePreview = true}) {
+  static void showToolbar(
+    BuildContext context, {
+    bool enablePreview = true,
+  }) {
     final store = Provider.of<DevicePreviewStore>(context);
     store.data = store.data.copyWith(
       isToolbarVisible: true,
@@ -231,7 +303,10 @@ class DevicePreview extends StatefulWidget {
   ///
   /// If [disablePreview] is set to `false`, then the device preview stays active even
   /// if the toolbar is not visible anymore.
-  static void hideToolbar(BuildContext context, {bool disablePreview = true}) {
+  static void hideToolbar(
+    BuildContext context, {
+    bool disablePreview = true,
+  }) {
     final store = Provider.of<DevicePreviewStore>(context);
     store.data = store.data.copyWith(
       isToolbarVisible: false,
@@ -255,7 +330,10 @@ class DevicePreview extends StatefulWidget {
     BuildContext context,
   ) {
     final store = Provider.of<DevicePreviewStore>(context, listen: false);
-    return store.devices.map((info) => info.identifier).toList();
+    return store.devices
+        .where((info) => info != null)
+        .map((info) => info.identifier)
+        .toList();
   }
 
   /// All available locales in the tool.
@@ -346,6 +424,10 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
 
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
+  /// Global key for accessing ScaffoldMessenger
+  static final GlobalKey<ScaffoldMessengerState> scaffoldMessengerKey =
+      GlobalKey<ScaffoldMessengerState>();
+
   /// Whenever the [screenshot] is called, a new value is pushed to
   /// this stream.
   Stream<DeviceScreenshot> get onScreenshot => _onScreenshot!.stream;
@@ -359,7 +441,9 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
     final image = await boundary.toImage(
       pixelRatio: store.deviceInfo.pixelRatio,
     );
-    final byteData = await image.toByteData(format: format);
+    final byteData = await image.toByteData(
+      format: format,
+    );
     final bytes = byteData!.buffer.asUint8List();
     final screenshot = DeviceScreenshot(
       device: store.deviceInfo,
@@ -393,7 +477,12 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
       ),
     );
 
-    if (!isEnabled) return widget.builder(context);
+    final isQuickDevicesEnabled = widget.quickDevices.isNotEmpty &&
+        context.select(
+          (DevicePreviewStore store) => store.data.quickDeviceTools,
+        );
+
+    if (!isEnabled && !isQuickDevicesEnabled) return widget.builder(context);
 
     final mediaQuery = MediaQuery.of(context);
     final device = context.select(
@@ -441,10 +530,6 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                     key: _appKey,
                     builder: (context) {
                       final app = widget.builder(context);
-                      assert(
-                        isWidgetsAppUsingInheritedMediaQuery(app),
-                        'Your widgets app should have its `useInheritedMediaQuery` property set to `true` in order to use DevicePreview.',
-                      );
                       return app;
                     },
                   ),
@@ -460,17 +545,20 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
   @override
   Widget build(BuildContext context) {
     if (!widget.enabled) {
-      return Builder(key: _appKey, builder: widget.builder);
+      return Builder(
+        key: _appKey,
+        builder: widget.builder,
+      );
     }
-    final preferredLocales = View.of(context).platformDispatcher.locales;
 
     return ChangeNotifierProvider(
       create: (context) => DevicePreviewStore(
         defaultDevice: widget.defaultDevice ?? Devices.ios.iPhone13,
         devices: widget.devices,
-        preferredLocales: preferredLocales,
-        availableLocales: widget.availableLocales,
+        locales: widget.availableLocales,
         storage: storage,
+        onThemeChanged: widget.onThemeChanged,
+        initialDarkMode: widget.initialDarkMode,
       ),
       builder: (context, child) {
         final isInitialized = context.select(
@@ -481,12 +569,20 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
         );
 
         if (!isInitialized) {
-          return Builder(key: _appKey, builder: widget.builder);
+          return Builder(
+            key: _appKey,
+            builder: widget.builder,
+          );
         }
 
         final isEnabled = context.select(
           (DevicePreviewStore store) => store.data.isEnabled,
         );
+
+        final isQuickDevicesEnabled = widget.quickDevices.isNotEmpty &&
+            context.select(
+              (DevicePreviewStore store) => store.data.quickDeviceTools,
+            );
 
         final toolbarTheme = context.select(
           (DevicePreviewStore store) => store.settings.toolbarTheme,
@@ -496,8 +592,7 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
           (DevicePreviewStore store) => store.settings.backgroundTheme,
         );
 
-        final isToolbarVisible =
-            widget.isToolbarVisible &&
+        final isToolbarVisible = widget.isToolbarVisible &&
             context.select(
               (DevicePreviewStore store) => store.data.isToolbarVisible,
             );
@@ -506,122 +601,131 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
         final background = backgroundTheme.asThemeData();
         return Directionality(
           textDirection: TextDirection.ltr,
-          child: AnimatedSwitcher(
-            duration: const Duration(milliseconds: 400),
-            child: MediaQueryObserver(
-              //mediaQuery: DevicePreview._mediaQuery(context),
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  color: toolbar.scaffoldBackgroundColor,
-                ),
-                child: LayoutBuilder(
-                  builder: (context, constraints) {
-                    final mediaQuery = MediaQuery.of(context);
-                    final isSmall = constraints.maxWidth < 700;
+          child: ScaffoldMessenger(
+            key: scaffoldMessengerKey,
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 400),
+              child: MediaQueryObserver(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: toolbar.scaffoldBackgroundColor,
+                  ),
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      final mediaQuery = MediaQuery.of(context);
+                      final isSmall = constraints.maxWidth < 700;
 
-                    final borderRadius = isToolbarVisible
-                        ? BorderRadius.only(
-                            topRight: isSmall
-                                ? Radius.zero
-                                : const Radius.circular(16),
-                            bottomRight: const Radius.circular(16),
-                            bottomLeft: isSmall
-                                ? const Radius.circular(16)
-                                : Radius.zero,
-                          )
-                        : BorderRadius.zero;
-                    final double rightPanelOffset = !isSmall
-                        ? (isEnabled
+                      final borderRadius = isToolbarVisible
+                          ? BorderRadius.only(
+                              topRight: isSmall
+                                  ? Radius.zero
+                                  : const Radius.circular(16),
+                              bottomRight: const Radius.circular(16),
+                              bottomLeft: isSmall
+                                  ? const Radius.circular(16)
+                                  : Radius.zero,
+                            )
+                          : BorderRadius.zero;
+                      final double rightPanelOffset = !isSmall
+                          ? (isEnabled
                               ? ToolPanel.panelWidth - 10
                               : (64 + mediaQuery.padding.right))
-                        : 0;
-                    final double bottomPanelOffset = isSmall
-                        ? mediaQuery.padding.bottom + 52
-                        : 0;
-                    return Stack(
-                      children: <Widget>[
-                        if (isToolbarVisible && isSmall)
-                          Positioned(
-                            key: const Key('Small'),
-                            bottom: 0,
-                            right: 0,
+                          : 0;
+                      final double bottomPanelOffset =
+                          isSmall ? mediaQuery.padding.bottom + 52 : 0;
+                      return Stack(
+                        children: <Widget>[
+                          if (isToolbarVisible && isSmall)
+                            Positioned(
+                              key: const Key('Small'),
+                              bottom: 0,
+                              right: 0,
+                              left: 0,
+                              child: DevicePreviewSmallLayout(
+                                slivers: widget.tools,
+                                maxMenuHeight: constraints.maxHeight * 0.5,
+                                scaffoldKey: scaffoldKey,
+                                onMenuVisibleChanged: (isVisible) =>
+                                    setState(() {
+                                  _isToolPanelPopOverOpen = isVisible;
+                                }),
+                              ),
+                            ),
+                          if (isToolbarVisible && !isSmall)
+                            Positioned.fill(
+                              key: const Key('Large'),
+                              child: DevicePreviewLargeLayout(
+                                slivers: widget.tools,
+                                quickDevices: widget.quickDevices,
+                                enableQuickDevicesTools:
+                                    widget.enableQuickDevicesTools,
+                                showDeviceToast: widget.showDeviceToast,
+                                showThemeToggle: widget.showThemeToggle,
+                              ),
+                            ),
+                          AnimatedPositioned(
+                            key: const Key('preview'),
+                            duration: const Duration(milliseconds: 200),
                             left: 0,
-                            child: DevicePreviewSmallLayout(
-                              slivers: widget.tools,
-                              maxMenuHeight: constraints.maxHeight * 0.5,
-                              scaffoldKey: scaffoldKey,
-                              onMenuVisibleChanged: (isVisible) => setState(() {
-                                _isToolPanelPopOverOpen = isVisible;
-                              }),
-                            ),
-                          ),
-                        if (isToolbarVisible && !isSmall)
-                          Positioned.fill(
-                            key: const Key('Large'),
-                            child: DervicePreviewLargeLayout(
-                              slivers: widget.tools,
-                            ),
-                          ),
-                        AnimatedPositioned(
-                          key: const Key('preview'),
-                          duration: const Duration(milliseconds: 200),
-                          left: 0,
-                          right: isToolbarVisible ? rightPanelOffset : 0,
-                          top: 0,
-                          bottom: isToolbarVisible ? bottomPanelOffset : 0,
-                          child: Theme(
-                            data: background,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                boxShadow: const [
-                                  BoxShadow(
-                                    blurRadius: 20,
-                                    color: Color(0xAA000000),
-                                  ),
-                                ],
-                                borderRadius: borderRadius,
-                                color: background.scaffoldBackgroundColor,
-                              ),
-                              child: ClipRRect(
-                                borderRadius: borderRadius,
-                                child: isEnabled
-                                    ? Builder(builder: _buildPreview)
-                                    : Builder(
-                                        key: _appKey,
-                                        builder: widget.builder,
-                                      ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned.fill(
-                          child: IgnorePointer(
-                            ignoring: !_isToolPanelPopOverOpen,
-                            child: Localizations(
-                              locale: const Locale('en', 'US'),
-                              delegates: const [
-                                GlobalMaterialLocalizations.delegate,
-                                GlobalCupertinoLocalizations.delegate,
-                                GlobalWidgetsLocalizations.delegate,
-                              ],
-                              child: Navigator(
-                                onGenerateInitialRoutes: (navigator, name) {
-                                  return [
-                                    MaterialPageRoute(
-                                      builder: (context) => Scaffold(
-                                        key: scaffoldKey,
-                                        backgroundColor: Colors.transparent,
-                                      ),
+                            right: isToolbarVisible ? rightPanelOffset : 0,
+                            top: 0,
+                            bottom: isToolbarVisible ? bottomPanelOffset : 0,
+                            child: Theme(
+                              data: background,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      blurRadius: 20,
+                                      color: Color(0xAA000000),
                                     ),
-                                  ];
-                                },
+                                  ],
+                                  borderRadius: borderRadius,
+                                  color: background.scaffoldBackgroundColor,
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: borderRadius,
+                                  child: isEnabled || isQuickDevicesEnabled
+                                      ? Builder(
+                                          builder: _buildPreview,
+                                        )
+                                      : Builder(
+                                          key: _appKey,
+                                          builder: widget.builder,
+                                        ),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    );
-                  },
+                          Positioned.fill(
+                            child: IgnorePointer(
+                              ignoring: !_isToolPanelPopOverOpen,
+                              child: Localizations(
+                                locale: const Locale('en', 'US'),
+                                delegates: const [
+                                  GlobalMaterialLocalizations.delegate,
+                                  GlobalCupertinoLocalizations.delegate,
+                                  GlobalWidgetsLocalizations.delegate,
+                                ],
+                                child: Navigator(
+                                  onGenerateInitialRoutes: (navigator, name) {
+                                    return [
+                                      MaterialPageRoute(
+                                        builder: (context) => Scaffold(
+                                          key: scaffoldKey,
+                                          backgroundColor: Colors.transparent,
+                                        ),
+                                      ),
+                                    ];
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
                 ),
               ),
             ),

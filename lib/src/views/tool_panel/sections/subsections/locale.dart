@@ -1,5 +1,4 @@
 import 'package:device_preview_plus/device_preview_plus.dart';
-import 'package:device_preview_plus/src/state/store.dart';
 import 'package:device_preview_plus/src/views/tool_panel/widgets/search_field.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -7,7 +6,9 @@ import 'package:provider/provider.dart';
 /// A page for picking a simulated locale.
 class LocalePicker extends StatefulWidget {
   /// Create a new page for picking a simulated locale.
-  const LocalePicker({super.key});
+  const LocalePicker({
+    super.key,
+  });
 
   @override
   LocalePickerState createState() => LocalePickerState();
@@ -17,13 +18,17 @@ class LocalePickerState extends State<LocalePicker> {
   String filter = '';
   @override
   Widget build(BuildContext context) {
-    final locales = context.select((DevicePreviewStore store) => store.locales);
+    final locales = context.select(
+      (DevicePreviewStore store) => store.locales,
+    );
     final selectedLocale = context.select(
       (DevicePreviewStore store) => store.data.locale,
     );
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: const Text('Locale')),
+      appBar: AppBar(
+        title: const Text('Locale'),
+      ),
       body: Padding(
         padding: const EdgeInsets.only(left: 10.0),
         child: Column(
@@ -35,31 +40,34 @@ class LocalePickerState extends State<LocalePicker> {
             ),
             Expanded(
               child: ListView(
-                children: locales
-                    .where((locale) {
-                      final filter = this.filter.trim().toLowerCase();
-                      return filter.isEmpty ||
-                          locale.name.toLowerCase().contains(filter) ||
-                          locale.code.toLowerCase().contains(filter);
-                    })
-                    .map((locale) {
-                      final isSelected = locale.code == selectedLocale;
-                      return ListTile(
-                        onTap: !isSelected
-                            ? () {
-                                final store = context
-                                    .read<DevicePreviewStore>();
-                                store.data = store.data.copyWith(
-                                  locale: locale.code,
-                                );
-                                Navigator.pop(context);
-                              }
-                            : null,
-                        title: Text(locale.name),
-                        subtitle: Text(locale.code),
-                      );
-                    })
-                    .toList(),
+                children: locales.where(
+                  (locale) {
+                    final filter = this.filter.trim().toLowerCase();
+                    return filter.isEmpty ||
+                        locale.name.toLowerCase().contains(filter) ||
+                        locale.code.toLowerCase().contains(filter);
+                  },
+                ).map(
+                  (locale) {
+                    final isSelected = locale.code == selectedLocale;
+                    return ListTile(
+                      onTap: !isSelected
+                          ? () {
+                              final store = context.read<DevicePreviewStore>();
+                              store.data =
+                                  store.data.copyWith(locale: locale.code);
+                              Navigator.pop(context);
+                            }
+                          : null,
+                      title: Text(
+                        locale.name,
+                      ),
+                      subtitle: Text(
+                        locale.code,
+                      ),
+                    );
+                  },
+                ).toList(),
               ),
             ),
           ],

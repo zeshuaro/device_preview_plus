@@ -1,4 +1,4 @@
-import 'package:device_preview_plus/src/state/store.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:device_preview_plus/src/views/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -48,9 +48,14 @@ class DevicePreviewSmallLayout extends StatelessWidget {
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
                 ),
-                child: ToolPanel(isModal: true, slivers: slivers),
+                child: ToolPanel(
+                  isModal: true,
+                  slivers: slivers,
+                ),
               ),
-              constraints: BoxConstraints(maxHeight: maxMenuHeight),
+              constraints: BoxConstraints(
+                maxHeight: maxMenuHeight,
+              ),
               backgroundColor: Colors.transparent,
             );
             await sheet?.closed;
@@ -63,7 +68,10 @@ class DevicePreviewSmallLayout extends StatelessWidget {
 }
 
 class _BottomToolbar extends StatelessWidget {
-  const _BottomToolbar({required this.showPanel});
+  const _BottomToolbar({
+    super.key,
+    required this.showPanel,
+  });
 
   final VoidCallback showPanel;
 

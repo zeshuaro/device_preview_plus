@@ -59,8 +59,8 @@ class SettingsSection extends StatelessWidget {
               state.settings = state.settings.copyWith(
                 backgroundTheme:
                     backgroundTheme == DevicePreviewBackgroundThemeData.dark
-                    ? DevicePreviewBackgroundThemeData.light
-                    : DevicePreviewBackgroundThemeData.dark,
+                        ? DevicePreviewBackgroundThemeData.light
+                        : DevicePreviewBackgroundThemeData.dark,
               );
             },
           ),

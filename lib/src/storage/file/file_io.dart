@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:device_preview_plus/src/state/state.dart';
-
-import '../storage.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 
 /// A storage that saves device preview user preferences into
 /// a single [file] as json content.
 class FileDevicePreviewStorage extends DevicePreviewStorage {
-  FileDevicePreviewStorage({required this.filePath});
+  FileDevicePreviewStorage({
+    required this.filePath,
+  });
 
   /// The file to which the json content is saved to.
   final String filePath;

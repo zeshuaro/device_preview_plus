@@ -12,9 +12,8 @@ Future<dynamic> _openDeviceSizeAdjustDialog({
     context: context,
     builder: (context) {
       var navigator = Navigator.of(context);
-      var textEditingController = TextEditingController(
-        text: initialValue.toString(),
-      );
+      var textEditingController =
+          TextEditingController(text: initialValue.toString());
       textEditingController.selection = TextSelection(
         baseOffset: 0,
         extentOffset: textEditingController.text.length,
@@ -45,7 +44,10 @@ Future<dynamic> _openDeviceSizeAdjustDialog({
           ),
         ),
         actions: [
-          TextButton(onPressed: navigator.pop, child: const Text('Close')),
+          TextButton(
+            onPressed: navigator.pop,
+            child: const Text('Close'),
+          ),
           TextButton(
             child: const Text('Confirm'),
             onPressed: () {
@@ -73,21 +75,20 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
           ListTile(
             title: const Text('Width'),
             trailing: GestureDetector(
-              onTap: () async {
-                final value = await _openDeviceSizeAdjustDialog(
+              onTap: () {
+                _openDeviceSizeAdjustDialog(
                   context: context,
                   initialValue: customDevice.screenSize.width,
                   title: 'Change Width',
-                );
-                if (value == null) return;
-                if (context.mounted) {
+                ).then((value) {
+                  if (value == null) return;
                   final store = context.read<DevicePreviewStore>();
                   store.updateCustomDevice(
                     customDevice.copyWith(
                       screenSize: Size(value, customDevice.screenSize.height),
                     ),
                   );
-                }
+                });
               },
               child: Text(customDevice.screenSize.width.toString()),
             ),
@@ -110,21 +111,20 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
             title: const Text('Height'),
             trailing: GestureDetector(
               child: Text(customDevice.screenSize.height.toString()),
-              onTap: () async {
-                final value = await _openDeviceSizeAdjustDialog(
+              onTap: () {
+                _openDeviceSizeAdjustDialog(
                   context: context,
                   initialValue: customDevice.screenSize.height,
                   title: 'Change Height',
-                );
-                if (value == null) return;
-                if (context.mounted) {
+                ).then((value) {
+                  if (value == null) return;
                   final store = context.read<DevicePreviewStore>();
                   store.updateCustomDevice(
                     customDevice.copyWith(
                       screenSize: Size(customDevice.screenSize.width, value),
                     ),
                   );
-                }
+                });
               },
             ),
             subtitle: Slider(
@@ -149,7 +149,11 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
               value: customDevice.pixelRatio,
               onChanged: (v) {
                 final store = context.read<DevicePreviewStore>();
-                store.updateCustomDevice(customDevice.copyWith(pixelRatio: v));
+                store.updateCustomDevice(
+                  customDevice.copyWith(
+                    pixelRatio: v,
+                  ),
+                );
               },
               min: 1,
               max: 4,
@@ -244,11 +248,17 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
         ..._allPlatforms.map(
           (p) => ListTile(
             leading: TargetPlatformIcon(platform: p),
-            title: Text(p.name),
+            title: Text(
+              p.name,
+            ),
             onTap: () {
               final store = context.read<DevicePreviewStore>();
               if (customDevice != null) {
-                store.updateCustomDevice(customDevice.copyWith(platform: p));
+                store.updateCustomDevice(
+                  customDevice.copyWith(
+                    platform: p,
+                  ),
+                );
               }
             },
           ),
@@ -260,12 +270,20 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
       children: [
         ..._allDeviceTypes.map(
           (type) => ListTile(
-            leading: DeviceTypeIcon(type: type),
-            title: Text(type.name),
+            leading: DeviceTypeIcon(
+              type: type,
+            ),
+            title: Text(
+              type.name,
+            ),
             onTap: () {
               final store = context.read<DevicePreviewStore>();
               if (customDevice != null) {
-                store.updateCustomDevice(customDevice.copyWith(type: type));
+                store.updateCustomDevice(
+                  customDevice.copyWith(
+                    type: type,
+                  ),
+                );
               }
             },
           ),

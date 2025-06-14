@@ -1,4 +1,5 @@
 import 'package:device_preview_plus/device_preview_plus.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -87,6 +88,9 @@ class DevicePreviewData with _$DevicePreviewData {
 
     /// The custom device configuration
     @Default(null) CustomDeviceInfoData? customDevice,
+
+    /// Quick Device Tools
+    @Default(false) bool quickDeviceTools,
   }) = _DevicePreviewData;
 
   factory DevicePreviewData.fromJson(Map<String, dynamic> json) =>
@@ -151,8 +155,19 @@ abstract class DevicePreviewSettingsData with _$DevicePreviewSettingsData {
       _$DevicePreviewSettingsDataFromJson(json);
 }
 
-enum DevicePreviewToolBarThemeData { dark, light }
+enum DevicePreviewToolBarThemeData {
+  dark,
+  light,
+}
 
-enum DevicePreviewBackgroundThemeData { dark, light }
+enum DevicePreviewBackgroundThemeData {
+  dark,
+  light,
+}
 
-enum DevicePreviewToolBarPositionData { bottom, top, left, right }
+enum DevicePreviewToolBarPositionData {
+  bottom,
+  top,
+  left,
+  right,
+}
