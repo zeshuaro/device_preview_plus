@@ -2,6 +2,7 @@
 
 ### 🚀 Overview
 
+
 This release introduces significant improvements and new features to the `device_preview` package, focusing on quick device selection tools, theme switching capabilities, and overall user experience enhancements.
 
 ### ✨ New Features
