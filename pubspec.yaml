@@ -13,7 +13,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   provider: ^6.1.5
-  device_frame_plus: ^1.4.0
+  device_frame_plus: ^1.5.0
   freezed_annotation: ^3.0.0
   json_annotation: ^4.9.0
   shared_preferences: ^2.5.3
