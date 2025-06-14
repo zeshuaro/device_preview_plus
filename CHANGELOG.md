@@ -1,3 +1,91 @@
+## [2.4.3](v2.4.2...v2.4.3) (2025-06-14)
+
+### 🚀 Overview
+
+This release introduces significant improvements and new features to the `device_preview` package, focusing on quick device selection tools, theme switching capabilities, and overall user experience enhancements.
+
+### ✨ New Features
+
+#### 1. Quick Device Selection
+- Added compact device icon widget
+- Introduced quick device view with a new compact interface
+- Toast notifications support for device selection
+- Automatic icon selection based on device types
+
+#### 2. Theme Switching Features
+- Theme change callback support (`onThemeChanged`)
+- Initial dark mode setting (`initialDarkMode`)
+- Theme toggle button
+- Theme state tracking and notification system
+
+#### 3. Enhanced Configuration Options
+- `enableQuickDevicesTools`: Enable quick device tools
+- `showDeviceToast`: Device selection notifications
+- `showThemeToggle`: Theme toggle button visibility
+- ScaffoldMessenger integration for global access
+
+### 🔧 Technical Improvements
+
+- Refactored code structure: New widget class organization and modular tool panel
+- Improved state management
+- Added comprehensive dartdoc documentation
+
+### 📁 File Changes
+
+#### New Files
+- `lib/src/views/tool_panel/widgets/compact_device_icon.dart`
+- `lib/src/views/tool_panel/widgets/compact_quick_devices_view.dart`
+- `lib/src/views/tool_panel/widgets/tool_panel_widget.dart`
+- `lib/src/views/tool_panel/widgets/widgets.dart`
+
+#### Main Changes
+- `device_preview.dart`: New parameters and configuration options
+- `state.dart`: Added quickDeviceTools field
+- `store.dart`: Theme callbacks and initial settings
+- `tool_panel.dart`: Enhanced tool panel configuration
+
+### 🎯 Usage Examples
+
+#### Basic Usage
+```dart
+DevicePreview(
+  enabled: true,
+  enableQuickDevicesTools: true,
+  showDeviceToast: true,
+  showThemeToggle: true,
+  onThemeChanged: (isDark) {
+    print('Theme changed to: ${isDark ? 'Dark' : 'Light'}');
+  },
+  quickDevices: [
+    Devices.ios.iPhone13ProMax,
+    Devices.ios.iPadPro11Inches,
+  ],
+  builder: (context) => const MyApp(),
+)
+```
+
+#### Advanced Configuration
+```dart
+DevicePreview(
+  enabled: true,
+  enableQuickDevicesTools: true, // Quick device tools
+  showDeviceToast: true,         // Toast notifications
+  showThemeToggle: true,         // Theme toggle button
+  initialDarkMode: false,        // Initial theme setting
+  onThemeChanged: handleThemeChange,
+  quickDevices: customDeviceList,
+  builder: buildApp,
+)
+```
+
+### 🔄 Breaking Changes
+
+None – These changes are backward compatible. All new features are optional parameters.
+
+### 📋 Migration Notes
+
+No changes required for existing users. New features are disabled by default and preserve existing behavior.
+
 ## [2.4.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.1...v2.4.2) (2025-06-08)
 
 ### Bug Fixes
