@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:ui' as ui;
 
 import 'package:device_preview_plus/device_preview_plus.dart';
-import 'package:device_preview_plus/src/utilities/assert_inherited_media_query.dart';
 import 'package:device_preview_plus/src/utilities/media_query_observer.dart';
 import 'package:device_preview_plus/src/views/theme.dart';
 import 'package:device_preview_plus/src/views/tool_panel/tool_panel.dart';
@@ -24,7 +23,6 @@ import 'views/small.dart';
 /// ```dart
 /// DevicePreview(
 ///   builder: (context) => MaterialApp(
-///      useInheritedMediaQuery: true,
 ///      locale: DevicePreview.locale(context),
 ///      builder: DevicePreview.appBuilder,
 ///      theme: ThemeData.light(),
@@ -532,10 +530,6 @@ class DevicePreviewWidgetState extends State<DevicePreview> {
                     key: _appKey,
                     builder: (context) {
                       final app = widget.builder(context);
-                      assert(
-                        isWidgetsAppUsingInheritedMediaQuery(app),
-                        'Your widgets app should have its `useInheritedMediaQuery` property set to `true` in order to use DevicePreview.',
-                      );
                       return app;
                     },
                   ),
