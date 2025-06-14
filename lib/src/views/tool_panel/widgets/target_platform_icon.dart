@@ -5,7 +5,11 @@ class TargetPlatformIcon extends StatelessWidget {
   /// Creates an icon for the given [platform].
   ///
   /// A [color] can be given to customize the icon color.
-  const TargetPlatformIcon({super.key, required this.platform, this.color});
+  const TargetPlatformIcon({
+    Key? key,
+    required this.platform,
+    this.color,
+  }) : super(key: key);
 
   final Color? color;
   final TargetPlatform platform;
@@ -19,7 +23,10 @@ class TargetPlatformIcon extends StatelessWidget {
         height: 24,
         child: CustomPaint(
           size: const Size(24, 24),
-          painter: _PathPainter(platform, color),
+          painter: _PathPainter(
+            platform,
+            color,
+          ),
         ),
       ),
     );
@@ -44,12 +51,29 @@ class _PathPainter extends CustomPainter {
       target != oldDelegate.target || color != oldDelegate.color;
 }
 
-/// All paths are generated from https://simpleicons.org/ with https://fluttershapemaker.com/
+/// All paths are genereted from https://simpleicons.org/ with https://fluttershapemaker.com/
 final _paths = <TargetPlatform, Path>{
   TargetPlatform.iOS: Path()
-    ..moveTo(12.152, 6.896)
-    ..cubicTo(11.203999999999999, 6.896, 9.736999999999998, 5.818, 8.192, 5.856)
-    ..cubicTo(6.152, 5.883, 4.282, 7.039, 3.231, 8.87)
+    ..moveTo(
+      12.152,
+      6.896,
+    )
+    ..cubicTo(
+      11.203999999999999,
+      6.896,
+      9.736999999999998,
+      5.818,
+      8.192,
+      5.856,
+    )
+    ..cubicTo(
+      6.152,
+      5.883,
+      4.282,
+      7.039,
+      3.231,
+      8.87,
+    )
     ..cubicTo(
       1.1139999999999999,
       12.544999999999998,
@@ -58,7 +82,14 @@ final _paths = <TargetPlatform, Path>{
       4.75,
       20.96,
     )
-    ..cubicTo(5.763, 22.414, 6.958, 24.05, 8.542, 23.999000000000002)
+    ..cubicTo(
+      5.763,
+      22.414,
+      6.958,
+      24.05,
+      8.542,
+      23.999000000000002,
+    )
     ..cubicTo(
       10.062,
       23.934,
@@ -124,8 +155,18 @@ final _paths = <TargetPlatform, Path>{
       6.895000000000005,
     )
     ..close()
-    ..moveTo(15.53, 3.83)
-    ..cubicTo(16.372999999999998, 2.818, 16.93, 1.403, 16.775, 0)
+    ..moveTo(
+      15.53,
+      3.83,
+    )
+    ..cubicTo(
+      16.372999999999998,
+      2.818,
+      16.93,
+      1.403,
+      16.775,
+      0,
+    )
     ..cubicTo(
       15.567999999999998,
       0.052,
@@ -142,7 +183,14 @@ final _paths = <TargetPlatform, Path>{
       11.969999999999999,
       5.532,
     )
-    ..cubicTo(13.308, 5.636, 14.684999999999999, 4.844, 15.529, 3.831),
+    ..cubicTo(
+      13.308,
+      5.636,
+      14.684999999999999,
+      4.844,
+      15.529,
+      3.831,
+    ),
   TargetPlatform.macOS: Path()
     ..moveTo(0, 14.727)
     ..lineTo(0.941, 14.727)

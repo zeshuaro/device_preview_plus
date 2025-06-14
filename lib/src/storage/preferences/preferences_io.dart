@@ -1,14 +1,14 @@
 import 'dart:convert';
 
-import 'package:device_preview_plus/src/state/state.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '../storage.dart';
 
 /// A storage that keeps all preferences stored as json in the
 /// preference entry with the [preferenceKey] key.
 class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
-  PreferencesDevicePreviewStorage({this.preferenceKey = defaultPreferencesKey});
+  PreferencesDevicePreviewStorage({
+    this.preferenceKey = defaultPreferencesKey,
+  });
 
   /// The preferences key used to save the user configuration.
   final String preferenceKey;

@@ -1,8 +1,6 @@
-import 'package:device_preview_plus/src/state/store.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'section.dart';
 
 /// All the simulated accessibility settings.
 class AccessibilitySection extends StatelessWidget {
@@ -82,7 +80,9 @@ class AccessibilitySection extends StatelessWidget {
             ),
             onTap: () {
               final state = context.read<DevicePreviewStore>();
-              state.data = state.data.copyWith(invertColors: !invertColors);
+              state.data = state.data.copyWith(
+                invertColors: !invertColors,
+              );
             },
           ),
         if (this.boldText)
@@ -92,11 +92,15 @@ class AccessibilitySection extends StatelessWidget {
             subtitle: Text(boldText ? 'Enabled' : 'Disabled'),
             trailing: Opacity(
               opacity: boldText ? 1.0 : 0.3,
-              child: const Icon(Icons.format_bold),
+              child: const Icon(
+                Icons.format_bold,
+              ),
             ),
             onTap: () {
               final state = context.read<DevicePreviewStore>();
-              state.data = state.data.copyWith(boldText: !boldText);
+              state.data = state.data.copyWith(
+                boldText: !boldText,
+              );
             },
           ),
         if (this.textScalingFactor) ...[

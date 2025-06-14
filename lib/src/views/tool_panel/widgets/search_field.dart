@@ -8,11 +8,11 @@ class ToolbarSearchField extends StatefulWidget {
   ///
   /// The [onTextChanged] is invoked each time the [text] is changed by the user.
   const ToolbarSearchField({
-    super.key,
+    Key? key,
     required this.hintText,
     required this.onTextChanged,
     this.text = '',
-  });
+  }) : super(key: key);
 
   /// The current field content.
   final String text;
@@ -35,7 +35,9 @@ class ToolbarSearchFieldState extends State<ToolbarSearchField> {
   @override
   void initState() {
     _controller.addListener(() {
-      widget.onTextChanged(_controller.text.replaceAll(' ', '').toLowerCase());
+      widget.onTextChanged(
+        _controller.text.replaceAll(' ', '').toLowerCase(),
+      );
     });
     super.initState();
   }
@@ -58,7 +60,9 @@ class ToolbarSearchFieldState extends State<ToolbarSearchField> {
   }
 
   void _clear() {
-    WidgetsBinding.instance.addPostFrameCallback((_) => _controller.clear());
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => _controller.clear(),
+    );
   }
 
   @override
@@ -74,7 +78,10 @@ class ToolbarSearchFieldState extends State<ToolbarSearchField> {
             filled: true,
             border: InputBorder.none,
             prefixIcon: const Icon(Icons.search),
-            suffix: InkWell(onTap: _clear, child: const Icon(Icons.close)),
+            suffix: InkWell(
+              onTap: _clear,
+              child: const Icon(Icons.close),
+            ),
           ),
         ),
       ),

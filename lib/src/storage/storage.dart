@@ -1,6 +1,4 @@
-import 'package:device_preview_plus/src/state/state.dart';
-
-import 'preferences/preferences.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 
 /// A storage for device preview user's preferences.
 abstract class DevicePreviewStorage {
@@ -15,7 +13,10 @@ abstract class DevicePreviewStorage {
   factory DevicePreviewStorage.preferences({
     String preferenceKey =
         PreferencesDevicePreviewStorage.defaultPreferencesKey,
-  }) => PreferencesDevicePreviewStorage(preferenceKey: preferenceKey);
+  }) =>
+      PreferencesDevicePreviewStorage(
+        preferenceKey: preferenceKey,
+      );
 
   /// Save the given [data] to the storage so that it can be loaded
   /// later with the [load] method.

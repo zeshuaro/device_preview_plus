@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 class ToolPanelSection extends StatelessWidget {
   /// Create a new panel section with the given [title] and [children].
   const ToolPanelSection({
-    super.key,
+    Key? key,
     required this.title,
     required this.children,
-  });
+  }) : super(key: key);
 
   /// The section header content.
   final String title;
@@ -23,25 +23,27 @@ class ToolPanelSection extends StatelessWidget {
     return SliverPadding(
       padding: const EdgeInsets.only(bottom: 32.0),
       sliver: SliverList(
-        delegate: SliverChildListDelegate([
-          SafeArea(
-            top: false,
-            bottom: false,
-            minimum: const EdgeInsets.only(
-              top: 20,
-              left: 16,
-              right: 16,
-              bottom: 4,
-            ),
-            child: Text(
-              title.toUpperCase(),
-              style: theme.textTheme.titleSmall?.copyWith(
-                color: theme.hintColor,
+        delegate: SliverChildListDelegate(
+          [
+            SafeArea(
+              top: false,
+              bottom: false,
+              minimum: const EdgeInsets.only(
+                top: 20,
+                left: 16,
+                right: 16,
+                bottom: 4,
+              ),
+              child: Text(
+                title.toUpperCase(),
+                style: theme.textTheme.titleSmall?.copyWith(
+                  color: theme.hintColor,
+                ),
               ),
             ),
-          ),
-          ...children,
-        ]),
+            ...children,
+          ],
+        ),
       ),
     );
   }

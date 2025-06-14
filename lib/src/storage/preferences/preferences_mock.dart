@@ -1,11 +1,11 @@
-import 'package:device_preview_plus/src/state/state.dart';
-
-import '../storage.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 
 /// Since share_preferences makes pub considering the package as not supported we should
-/// remove this functionality from the web version to get the maximum score.
+/// remove this functionnality from the web version to get the maximum score.
 class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
-  PreferencesDevicePreviewStorage({this.preferenceKey = defaultPreferencesKey});
+  PreferencesDevicePreviewStorage({
+    this.preferenceKey = defaultPreferencesKey,
+  });
 
   /// The preferences key used to save the user configuration.
   final String preferenceKey;

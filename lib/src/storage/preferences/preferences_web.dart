@@ -2,16 +2,16 @@
 
 import 'dart:async';
 import 'dart:convert' show jsonDecode, jsonEncode;
+import 'dart:html' as html;
 
-import 'package:device_preview_plus/src/state/state.dart';
-import 'package:web/web.dart' as web;
-
-import '../storage.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 
 /// A storage that keeps all preferences stored as json in the
 /// preference entry with the [preferenceKey] key.
 class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
-  PreferencesDevicePreviewStorage({this.preferenceKey = defaultPreferencesKey});
+  PreferencesDevicePreviewStorage({
+    this.preferenceKey = defaultPreferencesKey,
+  });
 
   /// The preferences key used to save the user configuration.
   final String preferenceKey;
@@ -22,9 +22,7 @@ class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
   /// Load the last saved preferences (until [ignore] is `true`).
   @override
   Future<DevicePreviewData?> load() async {
-    final json = web.window.localStorage.getItem(
-      'flutter.$defaultPreferencesKey',
-    );
+    final json = html.window.localStorage['flutter.$defaultPreferencesKey'];
     if (json == null || json.isEmpty) return null;
     return DevicePreviewData.fromJson(jsonDecode(json));
   }
@@ -43,10 +41,8 @@ class PreferencesDevicePreviewStorage extends DevicePreviewStorage {
   Future _save() async {
     await Future.delayed(const Duration(milliseconds: 500));
     if (_saveData != null) {
-      web.window.localStorage.setItem(
-        'flutter.$defaultPreferencesKey',
-        jsonEncode(_saveData!.toJson()),
-      );
+      html.window.localStorage['flutter.$defaultPreferencesKey'] =
+          jsonEncode(_saveData!.toJson());
     }
     _saveTask = null;
   }

@@ -1,11 +1,9 @@
-import 'package:device_preview_plus/src/state/store.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:device_preview_plus/src/views/tool_panel/sections/subsections/device_model.dart';
 import 'package:device_preview_plus/src/views/tool_panel/widgets/device_type_icon.dart';
 import 'package:device_preview_plus/src/views/tool_panel/widgets/target_platform_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'section.dart';
 
 /// All the simulated properties for the device.
 class DeviceSection extends StatelessWidget {
@@ -69,9 +67,15 @@ class DeviceSection extends StatelessWidget {
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                TargetPlatformIcon(platform: deviceIdentifier.platform),
-                const SizedBox(width: 8),
-                DeviceTypeIcon(type: deviceIdentifier.type),
+                TargetPlatformIcon(
+                  platform: deviceIdentifier.platform,
+                ),
+                const SizedBox(
+                  width: 8,
+                ),
+                DeviceTypeIcon(
+                  type: deviceIdentifier.type,
+                ),
                 const Icon(Icons.chevron_right_rounded),
               ],
             ),
@@ -80,8 +84,10 @@ class DeviceSection extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      Theme(data: theme, child: const DeviceModelPicker()),
+                  builder: (context) => Theme(
+                    data: theme,
+                    child: const DeviceModelPicker(),
+                  ),
                 ),
               );
             },
@@ -90,14 +96,16 @@ class DeviceSection extends StatelessWidget {
           ListTile(
             key: const Key('orientation'),
             title: const Text('Orientation'),
-            subtitle: Text(() {
-              switch (orientation) {
-                case Orientation.landscape:
-                  return 'Landscape';
-                case Orientation.portrait:
-                  return 'Portrait';
-              }
-            }()),
+            subtitle: Text(
+              () {
+                switch (orientation) {
+                  case Orientation.landscape:
+                    return 'Landscape';
+                  case Orientation.portrait:
+                    return 'Portrait';
+                }
+              }(),
+            ),
             trailing: AnimatedContainer(
               duration: const Duration(milliseconds: 200),
               transformAlignment: Alignment.center,

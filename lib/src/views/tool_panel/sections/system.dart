@@ -1,16 +1,18 @@
-import 'package:device_preview_plus/src/state/store.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
 import 'package:device_preview_plus/src/views/tool_panel/sections/subsections/locale.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'section.dart';
 
 /// All the simulated system settings.
 class SystemSection extends StatelessWidget {
   /// Create a new menu section with simulated systel properties.
   ///
   /// The items can be hidden with [locale], [theme] parameters.
-  const SystemSection({super.key, this.locale = true, this.theme = true});
+  const SystemSection({
+    super.key,
+    this.locale = true,
+    this.theme = true,
+  });
 
   /// Allow to select the current device locale.
   final bool locale;
@@ -24,12 +26,16 @@ class SystemSection extends StatelessWidget {
       (DevicePreviewStore store) => store.data.isDarkMode,
     );
 
-    final locales = context.select((DevicePreviewStore store) => store.locales);
+    final locales = context.select(
+      (DevicePreviewStore store) => store.locales,
+    );
 
     final selectedLocale = locales.firstWhere(
       (element) =>
           element.code ==
-          context.select((DevicePreviewStore store) => store.data.locale),
+          context.select(
+            (DevicePreviewStore store) => store.data.locale,
+          ),
       orElse: () => locales.first,
     );
 
@@ -53,8 +59,10 @@ class SystemSection extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      Theme(data: theme, child: const LocalePicker()),
+                  builder: (context) => Theme(
+                    data: theme,
+                    child: const LocalePicker(),
+                  ),
                 ),
               );
             },
