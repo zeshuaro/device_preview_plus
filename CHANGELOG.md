@@ -1,3 +1,19 @@
+## [2.4.4](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.3...v2.4.4) (2025-06-29)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.32.5 ([#326](https://github.com/zeshuaro/device_preview_plus/issues/326)) ([02e401a](https://github.com/zeshuaro/device_preview_plus/commit/02e401a5868760193585f2a1ffbd5afe8632f549))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency build_runner to v2.5.0 ([#321](https://github.com/zeshuaro/device_preview_plus/issues/321)) ([951d714](https://github.com/zeshuaro/device_preview_plus/commit/951d714eacddb88c6c25d9aaafa569972e149e3c))
+* **deps:** update dependency build_runner to v2.5.1 ([#322](https://github.com/zeshuaro/device_preview_plus/issues/322)) ([09240a6](https://github.com/zeshuaro/device_preview_plus/commit/09240a666d67ee072e421a38d4db2d57cd3d0db7))
+* **deps:** update dependency build_runner to v2.5.2 ([#323](https://github.com/zeshuaro/device_preview_plus/issues/323)) ([b499a29](https://github.com/zeshuaro/device_preview_plus/commit/b499a297f8246f4cb78b9fb57acbecea29238fed))
+* **deps:** update dependency build_runner to v2.5.3 ([#325](https://github.com/zeshuaro/device_preview_plus/issues/325)) ([10f5170](https://github.com/zeshuaro/device_preview_plus/commit/10f517015ce1e30de942dbe5a1393391452cd5dd))
+* **deps:** update dependency semantic-release-pub to v0.10.10 ([#320](https://github.com/zeshuaro/device_preview_plus/issues/320)) ([0fe5e34](https://github.com/zeshuaro/device_preview_plus/commit/0fe5e3447250982e31fd8c97faebbc49c8fb7244))
+* **deps:** update dependency semantic-release-pub to v0.10.11 ([#324](https://github.com/zeshuaro/device_preview_plus/issues/324)) ([a991f32](https://github.com/zeshuaro/device_preview_plus/commit/a991f3270bb70ed4ca31211749d2797b7c6d33f4))
+* **node:** update node.js to v22.17.0 ([#327](https://github.com/zeshuaro/device_preview_plus/issues/327)) ([3d76b2c](https://github.com/zeshuaro/device_preview_plus/commit/3d76b2c18735d3e15a3fa6219138b43fc729cc7e))
+
 ## [2.4.3](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.2...v2.4.3) (2025-06-15)
 
 ### Bug Fixes
