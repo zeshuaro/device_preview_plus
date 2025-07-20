@@ -1,3 +1,16 @@
+## [2.4.6](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.5...v2.4.6) (2025-07-20)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.32.7 ([#343](https://github.com/zeshuaro/device_preview_plus/issues/343)) ([cc8f10c](https://github.com/zeshuaro/device_preview_plus/commit/cc8f10ca81d5ca00337cfb321386f7ac26be581d))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9.1.0 ([#337](https://github.com/zeshuaro/device_preview_plus/issues/337)) ([e3dbf28](https://github.com/zeshuaro/device_preview_plus/commit/e3dbf2856da8d4b8321d684461c7a1a29412656b))
+* **deps:** update dependency semantic-release to v24.2.7 ([#338](https://github.com/zeshuaro/device_preview_plus/issues/338)) ([ae467ef](https://github.com/zeshuaro/device_preview_plus/commit/ae467ef63223bd46fe99e8dd54a02eb4fca5cde9))
+* **deps:** update dependency semantic-release-pub to v0.10.14 ([#339](https://github.com/zeshuaro/device_preview_plus/issues/339)) ([8e4a46a](https://github.com/zeshuaro/device_preview_plus/commit/8e4a46a52606b2131b27ff676e01d8eb0b57868b))
+* **node:** update node.js to v22.17.1 ([#341](https://github.com/zeshuaro/device_preview_plus/issues/341)) ([e445a92](https://github.com/zeshuaro/device_preview_plus/commit/e445a9255b4c497eec7cce714d5adb05216aaf53))
+
 ## [2.4.5](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.4...v2.4.5) (2025-07-13)
 
 ### Bug Fixes
