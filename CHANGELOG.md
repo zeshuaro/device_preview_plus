@@ -1,3 +1,15 @@
+## [2.4.7](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.6...v2.4.7) (2025-07-27)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.32.8 ([#348](https://github.com/zeshuaro/device_preview_plus/issues/348)) ([5781e71](https://github.com/zeshuaro/device_preview_plus/commit/5781e7168abf4542728e5b0d9b9c3975fc841313))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#344](https://github.com/zeshuaro/device_preview_plus/issues/344)) ([9b1c55a](https://github.com/zeshuaro/device_preview_plus/commit/9b1c55a04b66d627de16346101a0f66710cb69cf))
+* **deps:** update code generation dependencies ([#347](https://github.com/zeshuaro/device_preview_plus/issues/347)) ([142a6a5](https://github.com/zeshuaro/device_preview_plus/commit/142a6a588892c4cd4410660650bb5a65c3fab38c))
+* **deps:** update dependency semantic-release-pub to v0.10.15 ([#345](https://github.com/zeshuaro/device_preview_plus/issues/345)) ([51886d5](https://github.com/zeshuaro/device_preview_plus/commit/51886d5e5029077df1bf5915857dd295b69fd6e2))
+
 ## [2.4.6](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.5...v2.4.6) (2025-07-20)
 
 ### Bug Fixes
