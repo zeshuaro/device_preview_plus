@@ -100,7 +100,7 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           primaryColor: accentColor,
           primaryColorDark: accentColor,
           highlightColor: accentColor,
-          appBarTheme: base.appBarTheme.copyWith(color: barColor),
+          appBarTheme: base.appBarTheme.copyWith(backgroundColor: barColor),
           sliderTheme: base.sliderTheme.copyWith(
             thumbColor: accentColor,
             activeTrackColor: accentColor.withValues(alpha: 0.7),

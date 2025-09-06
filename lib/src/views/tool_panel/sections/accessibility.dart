@@ -44,6 +44,10 @@ class AccessibilitySection extends StatelessWidget {
     final invertColors = context.select(
       (DevicePreviewStore store) => store.data.invertColors,
     );
+    final textScaleBy = textScalingFactor >= 2
+        ? 1.0
+        : (textScalingFactor < 1 ? 0.25 : 0.6);
+
     return ToolPanelSection(
       title: 'Accessibility',
       children: [
@@ -107,11 +111,7 @@ class AccessibilitySection extends StatelessWidget {
             trailing: Transform(
               alignment: Alignment.center,
               transform: (Matrix4.identity()
-                ..scale(
-                  textScalingFactor >= 2
-                      ? 1.0
-                      : (textScalingFactor < 1 ? 0.25 : 0.6),
-                )),
+                ..scaleByDouble(textScaleBy, textScaleBy, textScaleBy, 1.0)),
               child: const Icon(Icons.text_format),
             ),
           ),
