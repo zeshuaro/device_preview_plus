@@ -1,3 +1,23 @@
+## [2.5.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.5.0...v2.5.1) (2025-09-21)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.35.4 ([#383](https://github.com/zeshuaro/device_preview_plus/issues/383)) ([e64a0dc](https://github.com/zeshuaro/device_preview_plus/commit/e64a0dc7703fd91e7ee4261172ca4595ba2aabfd))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#375](https://github.com/zeshuaro/device_preview_plus/issues/375)) ([0be85d8](https://github.com/zeshuaro/device_preview_plus/commit/0be85d8f50752206e440ad3655e4f6f231132bc8))
+* **deps:** lock file maintenance ([#382](https://github.com/zeshuaro/device_preview_plus/issues/382)) ([2bce6dc](https://github.com/zeshuaro/device_preview_plus/commit/2bce6dc8f708e9e5035ab54a56aab52f488ac3d3))
+* **deps:** update code generation dependencies ([#377](https://github.com/zeshuaro/device_preview_plus/issues/377)) ([ab58823](https://github.com/zeshuaro/device_preview_plus/commit/ab5882386e10212d87f4918bf4656e42dabdbfdf))
+* **deps:** update dependency build_runner to v2.7.1 ([#376](https://github.com/zeshuaro/device_preview_plus/issues/376)) ([acdaf03](https://github.com/zeshuaro/device_preview_plus/commit/acdaf03f690beecd106e4fc47533baa747ba8028))
+* **deps:** update dependency freezed to v3.2.3 ([#384](https://github.com/zeshuaro/device_preview_plus/issues/384)) ([5b637af](https://github.com/zeshuaro/device_preview_plus/commit/5b637af1bf0fcc8b45bde4b5195b529bbfcdc8da))
+* **deps:** update dependency semantic-release to v24.2.8 ([#381](https://github.com/zeshuaro/device_preview_plus/issues/381)) ([c0106e9](https://github.com/zeshuaro/device_preview_plus/commit/c0106e9c470a89de6b5c197e6cfacfdab8e2b013))
+* **deps:** update dependency semantic-release-pub to v0.10.20 ([#378](https://github.com/zeshuaro/device_preview_plus/issues/378)) ([c834a69](https://github.com/zeshuaro/device_preview_plus/commit/c834a692ce43bc1dc3a3b7b9a57a4f9b78fe4965))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 3cbe549 ([#374](https://github.com/zeshuaro/device_preview_plus/issues/374)) ([0c581b0](https://github.com/zeshuaro/device_preview_plus/commit/0c581b00aea2a4c0cdf7108f195e3d180776cdb7))
+
 ## [2.5.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.4.7...v2.5.0) (2025-09-07)
 
 ### Features
