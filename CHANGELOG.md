@@ -1,3 +1,19 @@
+## [2.5.3](https://github.com/zeshuaro/device_preview_plus/compare/v2.5.2...v2.5.3) (2025-10-12)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.35.6 ([#399](https://github.com/zeshuaro/device_preview_plus/issues/399)) ([7d63c76](https://github.com/zeshuaro/device_preview_plus/commit/7d63c76402f2162dea5a31aecdc89a575e061986))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency build_runner to v2.9.0 ([#398](https://github.com/zeshuaro/device_preview_plus/issues/398)) ([d027a5a](https://github.com/zeshuaro/device_preview_plus/commit/d027a5ac8abe315a56323ac4123b1037e6f90bb9))
+* **deps:** update dependency semantic-release-pub to v0.10.23 ([#396](https://github.com/zeshuaro/device_preview_plus/issues/396)) ([936f11a](https://github.com/zeshuaro/device_preview_plus/commit/936f11ae0361a8994c7f7f4133336fc3d0f2c49a))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 55dc268 ([#397](https://github.com/zeshuaro/device_preview_plus/issues/397)) ([97e5f0d](https://github.com/zeshuaro/device_preview_plus/commit/97e5f0d7527575c523e80026e5daf89155815781))
+* **deps:** update zeshuaro/github-actions-workflows digest to b9daba8 ([#395](https://github.com/zeshuaro/device_preview_plus/issues/395)) ([baedda5](https://github.com/zeshuaro/device_preview_plus/commit/baedda52c41607bff5ddaa1033bd227fdc4fddd0))
+
 ## [2.5.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.5.1...v2.5.2) (2025-10-05)
 
 ### Bug Fixes
