@@ -1,11 +1,11 @@
 name: device_preview_plus
-version: 2.5.3
+version: 2.5.4
 description: Approximate how your Flutter app looks and performs on another device
 homepage: https://github.com/zeshuaro/device_preview_plus
 
 environment:
   sdk: ">=3.9.2 <4.0.0"
-  flutter: ">=3.35.6"
+  flutter: ">=3.35.7"
 
 dependencies:
   flutter:

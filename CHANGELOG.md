@@ -1,3 +1,22 @@
+## [2.5.4](https://github.com/zeshuaro/device_preview_plus/compare/v2.5.3...v2.5.4) (2025-10-26)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.35.7 ([#408](https://github.com/zeshuaro/device_preview_plus/issues/408)) ([87dd8f0](https://github.com/zeshuaro/device_preview_plus/commit/87dd8f07c8011b5448939f930c9deb14f512d93e))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#400](https://github.com/zeshuaro/device_preview_plus/issues/400)) ([b0192f4](https://github.com/zeshuaro/device_preview_plus/commit/b0192f48b4e2056ab8774a13b6332d7ef7c32079))
+* **deps:** update dependency semantic-release to v25 ([#403](https://github.com/zeshuaro/device_preview_plus/issues/403)) ([d3bb887](https://github.com/zeshuaro/device_preview_plus/commit/d3bb887462214f982c86054ab3b645abdeb9d36d))
+* **deps:** update dependency semantic-release to v25.0.1 ([#407](https://github.com/zeshuaro/device_preview_plus/issues/407)) ([1aa7759](https://github.com/zeshuaro/device_preview_plus/commit/1aa7759a41555a8ae11260f686830cc547982d45))
+* **deps:** update dependency semantic-release-pub to v0.10.24 ([#401](https://github.com/zeshuaro/device_preview_plus/issues/401)) ([ca72d1c](https://github.com/zeshuaro/device_preview_plus/commit/ca72d1cb56f2e9b3962fb2d947c9fffb71fe9555))
+* **deps:** update dependency semantic-release-pub to v0.10.25 ([#406](https://github.com/zeshuaro/device_preview_plus/issues/406)) ([82b8061](https://github.com/zeshuaro/device_preview_plus/commit/82b80611c6e50545e1afc902e96bdcc74e8b9bea))
+* **node:** update node.js to v22.21.0 ([#405](https://github.com/zeshuaro/device_preview_plus/issues/405)) ([22d7654](https://github.com/zeshuaro/device_preview_plus/commit/22d76540d083dad0f16bac0bffbac8d4d893da1e))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 165f3ed ([#404](https://github.com/zeshuaro/device_preview_plus/issues/404)) ([03f862b](https://github.com/zeshuaro/device_preview_plus/commit/03f862b0310f27f3fceda6c5740121293c51f76c))
+
 ## [2.5.3](https://github.com/zeshuaro/device_preview_plus/compare/v2.5.2...v2.5.3) (2025-10-12)
 
 ### Bug Fixes
