@@ -9,7 +9,7 @@ import 'custom_plugin.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: kDebugMode?true:false,
+      enabled: kDebugMode,
       tools: const [...DevicePreview.defaultTools, CustomPlugin()],
       builder: (context) => const BasicApp(),
     ),
