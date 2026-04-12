@@ -1,3 +1,19 @@
+## [2.7.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.6.2...v2.7.0) (2026-04-12)
+
+### Features
+
+* **sdk:** update dependency flutter to v3.41.6 ([#511](https://github.com/zeshuaro/device_preview_plus/issues/511)) ([af6e504](https://github.com/zeshuaro/device_preview_plus/commit/af6e5042fba2659e687d7da2c7583e6d4a5696a9))
+
+### Bug Fixes
+
+* **sdk:** update dependency dart to >=3.9.4 <4.0.0 ([#510](https://github.com/zeshuaro/device_preview_plus/issues/510)) ([9296a34](https://github.com/zeshuaro/device_preview_plus/commit/9296a34ad614ae7e4de376b89dbb8638ed0b460f))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#508](https://github.com/zeshuaro/device_preview_plus/issues/508)) ([d7df3fa](https://github.com/zeshuaro/device_preview_plus/commit/d7df3fa589d286ce123562ae2a3f265980cb0b8e))
+* **deps:** lock file maintenance ([#509](https://github.com/zeshuaro/device_preview_plus/issues/509)) ([396fed7](https://github.com/zeshuaro/device_preview_plus/commit/396fed7dac77c75a4ddcb7135343f7824b544ae6))
+* **example/deps:** update dependency dart to >=3.9.4 <4.0.0 ([#379](https://github.com/zeshuaro/device_preview_plus/issues/379)) ([ff2e63d](https://github.com/zeshuaro/device_preview_plus/commit/ff2e63d2e3c6bcc69e2035e1f811764315a0c4b3))
+
 ## [2.6.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.6.1...v2.6.2) (2026-04-05)
 
 ### Bug Fixes
