@@ -1,3 +1,19 @@
+## [2.7.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.7.0...v2.7.1) (2026-04-19)
+
+### Bug Fixes
+
+* **deps:** update code generation dependencies ([#488](https://github.com/zeshuaro/device_preview_plus/issues/488)) ([425ef1b](https://github.com/zeshuaro/device_preview_plus/commit/425ef1b6989bcf65c76240402fbed135a2d93332))
+* **sdk:** update dependency dart to >=3.11.4 <4.0.0 ([#512](https://github.com/zeshuaro/device_preview_plus/issues/512)) ([100a0f2](https://github.com/zeshuaro/device_preview_plus/commit/100a0f2798c8f176fa522c4027a6f69c7c9b8766))
+* **sdk:** update dependency dart to >=3.11.5 <4.0.0 ([#515](https://github.com/zeshuaro/device_preview_plus/issues/515)) ([e187e8e](https://github.com/zeshuaro/device_preview_plus/commit/e187e8ea15e254aed4a3b412a0d6fc4ffe24f51f))
+* **sdk:** update dependency flutter to v3.41.7 ([#516](https://github.com/zeshuaro/device_preview_plus/issues/516)) ([d31c11f](https://github.com/zeshuaro/device_preview_plus/commit/d31c11ffc2fcacf770f1faee9f2ec09aa9628ba9))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency semantic-release-pub to v0.11.13 ([#513](https://github.com/zeshuaro/device_preview_plus/issues/513)) ([c12f053](https://github.com/zeshuaro/device_preview_plus/commit/c12f053e0eb949e732b3135c8abb861b031f586b))
+* **example/deps:** update dependency dart to >=3.11.4 <4.0.0 ([#420](https://github.com/zeshuaro/device_preview_plus/issues/420)) ([15308e2](https://github.com/zeshuaro/device_preview_plus/commit/15308e20b8463e3866b3c30826bb0308c734b684))
+* **example/deps:** update dependency dart to >=3.11.5 <4.0.0 ([#514](https://github.com/zeshuaro/device_preview_plus/issues/514)) ([97ba8d7](https://github.com/zeshuaro/device_preview_plus/commit/97ba8d7e19006a27404a8fbac624b67f69b5ae3c))
+* **node:** update node.js to v24.15.0 ([#517](https://github.com/zeshuaro/device_preview_plus/issues/517)) ([a376649](https://github.com/zeshuaro/device_preview_plus/commit/a376649828a1931507d3a987848d4e4447a8ad74))
+
 ## [2.7.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.6.2...v2.7.0) (2026-04-12)
 
 ### Features
