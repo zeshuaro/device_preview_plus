@@ -239,6 +239,14 @@ class DevicePreview extends StatefulWidget {
     );
   }
 
+  /// Sets the orientation.
+  static void setOrientation(BuildContext context, Orientation orientation) {
+    final store = Provider.of<DevicePreviewStore>(context, listen: false);
+    if (store.data.orientation != orientation) {
+      store.data = store.data.copyWith(orientation: orientation);
+    }
+  }
+
   /// Select a device from its unique [deviceIdentifier].
   ///
   /// All the identifiers are available from [Devices].
