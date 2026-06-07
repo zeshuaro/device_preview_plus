@@ -1,3 +1,22 @@
+## [2.8.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.8.0...v2.8.1) (2026-06-07)
+
+### Bug Fixes
+
+* **sdk:** update dependency dart to >=3.12.1 <4.0.0 ([#552](https://github.com/zeshuaro/device_preview_plus/issues/552)) ([89dabbb](https://github.com/zeshuaro/device_preview_plus/commit/89dabbbe1172bbb53ec9d49a7abcc935053ad200))
+* **sdk:** update dependency flutter to v3.44.1 ([#556](https://github.com/zeshuaro/device_preview_plus/issues/556)) ([9ec2b4b](https://github.com/zeshuaro/device_preview_plus/commit/9ec2b4ba690856e00e7e18fc2fcff9e2304feb40))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#550](https://github.com/zeshuaro/device_preview_plus/issues/550)) ([83a5dc0](https://github.com/zeshuaro/device_preview_plus/commit/83a5dc08b09f58e96cd1f74ce35ed0c6009ca40f))
+* **deps:** lock file maintenance ([#555](https://github.com/zeshuaro/device_preview_plus/issues/555)) ([73d0b32](https://github.com/zeshuaro/device_preview_plus/commit/73d0b325b65a14fbc85d36d6ce29575d0b1f27af))
+* **deps:** update dependency semantic-release-pub to v0.12.0 ([#553](https://github.com/zeshuaro/device_preview_plus/issues/553)) ([262603f](https://github.com/zeshuaro/device_preview_plus/commit/262603f7b9874ac8f17dd3663c820e679d54e17b))
+* **example/deps:** update dependency dart to >=3.12.1 <4.0.0 ([#551](https://github.com/zeshuaro/device_preview_plus/issues/551)) ([1d4a7dc](https://github.com/zeshuaro/device_preview_plus/commit/1d4a7dc6a5123d20f70b82550c2343d7c195ba90))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to dca8343 ([#554](https://github.com/zeshuaro/device_preview_plus/issues/554)) ([59c0907](https://github.com/zeshuaro/device_preview_plus/commit/59c0907088bdb661042965fe970647667f798cca))
+* **deps:** update zeshuaro/github-actions-workflows digest to e2bd453 ([#557](https://github.com/zeshuaro/device_preview_plus/issues/557)) ([530075d](https://github.com/zeshuaro/device_preview_plus/commit/530075d18df49fd198ace5a4e81707710f02fd0d))
+
 ## [2.8.0](https://github.com/zeshuaro/device_preview_plus/compare/v2.7.2...v2.8.0) (2026-05-24)
 
 ### Features
