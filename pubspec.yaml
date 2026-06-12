@@ -5,7 +5,7 @@ homepage: https://github.com/zeshuaro/device_preview_plus
 
 environment:
   sdk: ">=3.12.1 <4.0.0"
-  flutter: ">=3.44.1"
+  flutter: ">=3.44.2"
 
 dependencies:
   flutter:
