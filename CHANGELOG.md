@@ -1,3 +1,21 @@
+## [2.8.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.8.1...v2.8.2) (2026-06-14)
+
+### Bug Fixes
+
+* **sdk:** update dart sdk minor patch version to >=3.12.2 <4.0.0 ([#561](https://github.com/zeshuaro/device_preview_plus/issues/561)) ([b93f4ae](https://github.com/zeshuaro/device_preview_plus/commit/b93f4ae63b1a3654b9f5f22ac6ad04333cfcbbd3))
+* **sdk:** update flutter sdk patch version to v3.44.2 ([#562](https://github.com/zeshuaro/device_preview_plus/issues/562)) ([141703d](https://github.com/zeshuaro/device_preview_plus/commit/141703d354f2c36a5d8517c64a390d48f1cbd441))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#558](https://github.com/zeshuaro/device_preview_plus/issues/558)) ([10a4e67](https://github.com/zeshuaro/device_preview_plus/commit/10a4e6716ac9307d928816d94d72df77eb81df3a))
+* **deps:** update semantic-release monorepo to v25.0.4 ([#563](https://github.com/zeshuaro/device_preview_plus/issues/563)) ([76e99f1](https://github.com/zeshuaro/device_preview_plus/commit/76e99f1040356b6e8bdda6cf03176063dd88ed44))
+* **deps:** update semantic-release monorepo to v25.0.5 ([#564](https://github.com/zeshuaro/device_preview_plus/issues/564)) ([093033d](https://github.com/zeshuaro/device_preview_plus/commit/093033d8d034a5a1aa02a506ff2868e2fbb229a9))
+* **example/deps:** update dependency dart to >=3.12.2 <4.0.0 ([#560](https://github.com/zeshuaro/device_preview_plus/issues/560)) ([025f763](https://github.com/zeshuaro/device_preview_plus/commit/025f7632c62fd9b810e6dd874fa462247f88e0a7))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to de5b773 ([#559](https://github.com/zeshuaro/device_preview_plus/issues/559)) ([fa8daca](https://github.com/zeshuaro/device_preview_plus/commit/fa8daca24d590d65a637e0a46fa0ab2f8a315244))
+
 ## [2.8.1](https://github.com/zeshuaro/device_preview_plus/compare/v2.8.0...v2.8.1) (2026-06-07)
 
 ### Bug Fixes
