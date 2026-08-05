@@ -1088,6 +1088,24 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==
 
+execa@^10.0.0:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-10.0.1.tgz#7e5ed6cc9d5ac2cc4160036c624934137f0750ff"
+  integrity sha512-ge98qjkRK4IB7tL7Ju/6qmm5LHoH1eEMt5FNZrz3f4UIYhF28lggX20z3FaX1sgc67msLEn0N0BscOs29iuwyw==
+  dependencies:
+    "@sindresorhus/merge-streams" "^4.0.0"
+    figures "^6.1.0"
+    get-stream "^9.0.1"
+    human-signals "^8.0.1"
+    is-plain-obj "^4.1.0"
+    is-stream "^4.0.1"
+    npm-run-path "^6.0.0"
+    pretty-ms "^9.3.0"
+    signal-exit "^4.1.0"
+    strip-final-newline "^4.0.0"
+    which-command "^0.1.0"
+    yoctocolors "^2.1.2"
+
 execa@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-5.1.1.tgz#f80ad9cbf4298f7bd1d4c9555c21e93741c411dd"
@@ -1118,7 +1136,7 @@ execa@^8.0.0:
     signal-exit "^4.1.0"
     strip-final-newline "^3.0.0"
 
-execa@^9.0.0, execa@^9.6.1:
+execa@^9.0.0:
   version "9.6.1"
   resolved "https://registry.yarnpkg.com/execa/-/execa-9.6.1.tgz#5b90acedc6bdc0fa9b9a6ddf8f9cbb0c75a7c471"
   integrity sha512-9Be3ZoN4LmYR90tUoVu2te2BsbzHfhJyfEiAVfz7N5/zv+jduIfLrV2xdQXOHbaD6KgpGdO9PRPM1Y4Q9QkPkA==
@@ -1276,7 +1294,7 @@ get-stream@^8.0.1:
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-8.0.1.tgz#def9dfd71742cd7754a7761ed43749a27d02eca2"
   integrity sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA==
 
-get-stream@^9.0.0:
+get-stream@^9.0.0, get-stream@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-9.0.1.tgz#95157d21df8eb90d1647102b63039b1df60ebd27"
   integrity sha512-kVCxPF3vQM/N0B1PmoqVUqgHP+EeVjmZSQn+1oCRPxd2P21P2F19lIgbR3HBosbB1PUhOAoctJnfEn2GbN2eZA==
@@ -1316,7 +1334,7 @@ glob@^8.1.0:
     minimatch "^5.0.1"
     once "^1.3.0"
 
-google-auth-library@^10.9.0:
+google-auth-library@^10.9.1:
   version "10.9.1"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-10.9.1.tgz#af9852a328a6077e8ffbe776681b4ca9420a1714"
   integrity sha512-i1ydyHrqcIxXkWh/uBmVkzCvIuq5yiK2ATndIe5XxKholrG/MTYP9xGYka4sQhrbIAgGjL2B6NOE7rFaiF3fXw==
@@ -2565,7 +2583,7 @@ pretty-format@^29.7.0:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
-pretty-ms@^9.2.0:
+pretty-ms@^9.2.0, pretty-ms@^9.3.0:
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/pretty-ms/-/pretty-ms-9.3.0.tgz#dd2524fcb3c326b4931b2272dfd1e1a8ed9a9f5a"
   integrity sha512-gjVS5hOP+M3wMm5nmNOucbIrqudzs9v/57bWRHQWLYklXqoXKrVfYW2W9+glfGsqtPgpiz5WwyEEB+ksXIx3gQ==
@@ -2740,15 +2758,15 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semantic-release-pub@0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.2.tgz#6f60fabae0df26d470ddf8dc9ee5c7fe8d84c1a8"
-  integrity sha512-iQ9RK8vGvr92+B9qEcM+y0CUMKWnt+j9GuUBK0dq2h9nzg+kyApLhAs5T5pfNFmKw736CtgXnK8/Xh//TwGMsQ==
+semantic-release-pub@0.13.3:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/semantic-release-pub/-/semantic-release-pub-0.13.3.tgz#35c735b811c397892f309c13fa464cbd21663dfb"
+  integrity sha512-R1OvOTPlCVfo/37tbMQwq5AlUKB14ZaTFAS3rJtymqsNXPR+SURr/BwoP4XEZk58XnFA+2dVCaPAuWNK4sTVNA==
   dependencies:
     "@actions/core" "^3.0.1"
     "@semantic-release/error" "^4.0.0"
-    execa "^9.6.1"
-    google-auth-library "^10.9.0"
+    execa "^10.0.0"
+    google-auth-library "^10.9.1"
     yaml "^2.9.0"
     zod "^4.4.3"
 
@@ -3272,6 +3290,11 @@ web-worker@^1.5.0:
   resolved "https://registry.yarnpkg.com/web-worker/-/web-worker-1.5.0.tgz#71b2b0fbcc4293e8f0aa4f6b8a3ffebff733dcc5"
   integrity sha512-RiMReJrTAiA+mBjGONMnjVDP2u3p9R1vkcGz6gDIrOMT3oGuYwX2WRMYI9ipkphSuE5XKEhydbhNEJh4NY9mlw==
 
+which-command@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/which-command/-/which-command-0.1.0.tgz#62828a961c1104d660fbdc397b5a540c629f3d6c"
+  integrity sha512-XZyoF5/5hZtXitIwzrU4NKK+Wtbb9aB9CezUEw2Q0wlYK8NUYQxC1rRXgNueYLtBAJwXIb+/tFVk4dozciNJMA==
+
 which@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/which/-/which-2.0.2.tgz#7c6a8dd0a636a0327e10b59c9286eee93f3f51b1"
@@ -3399,7 +3422,7 @@ yargs@^18.0.0:
     y18n "^5.0.5"
     yargs-parser "^22.0.0"
 
-yoctocolors@^2.1.1:
+yoctocolors@^2.1.1, yoctocolors@^2.1.2:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/yoctocolors/-/yoctocolors-2.2.0.tgz#c4b68ee477f3982c33e4de24a5aa4a354be506d3"
   integrity sha512-xYqdZFUK/VYazNl/oCDYN+3WloWQwMfZxBoiNt6qNyk+xfOdi598muWE42rNZFp1kNOiqW936q5RhUdnpqElSg==
