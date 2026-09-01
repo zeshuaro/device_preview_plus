@@ -6,9 +6,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
 /// The tool layout when the screen is large.
-class DervicePreviewLargeLayout extends StatefulWidget {
+class DevicePreviewLargeLayout extends StatefulWidget {
   /// Create a new panel from the given tools grouped as [slivers].
-  const DervicePreviewLargeLayout({super.key, required this.slivers});
+  const DevicePreviewLargeLayout({super.key, required this.slivers});
 
   /// The sections containing the tools.
   ///
@@ -16,11 +16,11 @@ class DervicePreviewLargeLayout extends StatefulWidget {
   final List<Widget> slivers;
 
   @override
-  DervicePreviewLargeLayoutState createState() =>
-      DervicePreviewLargeLayoutState();
+  DevicePreviewLargeLayoutState createState() =>
+      DevicePreviewLargeLayoutState();
 }
 
-class DervicePreviewLargeLayoutState extends State<DervicePreviewLargeLayout> {
+class DevicePreviewLargeLayoutState extends State<DevicePreviewLargeLayout> {
   @override
   void initState() {
     // Forcing rebuild to update absolute position in `_overlayKey`
