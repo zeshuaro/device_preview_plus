@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
 import '../../device_preview_plus.dart' as device_preview;
 import '../../device_preview_plus.dart';
@@ -24,6 +25,9 @@ class DevicePreviewStore extends ChangeNotifier {
       devices: devices,
     );
   }
+
+  /// Access the store associated with the given [context].
+  static DevicePreviewStore of(BuildContext context) => context.read<DevicePreviewStore>();
 
   final DeviceInfo defaultDevice;
 
