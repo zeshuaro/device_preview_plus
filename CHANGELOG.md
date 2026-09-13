@@ -1,3 +1,22 @@
+## [2.9.3](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.2...v2.9.3) (2026-09-13)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.47.3 ([#615](https://github.com/zeshuaro/device_preview_plus/issues/615)) ([e765252](https://github.com/zeshuaro/device_preview_plus/commit/e7652527d66fabd4ca875dd6084e530f9d8a2f00))
+* **sdk:** update dependency flutter to v3.47.4 ([#616](https://github.com/zeshuaro/device_preview_plus/issues/616)) ([2c2e5ee](https://github.com/zeshuaro/device_preview_plus/commit/2c2e5ee232eec286245482e5c7afc784b239108c))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#610](https://github.com/zeshuaro/device_preview_plus/issues/610)) ([5884cf0](https://github.com/zeshuaro/device_preview_plus/commit/5884cf06c477433147d2857eca5ab643dc718b9e))
+* **deps:** update dependency build_runner to v2.16.1 ([#614](https://github.com/zeshuaro/device_preview_plus/issues/614)) ([788fa9e](https://github.com/zeshuaro/device_preview_plus/commit/788fa9eb591c123a40b0aaf7a2e382f6f49917ae))
+* **deps:** update dependency freezed to v4.0.1 ([#613](https://github.com/zeshuaro/device_preview_plus/issues/613)) ([a9fb0f6](https://github.com/zeshuaro/device_preview_plus/commit/a9fb0f66f50f2d2607e297a1e90cee28c9086425))
+* **example/deps:** update dependency dart to >=3.13.3 <4.0.0 ([#611](https://github.com/zeshuaro/device_preview_plus/issues/611)) ([0974da4](https://github.com/zeshuaro/device_preview_plus/commit/0974da4036f5aaf79241b910687062f472dd486d))
+* **node:** update node.js to v24.21.0 ([#617](https://github.com/zeshuaro/device_preview_plus/issues/617)) ([36e3ee0](https://github.com/zeshuaro/device_preview_plus/commit/36e3ee069623c35f265a7a7f2f6b571cec87721a))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to befbed3 ([#612](https://github.com/zeshuaro/device_preview_plus/issues/612)) ([32ab452](https://github.com/zeshuaro/device_preview_plus/commit/32ab452d8147f8340e77ab385d5072719c0b5832))
+
 ## [2.9.2](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.1...v2.9.2) (2026-08-30)
 
 ### Bug Fixes
