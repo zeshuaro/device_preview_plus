@@ -1,3 +1,21 @@
+## [2.9.5](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.4...v2.9.5) (2026-10-04)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.47.6 ([#630](https://github.com/zeshuaro/device_preview_plus/issues/630)) ([1dbab72](https://github.com/zeshuaro/device_preview_plus/commit/1dbab7259dd13e990ef9c1575c107f77eb0ad8c2))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#624](https://github.com/zeshuaro/device_preview_plus/issues/624)) ([de419e9](https://github.com/zeshuaro/device_preview_plus/commit/de419e9f61b7ea32f771f1f79425ea5008421870))
+* **deps:** lock file maintenance ([#628](https://github.com/zeshuaro/device_preview_plus/issues/628)) ([b0be933](https://github.com/zeshuaro/device_preview_plus/commit/b0be93325640db98626f6263255aadd9d8b79626))
+* **deps:** update dependency freezed to v4.0.2 ([#627](https://github.com/zeshuaro/device_preview_plus/issues/627)) ([109694e](https://github.com/zeshuaro/device_preview_plus/commit/109694e6ba0ef3223909352c5c63dde1b997e420))
+* **deps:** update dependency semantic-release-pub to v0.13.6 ([#625](https://github.com/zeshuaro/device_preview_plus/issues/625)) ([ebf61dd](https://github.com/zeshuaro/device_preview_plus/commit/ebf61dd1bd81b7c16c22c966a5fc8707f052736e))
+* **example/deps:** update dependency dart to >=3.13.5 <4.0.0 ([#629](https://github.com/zeshuaro/device_preview_plus/issues/629)) ([319376c](https://github.com/zeshuaro/device_preview_plus/commit/319376c68d8af8c990bd3bf8bec43733f09b10fd))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to 92fcccd ([#626](https://github.com/zeshuaro/device_preview_plus/issues/626)) ([61dcdb6](https://github.com/zeshuaro/device_preview_plus/commit/61dcdb654fded0d4f1b28765fa7d55b0e1cb1cdb))
+
 ## [2.9.4](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.3...v2.9.4) (2026-09-20)
 
 ### Bug Fixes
