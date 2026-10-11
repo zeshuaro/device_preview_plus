@@ -1,3 +1,17 @@
+## [2.9.6](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.5...v2.9.6) (2026-10-11)
+
+### Bug Fixes
+
+* **sdk:** update dependency flutter to v3.47.7 ([#634](https://github.com/zeshuaro/device_preview_plus/issues/634)) ([dc65d48](https://github.com/zeshuaro/device_preview_plus/commit/dc65d48762a26a92c13e8b938142fd4389340b2d))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#631](https://github.com/zeshuaro/device_preview_plus/issues/631)) ([40bcc35](https://github.com/zeshuaro/device_preview_plus/commit/40bcc3550674323555ca7ff3abf8f19620bdbbe4))
+
+### Continuous Integration
+
+* **deps:** update zeshuaro/github-actions-workflows digest to be1a900 ([#633](https://github.com/zeshuaro/device_preview_plus/issues/633)) ([4a2f139](https://github.com/zeshuaro/device_preview_plus/commit/4a2f1396769df5378bb9a56268afb1ce650163c4))
+
 ## [2.9.5](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.4...v2.9.5) (2026-10-04)
 
 ### Bug Fixes
