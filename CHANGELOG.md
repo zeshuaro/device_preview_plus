@@ -1,3 +1,16 @@
+## [2.9.7](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.6...v2.9.7) (2026-10-18)
+
+### Bug Fixes
+
+* **deps:** update dependency shared_preferences to v2.5.6 ([#636](https://github.com/zeshuaro/device_preview_plus/issues/636)) ([19f3875](https://github.com/zeshuaro/device_preview_plus/commit/19f387599ad19678b97cb964df21a00d244cfd1c))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([#635](https://github.com/zeshuaro/device_preview_plus/issues/635)) ([1c9ec14](https://github.com/zeshuaro/device_preview_plus/commit/1c9ec14de9faf10b287022f0f491e56bc248000f))
+* **deps:** update dependency build_runner to v2.16.2 ([#637](https://github.com/zeshuaro/device_preview_plus/issues/637)) ([d51cb5d](https://github.com/zeshuaro/device_preview_plus/commit/d51cb5de6b213d5e9fd51e78c86b57a356f96da1))
+* **deps:** update dependency semantic-release-pub to v0.13.7 ([#638](https://github.com/zeshuaro/device_preview_plus/issues/638)) ([96c9bd8](https://github.com/zeshuaro/device_preview_plus/commit/96c9bd8ce7a9944c9844643f4150ade6c025d2db))
+* **node:** update node.js to v24.22.0 ([#639](https://github.com/zeshuaro/device_preview_plus/issues/639)) ([908e930](https://github.com/zeshuaro/device_preview_plus/commit/908e930b31f8725fe3d4eb3f46f0e50fb7c01568))
+
 ## [2.9.6](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.5...v2.9.6) (2026-10-11)
 
 ### Bug Fixes
