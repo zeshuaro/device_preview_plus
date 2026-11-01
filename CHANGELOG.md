@@ -1,3 +1,17 @@
+## [2.9.9](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.8...v2.9.9) (2026-11-01)
+
+### Bug Fixes
+
+* **deps:** update dependency web to ^1.1.2 ([#650](https://github.com/zeshuaro/device_preview_plus/issues/650)) ([b9dd4a3](https://github.com/zeshuaro/device_preview_plus/commit/b9dd4a3f2b9919ed395cd357f8e80dbaf6fac011))
+* **sdk:** update dependency flutter to v3.47.9 ([#651](https://github.com/zeshuaro/device_preview_plus/issues/651)) ([a17785a](https://github.com/zeshuaro/device_preview_plus/commit/a17785a381b01e6796d377b7014581f543667190))
+
+### Miscellaneous Chores
+
+* **deps:** update dependency build_runner to v2.17.1 ([#644](https://github.com/zeshuaro/device_preview_plus/issues/644)) ([d86fc59](https://github.com/zeshuaro/device_preview_plus/commit/d86fc5928f5c8f851d0dc66a605d8309f8457239))
+* **deps:** update dependency json_serializable to v6.15.2 ([#646](https://github.com/zeshuaro/device_preview_plus/issues/646)) ([8e2eac0](https://github.com/zeshuaro/device_preview_plus/commit/8e2eac00c51d66bad000afbea4290f5b7f5f4898))
+* **deps:** update dependency semantic-release-pub to v0.13.9 ([#647](https://github.com/zeshuaro/device_preview_plus/issues/647)) ([b6a5eb9](https://github.com/zeshuaro/device_preview_plus/commit/b6a5eb974517b9bcacabd16fae8896947c5fb778))
+* **node:** update node.js to v24.22.2 ([#648](https://github.com/zeshuaro/device_preview_plus/issues/648)) ([4f4bc4f](https://github.com/zeshuaro/device_preview_plus/commit/4f4bc4f5a026305063c6b71b5652a8d305d33086))
+
 ## [2.9.8](https://github.com/zeshuaro/device_preview_plus/compare/v2.9.7...v2.9.8) (2026-10-25)
 
 ### Bug Fixes
